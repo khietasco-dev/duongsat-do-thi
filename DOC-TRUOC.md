@@ -3,7 +3,7 @@
 ## Chạy lại sau khi sửa nội dung
 
 ```
-python ds_v7.py
+python ds_v8.py
 ```
 
 Kịch bản sinh ra bảy trang HTML + sitemap.xml + robots.txt.
@@ -21,7 +21,9 @@ Kịch bản sinh ra bảy trang HTML + sitemap.xml + robots.txt.
 | `ds_v5.py` | Trang tiếng Anh, tiếng Trung |
 | `ds_ten.py` | **Tên 51 văn bản viết có dấu** — tra theo số hiệu |
 | `ds_v6.py` | Logo in hoa · nút ngôn ngữ sổ xuống · cột Số hiệu |
-| `ds_v7.py` | Trang Nhật, Pháp, Đức + **chạy file này** |
+| `ds_v7.py` | Trang Nhật, Pháp, Đức |
+| `ds_tep.py` | **Chép 110 tệp văn bản vào trang** — chạy một lần |
+| `ds_v8.py` | Liên kết mở tệp + **chạy file này** |
 | `vb_phanloai.json` | 51 đầu văn bản, sinh từ kho VBPL |
 
 ## Hai tầng giao diện
@@ -103,3 +105,23 @@ Hai lỗi đã vấp về thanh đầu:
 `ds_build.py` nhúng favicon dạng `data:image/svg+xml,...` — chuỗi này chứa **179 ký tự `%`**
 đã được nhân đôi thành `%%` để không làm hỏng khuôn định dạng chuỗi của Python.
 Sửa favicon thì nhớ nhân đôi lại.
+
+## Bấm vào văn bản là mở được tệp
+
+`van-ban/tep/` chứa **110 tệp Word và PDF, 139 MB**, chép từ kho VBPL trong vault.
+
+| Cách bấm | Mở gì |
+|---|---|
+| Bấm **tên văn bản** | Bản Word; văn bản nào không có Word thì mở PDF |
+| Bấm nút **DOC** hoặc **PDF** ở cột Mở tệp | Đúng định dạng đó |
+| Văn bản nhiều phần | Hiện **W1 W2…** hoặc **P1 P2…**, phải mở hết mới đủ |
+
+39/51 văn bản có bản Word · 51/51 có PDF · 5 văn bản chia nhiều phần.
+
+⚠️ **Dung lượng kho nhảy từ 954 KB lên 140 MB.** Các kho ASCO khác chỉ 3–4 MB.
+Lần đẩy đầu tiên lên GitHub sẽ lâu. Nếu muốn kho nhẹ thì bỏ `van-ban/tep/` vào
+`.gitignore` và thay liên kết bằng đường dẫn tới nguồn chính thức trên Công báo —
+nhưng khi đó trang chạy trên mạng sẽ không mở được tệp.
+
+Tên tệp đã **bỏ dấu tiếng Việt và thay khoảng trắng bằng gạch nối** để địa chỉ web
+không bị mã hoá lung tung. Xem hàm `gon()` trong `ds_tep.py`.
