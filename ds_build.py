@@ -79,7 +79,7 @@ a{color:var(--muc)}
 
 /* ---------- THANH DAU (dung chung 2 tang) ---------- */
 header.top{position:sticky;top:0;z-index:60;background:var(--nen);border-bottom:1px solid var(--vien)}
-.top-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 22px}
 .hieu{display:flex;align-items:center;gap:10px;text-decoration:none}
 .hieu svg{width:34px;height:34px;flex:0 0 auto}
 .hieu b{font-family:'Times New Roman',Times,'Nimbus Roman',serif;font-size:17.6px;color:var(--muc);display:block;line-height:1.2}
@@ -91,7 +91,7 @@ header.top{position:sticky;top:0;z-index:60;background:var(--nen);border-bottom:
 :root[data-theme="dark"] .nut-lh{color:#0D2044!important}
 .menu-nut{display:none;background:none;border:1px solid var(--vien);border-radius:9px;padding:7px 11px;
   font-size:15px;font-family:inherit;color:var(--chu);cursor:pointer}
-@media(max-width:1000px){
+@media(max-width:1160px){
   .top-nav{position:absolute;top:100%;left:0;right:0;background:var(--nen);border-bottom:1px solid var(--vien);
     flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 16px;display:none}
   .top-nav[data-mo]{display:flex}
@@ -257,6 +257,7 @@ def khung(slug, tieude, mota, than, jsonld=None, tang='trong'):
 <link rel="canonical" href="%(dc)s">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="theme-color" content="#184088">
+<link rel="icon" href="data:image/svg+xml,%%3Csvg%%20xmlns%%3D%%22http%%3A%%2F%%2Fwww.w3.org%%2F2000%%2Fsvg%%22%%20viewBox%%3D%%220%%200%%2034%%2034%%22%%3E%%3Crect%%20width%%3D%%2234%%22%%20height%%3D%%2234%%22%%20rx%%3D%%227%%22%%20fill%%3D%%22%%23184088%%22%%2F%%3E%%3Crect%%20x%%3D%%2210%%22%%20y%%3D%%227%%22%%20width%%3D%%2214%%22%%20height%%3D%%2215%%22%%20rx%%3D%%223.4%%22%%20fill%%3D%%22none%%22%%20stroke%%3D%%22%%23B8862A%%22%%20stroke-width%%3D%%221.9%%22%%2F%%3E%%3Cpath%%20d%%3D%%22M10%%2016h14%%22%%20stroke%%3D%%22%%23B8862A%%22%%20stroke-width%%3D%%221.9%%22%%2F%%3E%%3Ccircle%%20cx%%3D%%2213.6%%22%%20cy%%3D%%2219%%22%%20r%%3D%%221.3%%22%%20fill%%3D%%22%%23B8862A%%22%%2F%%3E%%3Ccircle%%20cx%%3D%%2220.4%%22%%20cy%%3D%%2219%%22%%20r%%3D%%221.3%%22%%20fill%%3D%%22%%23B8862A%%22%%2F%%3E%%3Cpath%%20d%%3D%%22M12%%2022l-2%%204M22%%2022l2%%204%%22%%20stroke%%3D%%22%%23B8862A%%22%%20stroke-width%%3D%%221.9%%22%%20stroke-linecap%%3D%%22round%%22%%2F%%3E%%3Cpath%%20d%%3D%%22M8%%2028h18%%22%%20stroke%%3D%%22%%23B8862A%%22%%20stroke-width%%3D%%221.7%%22%%20stroke-linecap%%3D%%22round%%22%%2F%%3E%%3C%%2Fsvg%%3E">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="Đường sắt đô thị">

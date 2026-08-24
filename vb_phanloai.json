@@ -10,7 +10,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "Luat Duong sat 95-2025-QH15"
+  "hien": "Luat Duong sat 95-2025-QH15",
+  "sohieu": "95/2025/QH15",
+  "ten_ngan": "Luat Duong sat",
+  "ten_dep": "Luật Đường sắt"
  },
  {
   "ten": "Luat Thu do 02-2026-QH16",
@@ -22,7 +25,10 @@
   "diaban": "Toàn quốc",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "Luat Thu do 02-2026-QH16"
+  "hien": "Luat Thu do 02-2026-QH16",
+  "sohieu": "02/2026/QH16",
+  "ten_ngan": "Luat Thu do",
+  "ten_dep": "Luật Thủ đô"
  },
  {
   "ten": "Luat Thu do 39-2024-QH15 (ban goc)",
@@ -35,7 +41,10 @@
   "diaban": "Toàn quốc",
   "nam": "2024",
   "hopnhat": false,
-  "hien": "Luat Thu do 39-2024-QH15 (ban goc)"
+  "hien": "Luat Thu do 39-2024-QH15 (ban goc)",
+  "sohieu": "39/2024/QH15",
+  "ten_ngan": "Luat Thu do (ban goc)",
+  "ten_dep": "Luật Thủ đô (bản gốc, đã được thay thế)"
  },
  {
   "ten": "NQ 188-2025-QH15 Thi diem co che dac thu phat trien duong sat do thi Ha Noi, TPHCM",
@@ -47,7 +56,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 188-2025-QH15 Thi diem co che dac thu phat trien duong sat do thi Ha Noi, TPHCM"
+  "hien": "NQ 188-2025-QH15 Thi diem co che dac thu phat trien duong sat do thi Ha Noi, TPHCM",
+  "sohieu": "188/2025/QH15",
+  "ten_ngan": "Thi diem co che dac thu phat trien duong sat do thi Ha Noi, TPHCM",
+  "ten_dep": "Nghị quyết thí điểm cơ chế, chính sách đặc thù phát triển hệ thống đường sắt đô thị Hà Nội và TP. Hồ Chí Minh"
  },
  {
   "ten": "VBHN 114-VPQH Luat Thu do (ban hop nhat)",
@@ -60,7 +72,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 114-VPQH Luat Thu do (ban hop nhat)"
+  "hien": "VBHN 114-VPQH Luat Thu do (ban hop nhat)",
+  "sohieu": "114/VBHN-VPQH",
+  "ten_ngan": "Luat Thu do (ban hop nhat)",
+  "ten_dep": "Luật Thủ đô — bản hợp nhất"
  },
  {
   "ten": "VBHN 75-VPQH Luat Duong sat",
@@ -73,7 +88,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 75-VPQH Luat Duong sat"
+  "hien": "VBHN 75-VPQH Luat Duong sat",
+  "sohieu": "75/VBHN-VPQH",
+  "ten_ngan": "Luat Duong sat",
+  "ten_dep": "Luật Đường sắt — bản hợp nhất"
  },
  {
   "ten": "ND 04 2026 Giao nhiem vu, dat hang cung cap dich vu, hang hoa cong nghiep duong sat",
@@ -86,7 +104,10 @@
   "diaban": "Toàn quốc",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "ND 04 2026 Giao nhiem vu, dat hang cung cap dich vu, hang hoa cong nghiep duong sat"
+  "hien": "ND 04 2026 Giao nhiem vu, dat hang cung cap dich vu, hang hoa cong nghiep duong sat",
+  "sohieu": "04/2026/NĐ-CP",
+  "ten_ngan": "2026 Giao nhiem vu, dat hang cung cap dich vu, hang hoa cong nghiep duong sat",
+  "ten_dep": "Giao nhiệm vụ, đặt hàng cung cấp dịch vụ, hàng hoá công nghiệp đường sắt"
  },
  {
   "ten": "ND 123 2025 Thiet ke ky thuat tong the va co che dac thu cho mot so du an duong sat",
@@ -99,7 +120,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "ND 123 2025 Thiet ke ky thuat tong the va co che dac thu cho mot so du an duong sat"
+  "hien": "ND 123 2025 Thiet ke ky thuat tong the va co che dac thu cho mot so du an duong sat",
+  "sohieu": "123/2025/NĐ-CP",
+  "ten_ngan": "2025 Thiet ke ky thuat tong the va co che dac thu cho mot so du an duong sat",
+  "ten_dep": "Thiết kế kỹ thuật tổng thể và cơ chế đặc thù cho một số dự án đường sắt"
  },
  {
   "ten": "ND 15 2025 Quan ly, su dung va khai thac tai san ket cau ha tang duong sat",
@@ -112,7 +136,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "ND 15 2025 Quan ly, su dung va khai thac tai san ket cau ha tang duong sat"
+  "hien": "ND 15 2025 Quan ly, su dung va khai thac tai san ket cau ha tang duong sat",
+  "sohieu": "15/2025/NĐ-CP",
+  "ten_ngan": "2025 Quan ly, su dung va khai thac tai san ket cau ha tang duong sat",
+  "ten_dep": "Quản lý, sử dụng và khai thác tài sản kết cấu hạ tầng đường sắt"
  },
  {
   "ten": "ND 16 2026 Quy dinh chi tiet mot so dieu cua Luat Duong sat",
@@ -125,7 +152,10 @@
   "diaban": "Toàn quốc",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "ND 16 2026 Quy dinh chi tiet mot so dieu cua Luat Duong sat"
+  "hien": "ND 16 2026 Quy dinh chi tiet mot so dieu cua Luat Duong sat",
+  "sohieu": "16/2026/NĐ-CP",
+  "ten_ngan": "2026 Quy dinh chi tiet mot so dieu cua Luat Duong sat",
+  "ten_dep": "Quy định chi tiết một số điều của Luật Đường sắt"
  },
  {
   "ten": "ND 81 2026 Xu phat VPHC trong linh vuc giao thong duong sat",
@@ -138,7 +168,10 @@
   "diaban": "Toàn quốc",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "ND 81 2026 Xu phat VPHC trong linh vuc giao thong duong sat"
+  "hien": "ND 81 2026 Xu phat VPHC trong linh vuc giao thong duong sat",
+  "sohieu": "81/2026/NĐ-CP",
+  "ten_ngan": "2026 Xu phat VPHC trong linh vuc giao thong duong sat",
+  "ten_dep": "Xử phạt vi phạm hành chính trong lĩnh vực giao thông đường sắt"
  },
  {
   "ten": "VBHN 34-BXD Nghi dinh thiet ke ky thuat tong the va co che dac thu du an duong sat",
@@ -151,7 +184,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 34-BXD Nghi dinh thiet ke ky thuat tong the va co che dac thu du an duong sat"
+  "hien": "VBHN 34-BXD Nghi dinh thiet ke ky thuat tong the va co che dac thu du an duong sat",
+  "sohieu": "34/VBHN-BXD",
+  "ten_ngan": "Nghi dinh thiet ke ky thuat tong the va co che dac thu du an duong sat",
+  "ten_dep": "Nghị định về thiết kế kỹ thuật tổng thể và cơ chế đặc thù dự án đường sắt — bản hợp nhất, 143 Điều"
  },
  {
   "ten": "TT 06.2025 TT-BXD Quan ly, bao tri ket cau ha tang duong sat quoc gia",
@@ -164,7 +200,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "TT 06.2025 TT-BXD Quan ly, bao tri ket cau ha tang duong sat quoc gia"
+  "hien": "TT 06.2025 TT-BXD Quan ly, bao tri ket cau ha tang duong sat quoc gia",
+  "sohieu": "06/2025/TT-BXD",
+  "ten_ngan": "Quan ly, bao tri ket cau ha tang duong sat quoc gia",
+  "ten_dep": "Quản lý, bảo trì kết cấu hạ tầng đường sắt quốc gia"
  },
  {
   "ten": "TT 33.2025 TT-BXD Quan ly, khai thac van tai duong sat",
@@ -177,7 +216,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "TT 33.2025 TT-BXD Quan ly, khai thac van tai duong sat"
+  "hien": "TT 33.2025 TT-BXD Quan ly, khai thac van tai duong sat",
+  "sohieu": "33/2025/TT-BXD",
+  "ten_ngan": "Quan ly, khai thac van tai duong sat",
+  "ten_dep": "Quản lý, khai thác vận tải đường sắt"
  },
  {
   "ten": "TT 34.2025 TT-BXD Quan ly, khai thac ket cau ha tang duong sat",
@@ -190,7 +232,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "TT 34.2025 TT-BXD Quan ly, khai thac ket cau ha tang duong sat"
+  "hien": "TT 34.2025 TT-BXD Quan ly, khai thac ket cau ha tang duong sat",
+  "sohieu": "34/2025/TT-BXD",
+  "ten_ngan": "Quan ly, khai thac ket cau ha tang duong sat",
+  "ten_dep": "Quản lý, khai thác kết cấu hạ tầng đường sắt"
  },
  {
   "ten": "TT 44.2025 TT-BXD Cac Quy chuan ky thuat quoc gia ve duong sat",
@@ -203,7 +248,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "TT 44.2025 TT-BXD Cac Quy chuan ky thuat quoc gia ve duong sat"
+  "hien": "TT 44.2025 TT-BXD Cac Quy chuan ky thuat quoc gia ve duong sat",
+  "sohieu": "44/2025/TT-BXD",
+  "ten_ngan": "Cac Quy chuan ky thuat quoc gia ve duong sat",
+  "ten_dep": "Các Quy chuẩn kỹ thuật quốc gia về đường sắt"
  },
  {
   "ten": "TT 59.2024 TT-BGTVT Dinh muc kinh te ky thuat bao duong ket cau ha tang duong sat quoc gia",
@@ -216,7 +264,10 @@
   "diaban": "Toàn quốc",
   "nam": "2024",
   "hopnhat": false,
-  "hien": "TT 59.2024 TT-BGTVT Dinh muc kinh te ky thuat bao duong ket cau ha tang duong sat quoc gia"
+  "hien": "TT 59.2024 TT-BGTVT Dinh muc kinh te ky thuat bao duong ket cau ha tang duong sat quoc gia",
+  "sohieu": "59/2024/TT-BGTVT",
+  "ten_ngan": "Dinh muc kinh te ky thuat bao duong ket cau ha tang duong sat quoc gia",
+  "ten_dep": "Định mức kinh tế — kỹ thuật bảo dưỡng kết cấu hạ tầng đường sắt quốc gia"
  },
  {
   "ten": "TT 62.2026 TT-BXD QCVN ve Duong sat do thi - Loai hinh metro",
@@ -229,7 +280,10 @@
   "diaban": "Toàn quốc",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "TT 62.2026 TT-BXD QCVN ve Duong sat do thi - Loai hinh metro"
+  "hien": "TT 62.2026 TT-BXD QCVN ve Duong sat do thi - Loai hinh metro",
+  "sohieu": "62/2026/TT-BXD",
+  "ten_ngan": "QCVN ve Duong sat do thi - Loai hinh metro",
+  "ten_dep": "Quy chuẩn kỹ thuật quốc gia về Đường sắt đô thị — loại hình metro"
  },
  {
   "ten": "TT 75.2025 TT-BTC Tinh hao mon tai san ket cau ha tang duong sat",
@@ -241,7 +295,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "TT 75.2025 TT-BTC Tinh hao mon tai san ket cau ha tang duong sat"
+  "hien": "TT 75.2025 TT-BTC Tinh hao mon tai san ket cau ha tang duong sat",
+  "sohieu": "75/2025/TT-BTC",
+  "ten_ngan": "Tinh hao mon tai san ket cau ha tang duong sat",
+  "ten_dep": "Tính hao mòn tài sản kết cấu hạ tầng đường sắt"
  },
  {
   "ten": "VBHN 10-BXD Thong tu ve dang ky phuong tien giao thong duong sat",
@@ -254,7 +311,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 10-BXD Thong tu ve dang ky phuong tien giao thong duong sat"
+  "hien": "VBHN 10-BXD Thong tu ve dang ky phuong tien giao thong duong sat",
+  "sohieu": "10/VBHN-BXD",
+  "ten_ngan": "Thong tu ve dang ky phuong tien giao thong duong sat",
+  "ten_dep": "Thông tư về đăng ký phương tiện giao thông đường sắt — bản hợp nhất"
  },
  {
   "ten": "VBHN 11-BXD Thong tu ve giai quyet su co, tai nan giao thong duong sat",
@@ -267,7 +327,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 11-BXD Thong tu ve giai quyet su co, tai nan giao thong duong sat"
+  "hien": "VBHN 11-BXD Thong tu ve giai quyet su co, tai nan giao thong duong sat",
+  "sohieu": "11/VBHN-BXD",
+  "ten_ngan": "Thong tu ve giai quyet su co, tai nan giao thong duong sat",
+  "ten_dep": "Thông tư về giải quyết sự cố, tai nạn giao thông đường sắt — bản hợp nhất"
  },
  {
   "ten": "VBHN 12-BXD Thong tu ve duong ngang va cap giay phep xay dung cong trinh thiet yeu",
@@ -280,7 +343,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 12-BXD Thong tu ve duong ngang va cap giay phep xay dung cong trinh thiet yeu"
+  "hien": "VBHN 12-BXD Thong tu ve duong ngang va cap giay phep xay dung cong trinh thiet yeu",
+  "sohieu": "12/VBHN-BXD",
+  "ten_ngan": "Thong tu ve duong ngang va cap giay phep xay dung cong trinh thiet yeu",
+  "ten_dep": "Thông tư về đường ngang và cấp giấy phép xây dựng công trình thiết yếu — bản hợp nhất"
  },
  {
   "ten": "VBHN 13-BXD Thong tu ve ket noi ray duong sat do thi, duong sat chuyen dung",
@@ -292,7 +358,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 13-BXD Thong tu ve ket noi ray duong sat do thi, duong sat chuyen dung"
+  "hien": "VBHN 13-BXD Thong tu ve ket noi ray duong sat do thi, duong sat chuyen dung",
+  "sohieu": "13/VBHN-BXD",
+  "ten_ngan": "Thong tu ve ket noi ray duong sat do thi, duong sat chuyen dung",
+  "ten_dep": "Thông tư về kết nối ray đường sắt đô thị, đường sắt chuyên dùng với đường sắt quốc gia — bản hợp nhất"
  },
  {
   "ten": "VBHN 14-BXD Thong tu ve ket noi tin hieu den giao thong duong bo voi duong sat",
@@ -305,7 +374,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": true,
-  "hien": "VBHN 14-BXD Thong tu ve ket noi tin hieu den giao thong duong bo voi duong sat"
+  "hien": "VBHN 14-BXD Thong tu ve ket noi tin hieu den giao thong duong bo voi duong sat",
+  "sohieu": "14/VBHN-BXD",
+  "ten_ngan": "Thong tu ve ket noi tin hieu den giao thong duong bo voi duong sat",
+  "ten_dep": "Thông tư về kết nối tín hiệu đèn giao thông đường bộ với đường sắt — bản hợp nhất"
  },
  {
   "ten": "CV 3222 VPCP-CN Du an duong sat do thi Ha Noi tuyen so 5",
@@ -317,7 +389,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": false,
-  "hien": "CV 3222 VPCP-CN Du an duong sat do thi Ha Noi tuyen so 5"
+  "hien": "CV 3222 VPCP-CN Du an duong sat do thi Ha Noi tuyen so 5",
+  "sohieu": "3222/VPCP-CN",
+  "ten_ngan": "Du an duong sat do thi Ha Noi tuyen so 5",
+  "ten_dep": "Dự án đường sắt đô thị Hà Nội tuyến số 5"
  },
  {
   "ten": "CV 3357 VPCP-CN Thuc hien Nghi quyet 188-2025-QH15 ve duong sat do thi",
@@ -329,7 +404,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "CV 3357 VPCP-CN Thuc hien Nghi quyet 188-2025-QH15 ve duong sat do thi"
+  "hien": "CV 3357 VPCP-CN Thuc hien Nghi quyet 188-2025-QH15 ve duong sat do thi",
+  "sohieu": "3357/VPCP-CN",
+  "ten_ngan": "Thuc hien Nghi quyet 188-2025-QH15 ve duong sat do thi",
+  "ten_dep": "Đôn đốc thực hiện Nghị quyết 188/2025/QH15 về đường sắt đô thị"
  },
  {
   "ten": "CV 3722 VPCP-CN Co che dac thu keo dai tuyen Metro Ben Thanh - Suoi Tien",
@@ -341,7 +419,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": false,
-  "hien": "CV 3722 VPCP-CN Co che dac thu keo dai tuyen Metro Ben Thanh - Suoi Tien"
+  "hien": "CV 3722 VPCP-CN Co che dac thu keo dai tuyen Metro Ben Thanh - Suoi Tien",
+  "sohieu": "3722/VPCP-CN",
+  "ten_ngan": "Co che dac thu keo dai tuyen Metro Ben Thanh - Suoi Tien",
+  "ten_dep": "Cơ chế đặc thù kéo dài tuyến Metro Bến Thành – Suối Tiên"
  },
  {
   "ten": "DP HCM - NQ 21-2026-NQ-HDND Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong",
@@ -354,7 +435,10 @@
   "diaban": "TP. Hồ Chí Minh",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 21-2026-NQ-HDND Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong"
+  "hien": "NQ 21-2026-NQ-HDND Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong",
+  "sohieu": "21/2026/NQ-HĐND",
+  "ten_ngan": "Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong",
+  "ten_dep": "Quy hoạch khu vực TOD đối với đường sắt quốc gia và đường sắt địa phương"
  },
  {
   "ten": "DP HCM - NQ 88-2025-NQ-HDND Dinh muc chi phi don gia lap tham dinh phe duyet Quy hoach tong the TPHCM",
@@ -367,7 +451,10 @@
   "diaban": "TP. Hồ Chí Minh",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 88-2025-NQ-HDND Dinh muc chi phi don gia lap tham dinh phe duyet Quy hoach tong the TPHCM"
+  "hien": "NQ 88-2025-NQ-HDND Dinh muc chi phi don gia lap tham dinh phe duyet Quy hoach tong the TPHCM",
+  "sohieu": "88/2025/NQ-HĐND",
+  "ten_ngan": "Dinh muc chi phi don gia lap tham dinh phe duyet Quy hoach tong the TPHCM",
+  "ten_dep": "Định mức chi phí, đơn giá lập, thẩm định, phê duyệt Quy hoạch tổng thể TP.HCM"
  },
  {
   "ten": "DP HCM - NQ 90-2025-NQ-HDND Phan cap nguon thu tu quy dat khu vuc TOD duong sat dia phuong",
@@ -380,7 +467,10 @@
   "diaban": "TP. Hồ Chí Minh",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 90-2025-NQ-HDND Phan cap nguon thu tu quy dat khu vuc TOD duong sat dia phuong"
+  "hien": "NQ 90-2025-NQ-HDND Phan cap nguon thu tu quy dat khu vuc TOD duong sat dia phuong",
+  "sohieu": "90/2025/NQ-HĐND",
+  "ten_ngan": "Phan cap nguon thu tu quy dat khu vuc TOD duong sat dia phuong",
+  "ten_dep": "Phân cấp nguồn thu từ quỹ đất khu vực TOD đường sắt địa phương"
  },
  {
   "ten": "DP HCM - QD 38-2026-QD-UBND Quan ly bao tri ket cau ha tang duong sat dia phuong",
@@ -393,7 +483,10 @@
   "diaban": "TP. Hồ Chí Minh",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "QD 38-2026-QD-UBND Quan ly bao tri ket cau ha tang duong sat dia phuong"
+  "hien": "QD 38-2026-QD-UBND Quan ly bao tri ket cau ha tang duong sat dia phuong",
+  "sohieu": "38/2026/QĐ-UBND",
+  "ten_ngan": "Quan ly bao tri ket cau ha tang duong sat dia phuong",
+  "ten_dep": "Quản lý, bảo trì kết cấu hạ tầng đường sắt địa phương"
  },
  {
   "ten": "DP HN - NQ 40-2025-NQ-HDND Lua chon ap dung tieu chuan quy chuan ky thuat trong nuoc va nuoc ngoai",
@@ -406,7 +499,10 @@
   "diaban": "Hà Nội",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 40-2025-NQ-HDND Lua chon ap dung tieu chuan quy chuan ky thuat trong nuoc va nuoc ngoai"
+  "hien": "NQ 40-2025-NQ-HDND Lua chon ap dung tieu chuan quy chuan ky thuat trong nuoc va nuoc ngoai",
+  "sohieu": "40/2025/NQ-HĐND",
+  "ten_ngan": "Lua chon ap dung tieu chuan quy chuan ky thuat trong nuoc va nuoc ngoai",
+  "ten_dep": "Lựa chọn áp dụng tiêu chuẩn, quy chuẩn kỹ thuật trong nước và nước ngoài"
  },
  {
   "ten": "DP HN - NQ 62-2026-NQ-HDND Uu dai dau tu phat trien va khai thac khong gian ngam va khong gian tam thap",
@@ -419,7 +515,10 @@
   "diaban": "Hà Nội",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 62-2026-NQ-HDND Uu dai dau tu phat trien va khai thac khong gian ngam va khong gian tam thap"
+  "hien": "NQ 62-2026-NQ-HDND Uu dai dau tu phat trien va khai thac khong gian ngam va khong gian tam thap",
+  "sohieu": "62/2026/NQ-HĐND",
+  "ten_ngan": "Uu dai dau tu phat trien va khai thac khong gian ngam va khong gian tam thap",
+  "ten_dep": "Ưu đãi đầu tư phát triển và khai thác không gian ngầm, không gian tầm thấp"
  },
  {
   "ten": "DP HN - NQ 64-2026-NQ-HDND Quy hoach khong gian ngam va hoat dong quy hoach do thi kien truc",
@@ -432,7 +531,10 @@
   "diaban": "Hà Nội",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 64-2026-NQ-HDND Quy hoach khong gian ngam va hoat dong quy hoach do thi kien truc"
+  "hien": "NQ 64-2026-NQ-HDND Quy hoach khong gian ngam va hoat dong quy hoach do thi kien truc",
+  "sohieu": "64/2026/NQ-HĐND",
+  "ten_ngan": "Quy hoach khong gian ngam va hoat dong quy hoach do thi kien truc",
+  "ten_dep": "Quy hoạch không gian ngầm và hoạt động quy hoạch đô thị, kiến trúc"
  },
  {
   "ten": "DP HN - NQ 65-2026-NQ-HDND Cac khoan thu tu khai thac khong gian ngam va khong gian tam thap",
@@ -445,7 +547,10 @@
   "diaban": "Hà Nội",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 65-2026-NQ-HDND Cac khoan thu tu khai thac khong gian ngam va khong gian tam thap"
+  "hien": "NQ 65-2026-NQ-HDND Cac khoan thu tu khai thac khong gian ngam va khong gian tam thap",
+  "sohieu": "65/2026/NQ-HĐND",
+  "ten_ngan": "Cac khoan thu tu khai thac khong gian ngam va khong gian tam thap",
+  "ten_dep": "Các khoản thu từ khai thác không gian ngầm và không gian tầm thấp"
  },
  {
   "ten": "DP HN - NQ 66-2026-NQ-HDND Cai tao chinh trang tai thiet do thi va phat trien do thi tai khu vuc TOD",
@@ -458,7 +563,10 @@
   "diaban": "Hà Nội",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 66-2026-NQ-HDND Cai tao chinh trang tai thiet do thi va phat trien do thi tai khu vuc TOD"
+  "hien": "NQ 66-2026-NQ-HDND Cai tao chinh trang tai thiet do thi va phat trien do thi tai khu vuc TOD",
+  "sohieu": "66/2026/NQ-HĐND",
+  "ten_ngan": "Cai tao chinh trang tai thiet do thi va phat trien do thi tai khu vuc TOD",
+  "ten_dep": "Cải tạo, chỉnh trang, tái thiết đô thị và phát triển đô thị tại khu vực TOD"
  },
  {
   "ten": "DP HN - NQ 67-2026-NQ-HDND Cac khoan thu tu khai thac gia tri tang them trong khu vuc TOD",
@@ -471,7 +579,10 @@
   "diaban": "Hà Nội",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 67-2026-NQ-HDND Cac khoan thu tu khai thac gia tri tang them trong khu vuc TOD"
+  "hien": "NQ 67-2026-NQ-HDND Cac khoan thu tu khai thac gia tri tang them trong khu vuc TOD",
+  "sohieu": "67/2026/NQ-HĐND",
+  "ten_ngan": "Cac khoan thu tu khai thac gia tri tang them trong khu vuc TOD",
+  "ten_dep": "Các khoản thu từ khai thác giá trị tăng thêm trong khu vực TOD"
  },
  {
   "ten": "DP HN - NQ 70-2026-NQ-HDND Chinh sach dau tu quan ly khai thac ket cau ha tang duong bo va duong sat dia phuong",
@@ -484,7 +595,10 @@
   "diaban": "Hà Nội",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 70-2026-NQ-HDND Chinh sach dau tu quan ly khai thac ket cau ha tang duong bo va duong sat dia phuong"
+  "hien": "NQ 70-2026-NQ-HDND Chinh sach dau tu quan ly khai thac ket cau ha tang duong bo va duong sat dia phuong",
+  "sohieu": "70/2026/NQ-HĐND",
+  "ten_ngan": "Chinh sach dau tu quan ly khai thac ket cau ha tang duong bo va duong sat dia phuong",
+  "ten_dep": "Chính sách đầu tư, quản lý, khai thác kết cấu hạ tầng đường bộ và đường sắt địa phương"
  },
  {
   "ten": "DP HN - NQ 71-2025-NQ-HDND Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong",
@@ -497,7 +611,10 @@
   "diaban": "Hà Nội",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 71-2025-NQ-HDND Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong"
+  "hien": "NQ 71-2025-NQ-HDND Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong",
+  "sohieu": "71/2025/NQ-HĐND",
+  "ten_ngan": "Quy hoach khu vuc TOD doi voi duong sat quoc gia va duong sat dia phuong",
+  "ten_dep": "Quy hoạch khu vực TOD đối với đường sắt quốc gia và đường sắt địa phương"
  },
  {
   "ten": "DP HN - NQ 71-2026-NQ-HDND Chinh sach phat trien van tai va han che phuong tien ca nhan",
@@ -510,7 +627,10 @@
   "diaban": "Hà Nội",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "NQ 71-2026-NQ-HDND Chinh sach phat trien van tai va han che phuong tien ca nhan"
+  "hien": "NQ 71-2026-NQ-HDND Chinh sach phat trien van tai va han che phuong tien ca nhan",
+  "sohieu": "71/2026/NQ-HĐND",
+  "ten_ngan": "Chinh sach phat trien van tai va han che phuong tien ca nhan",
+  "ten_dep": "Chính sách phát triển vận tải công cộng và hạn chế phương tiện cá nhân"
  },
  {
   "ten": "DP HN - X NQ 31-2025-NQ-HDND (HET HIEU LUC) Trinh tu thu tuc quyet dinh chu truong dau tu",
@@ -523,7 +643,10 @@
   "diaban": "Hà Nội",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 31-2025-NQ-HDND (HET HIEU LUC) Trinh tu thu tuc quyet dinh chu truong dau tu"
+  "hien": "NQ 31-2025-NQ-HDND (HET HIEU LUC) Trinh tu thu tuc quyet dinh chu truong dau tu",
+  "sohieu": "31/2025/NQ-HĐND",
+  "ten_ngan": "(HET HIEU LUC) Trinh tu thu tuc quyet dinh chu truong dau tu",
+  "ten_dep": "Trình tự, thủ tục quyết định chủ trương đầu tư — ĐÃ HẾT HIỆU LỰC"
  },
  {
   "ten": "NQ 318 NQ-CP Ke hoach trien khai Nghi quyet 188-2025-QH15 ve duong sat do thi",
@@ -535,7 +658,10 @@
   "diaban": "Toàn quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 318 NQ-CP Ke hoach trien khai Nghi quyet 188-2025-QH15 ve duong sat do thi"
+  "hien": "NQ 318 NQ-CP Ke hoach trien khai Nghi quyet 188-2025-QH15 ve duong sat do thi",
+  "sohieu": "318/NQ-CP",
+  "ten_ngan": "Ke hoach trien khai Nghi quyet 188-2025-QH15 ve duong sat do thi",
+  "ten_dep": "Kế hoạch của Chính phủ triển khai Nghị quyết 188/2025/QH15 về đường sắt đô thị"
  },
  {
   "ten": "PQ NQ 01-2025-NQ-CP Dau tu mo rong Cang hang khong quoc te Phu Quoc",
@@ -548,7 +674,10 @@
   "diaban": "Phú Quốc",
   "nam": "2025",
   "hopnhat": false,
-  "hien": "NQ 01-2025-NQ-CP Dau tu mo rong Cang hang khong quoc te Phu Quoc"
+  "hien": "NQ 01-2025-NQ-CP Dau tu mo rong Cang hang khong quoc te Phu Quoc",
+  "sohieu": "01/2025/NQ-CP",
+  "ten_ngan": "Dau tu mo rong Cang hang khong quoc te Phu Quoc",
+  "ten_dep": "Đầu tư mở rộng Cảng hàng không quốc tế Phú Quốc"
  },
  {
   "ten": "PQ QD 1500 QD-TTg Thanh lap Ban Quan ly Khu kinh te Phu Quoc, tinh An Giang",
@@ -561,7 +690,10 @@
   "diaban": "Phú Quốc",
   "nam": "",
   "hopnhat": false,
-  "hien": "QD 1500 QD-TTg Thanh lap Ban Quan ly Khu kinh te Phu Quoc, tinh An Giang"
+  "hien": "QD 1500 QD-TTg Thanh lap Ban Quan ly Khu kinh te Phu Quoc, tinh An Giang",
+  "sohieu": "1500/QĐ-TTg",
+  "ten_ngan": "Thanh lap Ban Quan ly Khu kinh te Phu Quoc, tinh An Giang",
+  "ten_dep": "Thành lập Ban Quản lý Khu kinh tế Phú Quốc, tỉnh An Giang"
  },
  {
   "ten": "PQ QD 948 QD-TTg Trien khai nhanh cac du an phuc vu Hoi nghi APEC 2027 tai Phu Quoc",
@@ -574,7 +706,10 @@
   "diaban": "Phú Quốc",
   "nam": "2027",
   "hopnhat": false,
-  "hien": "QD 948 QD-TTg Trien khai nhanh cac du an phuc vu Hoi nghi APEC 2027 tai Phu Quoc"
+  "hien": "QD 948 QD-TTg Trien khai nhanh cac du an phuc vu Hoi nghi APEC 2027 tai Phu Quoc",
+  "sohieu": "948/QĐ-TTg",
+  "ten_ngan": "Trien khai nhanh cac du an phuc vu Hoi nghi APEC 2027 tai Phu Quoc",
+  "ten_dep": "Triển khai nhanh các dự án phục vụ Hội nghị APEC 2027 tại Phú Quốc"
  },
  {
   "ten": "QD 109 QD-TCTDSDT Thay doi thanh vien To cong tac duong sat do thi HN va TPHCM",
@@ -586,7 +721,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": false,
-  "hien": "QD 109 QD-TCTDSDT Thay doi thanh vien To cong tac duong sat do thi HN va TPHCM"
+  "hien": "QD 109 QD-TCTDSDT Thay doi thanh vien To cong tac duong sat do thi HN va TPHCM",
+  "sohieu": "109/QĐ-TCTDSDT",
+  "ten_ngan": "Thay doi thanh vien To cong tac duong sat do thi HN va TPHCM",
+  "ten_dep": "Thay đổi thành viên Tổ công tác đường sắt đô thị Hà Nội và TP. Hồ Chí Minh"
  },
  {
   "ten": "QD 2230 QD-TTg De an dao tao, phat trien nguon nhan luc duong sat den 2035",
@@ -599,7 +737,10 @@
   "diaban": "Toàn quốc",
   "nam": "2035",
   "hopnhat": false,
-  "hien": "QD 2230 QD-TTg De an dao tao, phat trien nguon nhan luc duong sat den 2035"
+  "hien": "QD 2230 QD-TTg De an dao tao, phat trien nguon nhan luc duong sat den 2035",
+  "sohieu": "2230/QĐ-TTg",
+  "ten_ngan": "De an dao tao, phat trien nguon nhan luc duong sat den 2035",
+  "ten_dep": "Đề án đào tạo, phát triển nguồn nhân lực đường sắt đến năm 2035"
  },
  {
   "ten": "QD 498 QD-TTg Co cau lai Tong cong ty Duong sat Viet Nam 2026-2030",
@@ -612,7 +753,10 @@
   "diaban": "Toàn quốc",
   "nam": "2026",
   "hopnhat": false,
-  "hien": "QD 498 QD-TTg Co cau lai Tong cong ty Duong sat Viet Nam 2026-2030"
+  "hien": "QD 498 QD-TTg Co cau lai Tong cong ty Duong sat Viet Nam 2026-2030",
+  "sohieu": "498/QĐ-TTg",
+  "ten_ngan": "Co cau lai Tong cong ty Duong sat Viet Nam 2026-2030",
+  "ten_dep": "Cơ cấu lại Tổng công ty Đường sắt Việt Nam giai đoạn 2026–2030"
  },
  {
   "ten": "QD 762 QD-TTg Ke hoach trien khai thi hanh Luat Thu do",
@@ -624,7 +768,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": false,
-  "hien": "QD 762 QD-TTg Ke hoach trien khai thi hanh Luat Thu do"
+  "hien": "QD 762 QD-TTg Ke hoach trien khai thi hanh Luat Thu do",
+  "sohieu": "762/QĐ-TTg",
+  "ten_ngan": "Ke hoach trien khai thi hanh Luat Thu do",
+  "ten_dep": "Kế hoạch triển khai thi hành Luật Thủ đô"
  },
  {
   "ten": "TB 340 TB-VPCP Ket luan Phien hop thu 2 To cong tac duong sat do thi HN va TPHCM",
@@ -636,7 +783,10 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": false,
-  "hien": "TB 340 TB-VPCP Ket luan Phien hop thu 2 To cong tac duong sat do thi HN va TPHCM"
+  "hien": "TB 340 TB-VPCP Ket luan Phien hop thu 2 To cong tac duong sat do thi HN va TPHCM",
+  "sohieu": "340/TB-VPCP",
+  "ten_ngan": "Ket luan Phien hop thu 2 To cong tac duong sat do thi HN va TPHCM",
+  "ten_dep": "Kết luận Phiên họp thứ 2 Tổ công tác đường sắt đô thị Hà Nội và TP. Hồ Chí Minh"
  },
  {
   "ten": "TB 443 TB-VPCP Ket luan Phien hop thu 3 To cong tac duong sat do thi HN va TPHCM",
@@ -648,6 +798,9 @@
   "diaban": "Toàn quốc",
   "nam": "",
   "hopnhat": false,
-  "hien": "TB 443 TB-VPCP Ket luan Phien hop thu 3 To cong tac duong sat do thi HN va TPHCM"
+  "hien": "TB 443 TB-VPCP Ket luan Phien hop thu 3 To cong tac duong sat do thi HN va TPHCM",
+  "sohieu": "443/TB-VPCP",
+  "ten_ngan": "Ket luan Phien hop thu 3 To cong tac duong sat do thi HN va TPHCM",
+  "ten_dep": "Kết luận Phiên họp thứ 3 Tổ công tác đường sắt đô thị Hà Nội và TP. Hồ Chí Minh"
  }
 ]
