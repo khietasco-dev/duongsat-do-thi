@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quy trình thực hiện dự án đường sắt đô thị — chín giai đoạn</title>
+<meta name="description" content="Chín giai đoạn từ quy hoạch tuyến đến quyết toán vốn đầu tư, kèm bốn ngăn pháp lý, thẩm quyền quyết định và vướng mắc hay gặp.">
+<link rel="canonical" href="https://duongsatdothi.vn/quy-trinh/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#184088">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Đường sắt đô thị">
+<meta property="og:title" content="Quy trình thực hiện dự án đường sắt đô thị — chín giai đoạn">
+<meta property="og:description" content="Chín giai đoạn từ quy hoạch tuyến đến quyết toán vốn đầu tư, kèm bốn ngăn pháp lý, thẩm quyền quyết định và vướng mắc hay gặp.">
+<meta property="og:url" content="https://duongsatdothi.vn/quy-trinh/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quy trình thực hiện dự án đường sắt đô thị — chín giai đoạn">
+<meta name="twitter:description" content="Chín giai đoạn từ quy hoạch tuyến đến quyết toán vốn đầu tư, kèm bốn ngăn pháp lý, thẩm quyền quyết định và vướng mắc hay gặp.">
+<style>
+:root{
+  --nen:#FFFFFF; --the:#FFFFFF; --nen2:#F4F7FC; --nen3:#EEF2F8;
+  --muc:#184088;            /* navy ASCO - mau thuong hieu */
+  --muc2:#12305F;           /* navy sau */
+  --muc3:#4A6EB0;           /* navy sang - vien, hover */
+  --nhan:#B8862A;           /* vang dong ASCO */
+  --nhan2:#8E6817;
+  --ngoc:#0F6B54;           /* XANH NGOC - mau ho tro moi */
+  --ngoc-nen:#E4F2ED;
+  --do:#A82420; --do-nen:#FBEAE8;
+  --hoacuc:#B8862A; --hoacuc-nen:#FBF3E2;
+  --chu:#0E1729; --chu2:#5D687C;
+  --vien:#E0E6F0; --vien-nhat:#EEF2F8;
+  --bong:0 1px 2px rgba(14,23,41,.05),0 8px 26px rgba(14,23,41,.07);
+  --r:13px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --nen:#0D2044; --the:#13294F; --nen2:#0A1B3B; --nen3:#102A56;
+  --muc:#8FB2EE; --muc2:#13294F; --muc3:#5478BE;
+  --nhan:#E0B458; --nhan2:#F2CE83;
+  --ngoc:#4FC0A2; --ngoc-nen:#0E3A30;
+  --do:#F0857E; --do-nen:#3A1A18;
+  --hoacuc:#E0B458; --hoacuc-nen:#2E2415;
+  --chu:#EEF3FB; --chu2:#8DA0C0;
+  --vien:#22406E; --vien-nhat:#1A3260;
+  --bong:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.45);
+}}
+:root[data-theme="dark"]{
+  --nen:#0D2044; --the:#13294F; --nen2:#0A1B3B; --nen3:#102A56;
+  --muc:#8FB2EE; --muc2:#13294F; --muc3:#5478BE;
+  --nhan:#E0B458; --nhan2:#F2CE83;
+  --ngoc:#4FC0A2; --ngoc-nen:#0E3A30;
+  --do:#F0857E; --do-nen:#3A1A18;
+  --hoacuc:#E0B458; --hoacuc-nen:#2E2415;
+  --chu:#EEF3FB; --chu2:#8DA0C0;
+  --vien:#22406E; --vien-nhat:#1A3260;
+  --bong:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--nen);color:var(--chu);
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  font-size:16.6px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.hep{max-width:900px}
+h1,h2,h3{font-family:'Times New Roman',Times,'Nimbus Roman',serif;letter-spacing:-.021em;line-height:1.22;margin:0}
+h1{font-size:clamp(28px,4.1vw,45px)}
+h2{font-size:clamp(22px,2.9vw,31px);color:var(--muc)}
+h3{font-size:18.5px;color:var(--muc)}
+p{margin:13px 0}
+a{color:var(--muc)}
+.small{font-size:14.3px;color:var(--chu2)}
+
+/* ---------- THANH DAU (dung chung 2 tang) ---------- */
+header.top{position:sticky;top:0;z-index:60;background:var(--nen);border-bottom:1px solid var(--vien)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+.hieu{display:flex;align-items:center;gap:10px;text-decoration:none}
+.hieu svg{width:34px;height:34px;flex:0 0 auto}
+.hieu b{font-family:'Times New Roman',Times,'Nimbus Roman',serif;font-size:17.6px;color:var(--muc);display:block;line-height:1.2}
+.hieu i{font-style:normal;font-size:10.8px;font-weight:700;color:var(--chu2);letter-spacing:.1em;text-transform:uppercase}
+.top-nav{display:flex;align-items:center;gap:16px}
+.top-nav a{font-size:14.6px;font-weight:600;color:var(--chu);text-decoration:none;white-space:nowrap}
+.top-nav a:hover,.top-nav a[aria-current]{color:var(--muc);text-decoration:underline;text-underline-offset:5px}
+.nut-lh{background:var(--muc);color:#fff!important;padding:8px 16px;border-radius:999px;font-weight:700}
+:root[data-theme="dark"] .nut-lh{color:#0D2044!important}
+.menu-nut{display:none;background:none;border:1px solid var(--vien);border-radius:9px;padding:7px 11px;
+  font-size:15px;font-family:inherit;color:var(--chu);cursor:pointer}
+@media(max-width:1000px){
+  .top-nav{position:absolute;top:100%;left:0;right:0;background:var(--nen);border-bottom:1px solid var(--vien);
+    flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 16px;display:none}
+  .top-nav[data-mo]{display:flex}
+  .top-nav a{padding:10px 0;border-bottom:1px solid var(--vien)}
+  .top-nav .nut-lh{margin-top:10px;text-align:center;border-bottom:0}
+  .menu-nut{display:block}
+  header.top{position:relative}
+}
+
+/* ================= TANG NGOAI — trang dich ================= */
+.ngoai .hero{position:relative;overflow:hidden;color:#EDF2FA;padding:clamp(52px,7vw,104px) 0;
+  background:radial-gradient(820px 440px at 84% -20%,rgba(184,134,42,.22),transparent 60%),
+             linear-gradient(158deg,#1E4C9E 0%,#184088 48%,#0C2148 100%)}
+.ngoai .hero .wrap{position:relative;z-index:2}
+.ngoai .hero h1{color:#fff;max-width:19ch}
+.ngoai .hero .lede{color:rgba(237,242,250,.9);max-width:62ch;font-size:clamp(16.6px,1.9vw,19px);margin-top:17px}
+.nhan-pill{display:inline-block;font-size:12.2px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--nhan);border:1px solid rgba(184,134,42,.48);padding:6px 14px;border-radius:999px;margin-bottom:19px}
+.hero-nut{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.n1,.n2{padding:13px 26px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;display:inline-block}
+.n1{background:var(--nhan);color:#231B00}
+.n1:hover{background:#E4B451}
+.n2{border:1.5px solid rgba(237,242,250,.4);color:#EDF2FA}
+.n2:hover{border-color:var(--nhan);color:var(--nhan)}
+.hero-so{display:flex;flex-wrap:wrap;gap:30px;margin-top:38px;padding-top:24px;border-top:1px solid rgba(237,242,250,.16)}
+.hero-so div b{display:block;font-family:'Times New Roman',Times,'Nimbus Roman',serif;font-size:26px;color:var(--nhan);line-height:1.2}
+.hero-so div span{font-size:13.4px;color:rgba(237,242,250,.72)}
+/* duong ray trang tri */
+.ray{position:absolute;left:0;right:0;bottom:0;height:76px;opacity:.5;z-index:1}
+
+/* ================= TANG TRONG — trang cong cu ================= */
+.trong .banner{background:var(--muc);color:#EDF2FA;padding:clamp(26px,3.4vw,44px) 0}
+:root[data-theme="dark"] .trong .banner{background:var(--muc2);border-bottom:1px solid var(--vien)}
+.trong .banner h1{color:#fff;font-size:clamp(25px,3.4vw,37px)}
+.trong .banner p{color:rgba(237,242,250,.86);max-width:66ch;margin:11px 0 0;font-size:16.2px}
+.duong{font-size:13.4px;color:rgba(237,242,250,.66);margin-bottom:11px}
+.duong a{color:rgba(237,242,250,.86)}
+.trong .than{padding:clamp(30px,3.8vw,52px) 0}
+
+section{padding:clamp(40px,5vw,70px) 0;border-bottom:1px solid var(--vien)}
+section.nen2{background:var(--nen2)}
+.dau{margin-bottom:28px;max-width:74ch}
+.dau .mac{font-size:12.2px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--nhan2);margin-bottom:8px}
+.luoi{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
+.the{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:23px;box-shadow:var(--bong)}
+.the h3{margin-bottom:7px}
+.the p{margin:0;font-size:15.2px;color:var(--chu2)}
+.the.lienket{text-decoration:none;color:inherit;display:block;transition:border-color .15s}
+.the.lienket:hover{border-color:var(--muc3)}
+.the .di{margin-top:13px;font-size:14.4px;font-weight:700;color:var(--nhan2)}
+.ico{width:38px;height:38px;border-radius:10px;background:var(--muc);display:grid;place-items:center;margin-bottom:13px}
+.ico svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:root[data-theme="dark"] .ico svg{stroke:#0D2044}
+
+/* ---------- BANG ---------- */
+.bang-boc{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;border:1px solid var(--vien);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;min-width:620px;background:var(--the)}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--vien);font-size:14.9px;vertical-align:top}
+th{background:var(--nen2);font-weight:800;color:var(--muc);font-size:13.4px;position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--nen2)}
+.mã{font-family:Consolas,"Courier New",monospace;font-size:13.6px;color:var(--muc);font-weight:700;white-space:nowrap}
+
+/* ---------- CONG CU LOC ---------- */
+.loc{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:18px;margin-bottom:18px;box-shadow:var(--bong)}
+.loc-hang{display:flex;flex-wrap:wrap;gap:11px;align-items:flex-end}
+.loc-o{flex:1 1 190px;min-width:0}
+.loc-o label{display:block;font-size:12.6px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--chu2);margin-bottom:5px}
+.loc-o input,.loc-o select{width:100%;padding:9px 12px;border:1px solid var(--vien);border-radius:9px;
+  font-size:15px;font-family:inherit;background:var(--nen);color:var(--chu)}
+.loc-dem{margin-top:11px;font-size:14.2px;color:var(--chu2)}
+.loc-dem b{color:var(--muc)}
+.the-loc{display:inline-block;font-size:12.4px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.tl-luat{background:var(--ngoc-nen);color:var(--ngoc)}
+.tl-nd{background:var(--hoacuc-nen);color:var(--nhan2)}
+.tl-tt{background:var(--nen3);color:var(--muc)}
+.tl-khac{background:var(--vien-nhat);color:var(--chu2)}
+.dinh{font-size:12.2px;color:var(--chu2);white-space:nowrap}
+
+/* ---------- MOC / QUY TRINH ---------- */
+.gd{counter-reset:g;display:grid;gap:14px}
+.gd .b{background:var(--the);border:1px solid var(--vien);border-left:3px solid var(--nhan);border-radius:var(--r);
+  padding:21px 23px;box-shadow:var(--bong)}
+.gd .b h3::before{counter-increment:g;content:"Giai đoạn " counter(g) " · ";color:var(--nhan2);font-size:14px;
+  font-family:"Segoe UI",sans-serif;font-weight:800;letter-spacing:.04em}
+.gd .b .ct{margin-top:11px;display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(216px,1fr))}
+.gd .b .ct div{font-size:14.4px}
+.gd .b .ct b{display:block;font-size:11.8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--chu2);margin-bottom:2px}
+
+/* ---------- HOI DAP ---------- */
+details{background:var(--the);border:1px solid var(--vien);border-radius:11px;padding:15px 18px;margin-bottom:10px}
+details[open]{border-color:var(--muc3)}
+summary{cursor:pointer;font-weight:700;font-size:15.8px;color:var(--muc);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;font-size:20px;line-height:1;color:var(--nhan2)}
+details[open] summary::after{content:"–"}
+details p{font-size:15px;color:var(--chu2)}
+
+/* ---------- BIEU MAU ---------- */
+.mau{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:clamp(20px,3vw,32px);box-shadow:var(--bong)}
+.mau-luoi{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+.truong label{display:block;font-size:13.4px;font-weight:700;margin-bottom:5px}
+.truong input,.truong select,.truong textarea{width:100%;padding:10px 12px;border:1px solid var(--vien);
+  border-radius:9px;font-size:15.2px;font-family:inherit;background:var(--nen);color:var(--chu)}
+.truong textarea{min-height:112px;resize:vertical}
+.rong{grid-column:1/-1}
+.nut-gui{margin-top:17px;padding:13px 30px;border:0;border-radius:10px;cursor:pointer;background:var(--muc);
+  color:#fff;font-size:16px;font-weight:700;font-family:inherit}
+:root[data-theme="dark"] .nut-gui{color:#0D2044}
+.nut-gui:hover{background:var(--muc3)}
+
+/* ---------- CHAN TRANG ---------- */
+footer{background:var(--nen2);padding:34px 0 24px;font-size:14.2px;color:var(--chu2);border-top:1px solid var(--vien)}
+.ft-luoi{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+footer b{color:var(--chu);display:block;margin-bottom:6px;font-size:14.4px}
+footer a{color:var(--chu2);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:4px}
+.ft-cuoi{margin-top:24px;padding-top:16px;border-top:1px solid var(--vien);font-size:13.2px}
+
+@media print{
+  .top-nav,.menu-nut,.loc,.mau,.hero-nut{display:none!important}
+  body{background:#fff;color:#000;font-size:11.5pt}
+  section,.gd .b{page-break-inside:avoid;border:0}
+  .bang-boc{overflow:visible;border:0}
+}
+
+/* ---------- lop bo sung cho trang giao dien cap 2 ---------- */
+.huong-dan{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));margin:16px 0 24px}
+.huong-dan .b{background:var(--nen2);border:1px solid var(--vien);border-radius:11px;padding:16px 18px}
+.huong-dan .b b{display:block;color:var(--muc);font-size:15.2px;margin-bottom:5px}
+.huong-dan .b span{font-size:14.4px;color:var(--chu2)}
+
+.thongke{display:flex;flex-wrap:wrap;gap:11px;margin:14px 0 22px}
+.thongke div{background:var(--the);border:1px solid var(--vien);border-radius:10px;padding:12px 17px;min-width:118px}
+.thongke b{display:block;font-family:'Times New Roman',Times,serif;font-size:25px;color:var(--muc);line-height:1.15}
+.thongke span{font-size:13.2px;color:var(--chu2)}
+
+.buoc{counter-reset:s;display:grid;gap:12px;margin:16px 0}
+.buoc .b{display:flex;gap:15px;align-items:flex-start;background:var(--the);border:1px solid var(--vien);
+  border-radius:11px;padding:17px 19px}
+.buoc .b::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:29px;height:29px;border-radius:50%;
+  background:var(--muc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14.6px}
+:root[data-theme="dark"] .buoc .b::before{color:#0D2044}
+.buoc .b b{display:block;color:var(--muc);font-size:16px;margin-bottom:3px}
+.buoc .b span{font-size:14.9px;color:var(--chu2)}
+
+.cot2{display:grid;gap:22px;grid-template-columns:1.35fr 1fr;align-items:start}
+@media(max-width:860px){.cot2{grid-template-columns:1fr}}
+.hop-ben{background:var(--nen2);border:1px solid var(--vien);border-radius:var(--r);padding:20px 22px;
+  position:sticky;top:78px}
+@media(max-width:860px){.hop-ben{position:static}}
+.hop-ben h3{font-size:16.5px;margin-bottom:9px}
+.hop-ben ul{margin:0;padding-left:18px;font-size:14.6px;color:var(--chu2)}
+.hop-ben li{margin-bottom:7px}
+
+.kenh{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));margin:18px 0}
+.kenh .b{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:21px;box-shadow:var(--bong)}
+.kenh .b .nh{display:inline-block;font-size:11.6px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.nh-nhanh{background:var(--ngoc-nen);color:var(--ngoc)}
+.nh-sau{background:var(--hoacuc-nen);color:var(--nhan2)}
+.nh-cham{background:var(--nen3);color:var(--muc)}
+.kenh .b h3{margin-bottom:6px}
+.kenh .b p{margin:0;font-size:14.9px;color:var(--chu2)}
+.kenh .b .dm{margin-top:11px;font-size:14px;color:var(--chu2);border-top:1px solid var(--vien);padding-top:9px}
+.kenh .b .dm b{color:var(--muc)}
+.so-lon{font-family:'Times New Roman',Times,serif;font-size:27px;font-weight:700;color:var(--muc);
+  text-decoration:none;letter-spacing:.01em;display:inline-block}
+.so-lon:hover{color:var(--nhan2)}
+
+/* ---------- bo chuyen ngon ngu ---------- */
+.top-in{position:relative}
+.ngonngu{display:flex;align-items:center;gap:2px;border:1px solid var(--vien);border-radius:999px;
+  padding:2px;background:var(--nen2);flex:0 0 auto}
+.ngonngu a{font-size:12.6px;font-weight:800;letter-spacing:.03em;padding:5px 11px;border-radius:999px;
+  color:var(--chu2);text-decoration:none;white-space:nowrap;line-height:1}
+.ngonngu a:hover{color:var(--muc);text-decoration:none}
+.ngonngu a[aria-current]{background:var(--muc);color:#fff}
+:root[data-theme="dark"] .ngonngu a[aria-current]{color:#0D2044}
+/* logo day sang trai, bo ngon ngu bam ngoai cung ben PHAI */
+.top-in .hieu{margin-right:auto}
+@media(max-width:1000px){
+  .ngonngu{order:1;margin-right:8px}
+  .menu-nut{order:2}
+}
+@media(max-width:420px){.ngonngu a{padding:5px 8px;font-size:11.8px}
+  .hieu i{display:none}}
+
+/* ---------- bang so sanh hai cach lam ---------- */
+.ss td:nth-child(2){color:var(--chu2)}
+.ss td:nth-child(3){color:var(--chu);font-weight:600}
+.ss thead th:nth-child(3){color:var(--ngoc)}
+
+/* ---------- phan hanh ---------- */
+.ph{display:grid;gap:12px;margin:16px 0}
+.ph .b{display:grid;grid-template-columns:74px 1fr;gap:16px;background:var(--the);border:1px solid var(--vien);
+  border-radius:var(--r);padding:18px 20px;box-shadow:var(--bong)}
+@media(max-width:620px){.ph .b{grid-template-columns:1fr;gap:8px}}
+.ph .ma{font-family:Consolas,"Courier New",monospace;font-size:19px;font-weight:700;color:var(--nhan2);
+  line-height:1.2;padding-top:2px}
+.ph h3{font-size:17px;margin-bottom:6px}
+.ph p{margin:0;font-size:14.9px;color:var(--chu2)}
+.ph .luuy{margin-top:9px;padding-top:8px;border-top:1px solid var(--vien);font-size:14.2px;color:var(--do)}
+
+/* ---------- can doi ---------- */
+.cd{background:var(--nen2);border:1px solid var(--vien);border-left:3px solid var(--ngoc);
+  border-radius:var(--r);padding:18px 20px;margin-bottom:13px}
+.cd b{display:block;color:var(--muc);font-size:16px;margin-bottom:8px}
+.cd .ct{font-family:Consolas,"Courier New",monospace;font-size:14.4px;background:var(--the);
+  border:1px solid var(--vien);border-radius:8px;padding:11px 13px;color:var(--chu);overflow-x:auto}
+.cd .gc{margin-top:9px;font-size:14.3px;color:var(--chu2)}
+
+/* ---------- rui ro ---------- */
+.rr-nhom{margin-bottom:26px}
+.rr-nhom>h3{font-size:19px;margin-bottom:11px;padding-bottom:7px;border-bottom:2px solid var(--vien)}
+.rr{display:grid;gap:11px}
+.rr .b{background:var(--the);border:1px solid var(--vien);border-radius:11px;padding:16px 18px}
+.rr .b .dau{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.rr .b h4{margin:0;font-family:'Times New Roman',Times,serif;font-size:16.6px;color:var(--muc);line-height:1.3}
+.rr .b .muc{flex:0 0 auto;font-size:11.4px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px}
+.m-cao{background:var(--do-nen);color:var(--do)}
+.m-trung{background:var(--hoacuc-nen);color:var(--nhan2)}
+.m-thap{background:var(--nen3);color:var(--chu2)}
+.rr .b .mo{margin:9px 0 0;font-size:14.7px;color:var(--chu2)}
+.rr .b .tt{margin:9px 0 0;padding-top:8px;border-top:1px solid var(--vien);font-size:14.5px;color:var(--chu)}
+.rr .b .tt b{color:var(--ngoc)}
+
+/* ---------- trang ngoai ngu ---------- */
+.nn-bao{background:var(--nen2);border:1px solid var(--vien);border-left:3px solid var(--nhan);
+  border-radius:var(--r);padding:18px 20px;margin:22px 0}
+</style>
+</head>
+<body class="trong">
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="hieu" href="../index.html"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#184088"/><rect x="10" y="7" width="14" height="15" rx="3.4" fill="none" stroke="#B8862A" stroke-width="1.7"/><path d="M10 16h14" stroke="#B8862A" stroke-width="1.7"/><circle cx="13.6" cy="19" r="1.2" fill="#B8862A"/><circle cx="20.4" cy="19" r="1.2" fill="#B8862A"/><path d="M12 22l-2 4M22 22l2 4" stroke="#B8862A" stroke-width="1.7" stroke-linecap="round"/><path d="M8 28h18" stroke="#B8862A" stroke-width="1.5" stroke-linecap="round"/></svg><span><b>Đường sắt đô thị</b><i>Văn bản · Quy trình · Kinh nghiệm</i></span></a>
+    <button class="menu-nut" id="menu" aria-expanded="false" aria-controls="dhuong">Mục lục</button>
+    <nav class="top-nav" id="dhuong">
+        <a href="../van-ban/index.html">Cập nhật văn bản</a>
+        <a href="../quy-trinh/index.html" aria-current="page">Quy trình dự án</a>
+        <a href="../kiem-toan/index.html">Kiểm toán quyết toán</a>
+        <a href="../thu-vien-rui-ro/index.html">Thư viện rủi ro</a>
+        <a href="../kinh-nghiem/index.html">Kinh nghiệm QLDA</a>
+        <a href="../vuong-mac/index.html">Vướng mắc</a>
+        <a href="../tu-van/index.html">Tư vấn</a>
+        <a href="../lien-he/index.html" class="nut-lh">Liên hệ</a>
+    </nav>
+    <div class="ngonngu" role="group" aria-label="Chọn ngôn ngữ"><a href="../index.html" hreflang="vi" aria-current="true">VI</a><a href="../en/index.html" hreflang="en">EN</a><a href="../zh/index.html" hreflang="zh">中文</a></div>
+  </div>
+</header>
+
+
+<div class="banner"><div class="wrap">
+  <div class="duong"><a href="../index.html">Trang chủ</a> · Quy trình dự án</div>
+  <h1>Quy trình thực hiện dự án đường sắt đô thị</h1>
+  <p>Chín giai đoạn từ quy hoạch tuyến đến quyết toán vốn đầu tư. Mỗi giai đoạn nêu thẩm quyền
+  quyết định, căn cứ pháp lý, sản phẩm đầu ra và vướng mắc hay gặp.</p>
+</div></div>
+
+<div class="than"><div class="wrap">
+
+  <div class="the" style="border-left:3px solid var(--nhan);margin-bottom:22px">
+    <h3>Trước hết: dự án của Quý vị thuộc ngăn nào?</h3>
+    <p style="margin-top:9px">Đường sắt đô thị là loại dự án hiếm hoi mà <b>ba hệ pháp luật chồng lên nhau
+    trên cùng một công trình</b> — pháp luật xây dựng, pháp luật đầu tư công hoặc PPP, và một tầng cơ chế
+    đặc thù riêng. Chọn sai ngăn thì toàn bộ trình tự phía sau sai theo.</p>
+  </div>
+
+  <div class="bang-boc">
+    <table>
+      <thead><tr><th style="width:96px">Ngăn</th><th style="width:26%">Loại dự án</th>
+      <th style="width:22%">Điều kiện</th><th>Trục pháp lý</th></tr></thead>
+      <tbody><tr><td><span class="the-loc tl-luat" style="font-size:13px">Ngăn A</span></td><td><b>Metro Hà Nội / TP.HCM, vốn đầu tư công</b></td><td>Địa bàn Hà Nội hoặc TP. Hồ Chí Minh</td><td>NQ 188/2025/QH15 · Luật Đường sắt 95/2025/QH15 · VBHN 34/VBHN-BXD</td></tr><tr><td><span class="the-loc tl-khac" style="font-size:13px">Ngăn B</span></td><td><b>Metro địa bàn khác, vốn đầu tư công</b></td><td>Ngoài Hà Nội và TP. Hồ Chí Minh</td><td>Luật Đường sắt 95/2025/QH15 · Luật Đầu tư công 58/2024/QH15 · Luật Xây dựng. Không được viện dẫn NQ 188</td></tr><tr><td><span class="the-loc tl-nd" style="font-size:13px">Ngăn C</span></td><td><b>Metro theo phương thức PPP</b></td><td>Thực hiện bằng hợp đồng PPP</td><td>Luật PPP 64/2020/QH14 (bản hợp nhất 81/VBHN-VPQH) · NĐ 243/2025 · NĐ 312/2025</td></tr><tr><td><span class="the-loc tl-tt" style="font-size:13px">Ngăn D</span></td><td><b>Khu vực TOD gắn với tuyến</b></td><td>Vùng phụ cận nhà ga, đề-pô</td><td>Luật Thủ đô 02/2026/QH16 · Nghị quyết HĐND địa phương (Hà Nội: NQ 71/2025, 66/2026, 67/2026 — TP.HCM: NQ 21/2026)</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="the" style="border-left:3px solid var(--do);margin:18px 0 26px">
+    <h3>Nguyên tắc nền, không thoả hiệp</h3>
+    <p style="margin-top:8px">Vòng đời một tuyến metro thường <b>tám đến mười lăm năm</b>, đủ dài để đi qua
+    hai ba đời nghị định. Vì vậy: <b>áp dụng văn bản có hiệu lực tại thời điểm phát sinh công việc, không áp
+    văn bản hiện hành cho khối lượng đã thực hiện nhiều năm trước.</b></p>
+    <p style="margin-top:8px;color:var(--do)"><b>Nghị quyết 188/2025/QH15 chỉ thí điểm cho Hà Nội và
+    TP. Hồ Chí Minh</b> — không áp dụng cho Phú Quốc hay bất kỳ địa bàn nào khác. Bê cơ chế TOD của
+    hai thành phố này sang địa bàn thứ ba là lỗi căn cứ, không phải lỗi diễn đạt.</p>
+  </div>
+
+  <h2 style="margin-bottom:16px">Chín giai đoạn</h2>
+  <div class="gd"><div class="b">
+  <h3>Quy hoạch và hình thành ý tưởng tuyến</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Đưa tuyến vào quy hoạch tỉnh và quy hoạch chung đô thị; xác định hướng tuyến, vị trí ga và đề-pô; lập phương án tuyến; khoanh định sơ bộ khu vực TOD.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>UBND cấp tỉnh trình, HĐND cấp tỉnh thông qua phần thuộc thẩm quyền</div>
+    <div><b>Căn cứ pháp lý</b>Luật Quy hoạch đô thị và nông thôn 47/2024/QH15 · Luật Quy hoạch 112/2025/QH15 · Hà Nội: NQ 64/2026/NQ-HĐND về quy hoạch không gian ngầm</div>
+    <div><b>Sản phẩm đầu ra</b>Quy hoạch tuyến được duyệt · phương án tuyến · ranh giới sơ bộ khu vực TOD</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Hướng tuyến vẽ trên bản đồ nhưng chưa cắm mốc thực địa nên giải phóng mặt bằng về sau bị lệch. Quy hoạch không gian ngầm chưa có nên chưa xác định được ranh giới tầng ngầm của nhà ga.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Chủ trương đầu tư</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Lập báo cáo đề xuất chủ trương đầu tư hoặc báo cáo nghiên cứu tiền khả thi; thẩm định nguồn vốn và khả năng cân đối vốn; quyết định chủ trương đầu tư.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>Quốc hội với dự án quan trọng quốc gia · Thủ tướng Chính phủ · HĐND cấp tỉnh</div>
+    <div><b>Căn cứ pháp lý</b>Luật Đầu tư công 58/2024/QH15 · NĐ 85/2025 (sửa bởi NĐ 275/2025) · NĐ 19/2026 về thẩm định dự án quan trọng quốc gia</div>
+    <div><b>Sản phẩm đầu ra</b>Nghị quyết hoặc quyết định chủ trương đầu tư · sơ bộ tổng mức đầu tư · cơ cấu nguồn vốn</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Sơ bộ tổng mức đầu tư lập trên khảo sát mỏng nên chênh lệch lớn khi lập dự án. Khi dự án được miễn bước này theo cơ chế đặc thù thì hồ sơ quyết toán thiếu một mắt xích quen thuộc — phải chuẩn bị sẵn văn bản giải trình căn cứ miễn.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Lập, thẩm định và phê duyệt dự án</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Khảo sát xây dựng; lập báo cáo nghiên cứu khả thi và thiết kế cơ sở, hoặc thiết kế kỹ thuật tổng thể theo cơ chế đặc thù; thẩm định của cơ quan chuyên môn; thẩm duyệt phòng cháy chữa cháy và đánh giá tác động môi trường.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>Người quyết định đầu tư theo phân cấp; với dự án thuộc NQ 188 thì phân cấp mạnh cho địa phương</div>
+    <div><b>Căn cứ pháp lý</b>Luật Xây dựng 135/2025/QH15 · NĐ 209/2026 và NĐ 210/2026 · NĐ 206/2026 về quản lý chi phí · VBHN 34/VBHN-BXD về thiết kế kỹ thuật tổng thể</div>
+    <div><b>Sản phẩm đầu ra</b>Quyết định phê duyệt dự án · tổng mức đầu tư được duyệt — đây là trần pháp lý của toàn bộ chi phí quyết toán về sau</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Khối lượng phần ngầm là chỗ sai số lớn nhất giữa thiết kế và địa chất thực tế. Dự án lập trước ngày 30/7/2026 chưa có quy chuẩn riêng cho metro nên phải mượn tiêu chuẩn nước ngoài.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Giải phóng mặt bằng và tái định cư</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Thông báo thu hồi đất; kiểm đếm; lập, niêm yết và phê duyệt phương án bồi thường, hỗ trợ, tái định cư; chi trả; bàn giao mặt bằng theo từng đợt. Chạy song song với giai đoạn 3.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>UBND cấp có thẩm quyền thu hồi đất và phê duyệt phương án</div>
+    <div><b>Căn cứ pháp lý</b>Luật Đất đai 31/2024/QH15 · NĐ 88/2024 · NĐ 102/2024 · NĐ 103/2024 · Hà Nội tại khu vực TOD: NQ 66/2026/NQ-HĐND</div>
+    <div><b>Sản phẩm đầu ra</b>Quyết định thu hồi đất từng thửa · phương án bồi thường được duyệt · biên bản bàn giao mặt bằng</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Mặt bằng bàn giao xôi đỗ theo từng đoạn, nhà thầu không tổ chức được dây chuyền nên phát sinh yêu cầu thanh toán chi phí chờ việc. Hồ sơ chi trả thiếu chữ ký, đến khi quyết toán mới lộ ra và người dân đã chuyển đi.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Lựa chọn nhà thầu và ký hợp đồng</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Lập và phê duyệt kế hoạch lựa chọn nhà thầu; lập hồ sơ mời thầu; đánh giá; thẩm định và phê duyệt kết quả; thương thảo và ký hợp đồng.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>Người có thẩm quyền và chủ đầu tư theo Luật Đấu thầu</div>
+    <div><b>Căn cứ pháp lý</b>Luật Đấu thầu 22/2023/QH15 (sửa bởi Luật 57/2024 và Luật 90/2025) · NĐ 214/2025 · với PPP: TT 98/2025/TT-BTC và TT 142/2025/TT-BTC</div>
+    <div><b>Sản phẩm đầu ra</b>Quyết định phê duyệt kết quả lựa chọn nhà thầu · hợp đồng kèm hình thức giá hợp đồng</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Hình thức giá ghi trong hợp đồng không khớp với cách các bên thực sự thanh toán — ký trọn gói nhưng thanh toán theo khối lượng thực tế, hoặc ngược lại. Đây là nguồn gốc của phần lớn tranh chấp ở khâu quyết toán.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Thi công, quản lý chi phí và điều chỉnh</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Thiết kế bước sau; lập, thẩm định và phê duyệt dự toán; thi công; nghiệm thu khối lượng theo giai đoạn; thanh toán; xử lý phát sinh và điều chỉnh.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>Chủ đầu tư với dự toán trong phạm vi được duyệt; người quyết định đầu tư với điều chỉnh dự án</div>
+    <div><b>Căn cứ pháp lý</b>NĐ 206/2026 quản lý chi phí · NĐ 207/2026 quản lý chất lượng · TT 36/2026, TT 37/2026, TT 38/2026 về định mức và chi phí</div>
+    <div><b>Sản phẩm đầu ra</b>Dự toán được duyệt từng hạng mục · biên bản nghiệm thu khối lượng · bản vẽ hoàn công · hồ sơ thanh toán từng đợt</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Định mức là chỗ dễ sai nhất — cùng một công tác nhưng định mức mỗi thời kỳ một khác, phải lấy đúng bản có hiệu lực tại thời điểm lập dự toán. Công tác đặc thù như khoan hầm, hệ thống tín hiệu không có trong bộ định mức chung, phải lập và trình duyệt trước khi thi công.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Nghiệm thu, chạy thử và chứng nhận an toàn hệ thống</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Nghiệm thu hoàn thành từng hạng mục; thử nghiệm tĩnh và động; chạy thử liên động toàn hệ thống; đánh giá và chứng nhận an toàn hệ thống; nghiệm thu của cơ quan nhà nước; cấp phép khai thác.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>Chủ đầu tư nghiệm thu; cơ quan chuyên môn kiểm tra công tác nghiệm thu; cơ quan quản lý chuyên ngành cấp phép khai thác</div>
+    <div><b>Căn cứ pháp lý</b>Luật Đường sắt 95/2025/QH15 (bản hợp nhất 75/VBHN-VPQH) · NĐ 16/2026 · TT 62/2026/TT-BXD quy chuẩn metro · VBHN 13/VBHN-BXD về kết nối ray với đường sắt quốc gia</div>
+    <div><b>Sản phẩm đầu ra</b>Biên bản nghiệm thu hoàn thành · hồ sơ chạy thử · chứng nhận an toàn hệ thống · quyết định đưa vào khai thác</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Đây là giai đoạn kéo dài ngoài dự kiến nhiều nhất. Chi phí điện, nhân công vận hành, bảo hiểm phát sinh khi công trình chưa bàn giao và chưa có doanh thu — thuộc chi phí đầu tư hay chi phí vận hành là câu phải trả lời trước, không phải sau.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Bàn giao, ghi nhận tài sản và đưa vào khai thác</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Bàn giao công trình và hồ sơ cho đơn vị khai thác; xác lập quyền sở hữu và giao quản lý tài sản kết cấu hạ tầng; lập hồ sơ tài sản, kê khai, tính hao mòn; xây dựng phương án giá vé và trợ giá.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>Cấp có thẩm quyền giao quản lý tài sản kết cấu hạ tầng; UBND và HĐND cấp tỉnh với giá vé, trợ giá</div>
+    <div><b>Căn cứ pháp lý</b>NĐ 15/2025 về tài sản kết cấu hạ tầng đường sắt · TT 75/2025/TT-BTC về hao mòn · TT 34/2025 và TT 33/2025/TT-BXD · Luật Quản lý, sử dụng tài sản công 15/2017/QH14</div>
+    <div><b>Sản phẩm đầu ra</b>Biên bản bàn giao theo từng đơn vị tiếp nhận · danh mục và giá trị tài sản hình thành qua đầu tư</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Bàn giao trước, xác định giá trị sau — công trình đã chạy tàu nhưng giá trị tài sản chưa chốt, đơn vị khai thác ghi sổ theo giá tạm tính, quyết toán xong phải điều chỉnh lại toàn bộ.</span></div>
+  </div>
+</div><div class="b">
+  <h3>Quyết toán vốn đầu tư dự án hoàn thành</h3>
+  <p style="margin:7px 0 0;font-size:15.3px;color:var(--chu2)">Khoá sổ và đối chiếu vốn đã thanh toán; lập báo cáo quyết toán; kiểm toán độc lập báo cáo quyết toán; thẩm tra; phê duyệt quyết toán; xử lý công nợ và vật tư thiết bị tồn đọng.</p>
+  <div class="ct">
+    <div><b>Thẩm quyền quyết định</b>Người có thẩm quyền phê duyệt quyết toán theo phân cấp; cơ quan tài chính chủ trì thẩm tra</div>
+    <div><b>Căn cứ pháp lý</b>NĐ 254/2025 (thay NĐ 99/2021) · TT 147/2025/TT-BTC · TT 73/2026/TT-BTC hệ thống mẫu biểu · kiểm toán theo VSA 1000</div>
+    <div><b>Sản phẩm đầu ra</b>Báo cáo quyết toán · báo cáo kiểm toán độc lập · báo cáo thẩm tra · quyết định phê duyệt quyết toán</div>
+    <div><b>Vướng mắc hay gặp</b><span style="color:var(--do)">Hồ sơ trải qua nhiều đời nghị định; người lập đã nghỉ việc; chứng từ giai đoạn đầu thất lạc. Chi phí không tính vào giá trị tài sản chưa được cấp thẩm quyền cho phép bằng văn bản thì bị treo.</span></div>
+  </div>
+</div></div>
+
+  <h2 style="margin:34px 0 8px">Ba chỗ cơ chế còn hở</h2>
+  <p class="small" style="margin-bottom:16px">Cơ chế đã đủ ở tầng Luật và Nghị quyết, nhưng thiếu văn bản
+  định lượng ở tầng dưới cùng. Biết trước để không đưa con số ước tính vào phương án tài chính chính thức.</p>
+  <div class="the" style="border-left:3px solid var(--do);margin-bottom:14px"><h3>Hệ số lợi thế TOD của Hà Nội — chưa ban hành</h3><p style="margin-top:8px">NQ 67/2026/NQ-HĐND Điều 8 giao Uỷ ban nhân dân trình Hội đồng nhân dân quy định Hệ số lợi thế TOD và các tỷ lệ phần trăm, sau khi quy hoạch khu vực TOD được duyệt. Nghị quyết đó chưa ban hành. Chưa có nó thì bốn khoản thu TOD chưa quy ra tiền được.</p></div><div class="the" style="border-left:3px solid var(--do);margin-bottom:14px"><h3>Phí kết nối không gian ngầm của Hà Nội — chưa ban hành</h3><p style="margin-top:8px">NQ 65/2026/NQ-HĐND Điều 3 khoản 2 giao trình mức thu phí kết nối không gian ngầm sau khi quy hoạch không gian ngầm được duyệt. Chưa có văn bản này thì chưa xác định được nghĩa vụ phí kết nối của các công trình lân cận đấu nối vào ga ngầm.</p></div><div class="the" style="border-left:3px solid var(--do);margin-bottom:14px"><h3>Nghị định quy định chi tiết Luật Thủ đô 02/2026 — chưa tìm thấy</h3><p style="margin-top:8px">QĐ 762/QĐ-TTg là kế hoạch triển khai Luật Thủ đô 39/2024, ban hành trước khi có luật mới. Chưa tìm thấy quyết định thay thế cho Luật 02/2026, và cũng chưa tìm thấy nghị định quy định chi tiết.</p></div>
+
+  <div class="the" style="border-left:3px solid var(--ngoc);margin-top:20px">
+    <h3>Một câu đáng nhớ</h3>
+    <p style="margin-top:8px">Phần lớn vướng mắc phát sinh ở <b>giai đoạn 9</b> lại có nguyên nhân nằm ở
+    <b>giai đoạn 3 và 6</b>. Quyết toán không phải việc diễn ra ở cuối dự án — nó là <b>kết quả của cách
+    hồ sơ được lập trong suốt mười năm trước đó</b>. Chi phí sửa một thiếu sót hồ sơ tăng theo hàm mũ
+    của thời gian: bổ sung một chữ ký lúc đang thi công mất nửa buổi; bổ sung chữ ký đó sau bảy năm,
+    khi người ký đã nghỉ hưu, thường là không làm được.</p>
+  </div>
+
+</div></div>
+
+
+<footer>
+  <div class="wrap">
+    <div class="ft-luoi">
+      <div><b>Đường sắt đô thị</b>Trang thông tin chuyên môn về đầu tư, quản lý và quyết toán
+        dự án đường sắt đô thị tại Việt Nam.</div>
+      <div><b>Tra cứu</b><ul>
+        <li><a href="../van-ban/index.html">Cập nhật văn bản</a></li>
+        <li><a href="../quy-trinh/index.html">Quy trình thực hiện dự án</a></li>
+        <li><a href="../kinh-nghiem/index.html">Kinh nghiệm quản lý dự án</a></li></ul></div>
+      <div><b>Trao đổi</b><ul>
+        <li><a href="../vuong-mac/index.html">Vướng mắc thường gặp</a></li>
+        <li><a href="../tu-van/index.html">Gửi yêu cầu tư vấn</a></li>
+        <li><a href="../lien-he/index.html">Liên hệ</a></li></ul></div>
+      <div><b>Lưu ý</b>Nội dung trên trang là thông tin tham khảo, không thay thế ý kiến tư vấn
+        cho một dự án cụ thể. Văn bản pháp luật thay đổi thường xuyên — luôn đối chiếu bản gốc.</div>
+    </div>
+    <div class="ft-cuoi">Bản quyền của Hãng Kiểm toán và Định giá ASCO · Nội dung biên soạn từ kho văn bản pháp luật nội bộ, cập nhật 24/08/2026.</div>
+  </div>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Quy trình thực hiện dự án đường sắt đô thị","description":"Chín giai đoạn từ quy hoạch tuyến đến quyết toán vốn đầu tư dự án hoàn thành.","step":[{"@type":"HowToStep","position":1,"name":"Quy hoạch và hình thành ý tưởng tuyến","text":"Đưa tuyến vào quy hoạch tỉnh và quy hoạch chung đô thị; xác định hướng tuyến, vị trí ga và đề-pô; lập phương án tuyến; khoanh định sơ bộ khu vực TOD."},{"@type":"HowToStep","position":2,"name":"Chủ trương đầu tư","text":"Lập báo cáo đề xuất chủ trương đầu tư hoặc báo cáo nghiên cứu tiền khả thi; thẩm định nguồn vốn và khả năng cân đối vốn; quyết định chủ trương đầu tư."},{"@type":"HowToStep","position":3,"name":"Lập, thẩm định và phê duyệt dự án","text":"Khảo sát xây dựng; lập báo cáo nghiên cứu khả thi và thiết kế cơ sở, hoặc thiết kế kỹ thuật tổng thể theo cơ chế đặc thù; thẩm định của cơ quan chuyên môn; thẩm duyệt phòng cháy chữa cháy và đánh giá tác động môi trường."},{"@type":"HowToStep","position":4,"name":"Giải phóng mặt bằng và tái định cư","text":"Thông báo thu hồi đất; kiểm đếm; lập, niêm yết và phê duyệt phương án bồi thường, hỗ trợ, tái định cư; chi trả; bàn giao mặt bằng theo từng đợt. Chạy song song với giai đoạn 3."},{"@type":"HowToStep","position":5,"name":"Lựa chọn nhà thầu và ký hợp đồng","text":"Lập và phê duyệt kế hoạch lựa chọn nhà thầu; lập hồ sơ mời thầu; đánh giá; thẩm định và phê duyệt kết quả; thương thảo và ký hợp đồng."},{"@type":"HowToStep","position":6,"name":"Thi công, quản lý chi phí và điều chỉnh","text":"Thiết kế bước sau; lập, thẩm định và phê duyệt dự toán; thi công; nghiệm thu khối lượng theo giai đoạn; thanh toán; xử lý phát sinh và điều chỉnh."},{"@type":"HowToStep","position":7,"name":"Nghiệm thu, chạy thử và chứng nhận an toàn hệ thống","text":"Nghiệm thu hoàn thành từng hạng mục; thử nghiệm tĩnh và động; chạy thử liên động toàn hệ thống; đánh giá và chứng nhận an toàn hệ thống; nghiệm thu của cơ quan nhà nước; cấp phép khai thác."},{"@type":"HowToStep","position":8,"name":"Bàn giao, ghi nhận tài sản và đưa vào khai thác","text":"Bàn giao công trình và hồ sơ cho đơn vị khai thác; xác lập quyền sở hữu và giao quản lý tài sản kết cấu hạ tầng; lập hồ sơ tài sản, kê khai, tính hao mòn; xây dựng phương án giá vé và trợ giá."},{"@type":"HowToStep","position":9,"name":"Quyết toán vốn đầu tư dự án hoàn thành","text":"Khoá sổ và đối chiếu vốn đã thanh toán; lập báo cáo quyết toán; kiểm toán độc lập báo cáo quyết toán; thẩm tra; phê duyệt quyết toán; xử lý công nợ và vật tư thiết bị tồn đọng."}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://duongsatdothi.vn/"},{"@type":"ListItem","position":2,"name":"Quy trình dự án","item":"https://duongsatdothi.vn/quy-trinh/"}]}</script>
+<script>
+(function(){var b=document.getElementById('menu'),n=document.getElementById('dhuong');
+if(b&&n){b.addEventListener('click',function(){var m=n.hasAttribute('data-mo');
+if(m){n.removeAttribute('data-mo');}else{n.setAttribute('data-mo','');}
+b.setAttribute('aria-expanded',String(!m));});}})();
+</script>
+
+</body>
+</html>

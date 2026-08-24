@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thư viện rủi ro kiểm toán dự án</title>
+<meta name="description" content="Rủi ro thường gặp chia tám nhóm, kèm dấu hiệu nhận biết và thủ tục ứng phó. Tài liệu tham khảo chung, không từ đơn vị nào.">
+<link rel="canonical" href="https://duongsatdothi.vn/thu-vien-rui-ro/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#184088">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Đường sắt đô thị">
+<meta property="og:title" content="Thư viện rủi ro kiểm toán dự án">
+<meta property="og:description" content="Rủi ro thường gặp chia tám nhóm, kèm dấu hiệu nhận biết và thủ tục ứng phó. Tài liệu tham khảo chung, không từ đơn vị nào.">
+<meta property="og:url" content="https://duongsatdothi.vn/thu-vien-rui-ro/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thư viện rủi ro kiểm toán dự án">
+<meta name="twitter:description" content="Rủi ro thường gặp chia tám nhóm, kèm dấu hiệu nhận biết và thủ tục ứng phó. Tài liệu tham khảo chung, không từ đơn vị nào.">
+<style>
+:root{
+  --nen:#FFFFFF; --the:#FFFFFF; --nen2:#F4F7FC; --nen3:#EEF2F8;
+  --muc:#184088;            /* navy ASCO - mau thuong hieu */
+  --muc2:#12305F;           /* navy sau */
+  --muc3:#4A6EB0;           /* navy sang - vien, hover */
+  --nhan:#B8862A;           /* vang dong ASCO */
+  --nhan2:#8E6817;
+  --ngoc:#0F6B54;           /* XANH NGOC - mau ho tro moi */
+  --ngoc-nen:#E4F2ED;
+  --do:#A82420; --do-nen:#FBEAE8;
+  --hoacuc:#B8862A; --hoacuc-nen:#FBF3E2;
+  --chu:#0E1729; --chu2:#5D687C;
+  --vien:#E0E6F0; --vien-nhat:#EEF2F8;
+  --bong:0 1px 2px rgba(14,23,41,.05),0 8px 26px rgba(14,23,41,.07);
+  --r:13px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --nen:#0D2044; --the:#13294F; --nen2:#0A1B3B; --nen3:#102A56;
+  --muc:#8FB2EE; --muc2:#13294F; --muc3:#5478BE;
+  --nhan:#E0B458; --nhan2:#F2CE83;
+  --ngoc:#4FC0A2; --ngoc-nen:#0E3A30;
+  --do:#F0857E; --do-nen:#3A1A18;
+  --hoacuc:#E0B458; --hoacuc-nen:#2E2415;
+  --chu:#EEF3FB; --chu2:#8DA0C0;
+  --vien:#22406E; --vien-nhat:#1A3260;
+  --bong:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.45);
+}}
+:root[data-theme="dark"]{
+  --nen:#0D2044; --the:#13294F; --nen2:#0A1B3B; --nen3:#102A56;
+  --muc:#8FB2EE; --muc2:#13294F; --muc3:#5478BE;
+  --nhan:#E0B458; --nhan2:#F2CE83;
+  --ngoc:#4FC0A2; --ngoc-nen:#0E3A30;
+  --do:#F0857E; --do-nen:#3A1A18;
+  --hoacuc:#E0B458; --hoacuc-nen:#2E2415;
+  --chu:#EEF3FB; --chu2:#8DA0C0;
+  --vien:#22406E; --vien-nhat:#1A3260;
+  --bong:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--nen);color:var(--chu);
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  font-size:16.6px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.hep{max-width:900px}
+h1,h2,h3{font-family:'Times New Roman',Times,'Nimbus Roman',serif;letter-spacing:-.021em;line-height:1.22;margin:0}
+h1{font-size:clamp(28px,4.1vw,45px)}
+h2{font-size:clamp(22px,2.9vw,31px);color:var(--muc)}
+h3{font-size:18.5px;color:var(--muc)}
+p{margin:13px 0}
+a{color:var(--muc)}
+.small{font-size:14.3px;color:var(--chu2)}
+
+/* ---------- THANH DAU (dung chung 2 tang) ---------- */
+header.top{position:sticky;top:0;z-index:60;background:var(--nen);border-bottom:1px solid var(--vien)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+.hieu{display:flex;align-items:center;gap:10px;text-decoration:none}
+.hieu svg{width:34px;height:34px;flex:0 0 auto}
+.hieu b{font-family:'Times New Roman',Times,'Nimbus Roman',serif;font-size:17.6px;color:var(--muc);display:block;line-height:1.2}
+.hieu i{font-style:normal;font-size:10.8px;font-weight:700;color:var(--chu2);letter-spacing:.1em;text-transform:uppercase}
+.top-nav{display:flex;align-items:center;gap:16px}
+.top-nav a{font-size:14.6px;font-weight:600;color:var(--chu);text-decoration:none;white-space:nowrap}
+.top-nav a:hover,.top-nav a[aria-current]{color:var(--muc);text-decoration:underline;text-underline-offset:5px}
+.nut-lh{background:var(--muc);color:#fff!important;padding:8px 16px;border-radius:999px;font-weight:700}
+:root[data-theme="dark"] .nut-lh{color:#0D2044!important}
+.menu-nut{display:none;background:none;border:1px solid var(--vien);border-radius:9px;padding:7px 11px;
+  font-size:15px;font-family:inherit;color:var(--chu);cursor:pointer}
+@media(max-width:1000px){
+  .top-nav{position:absolute;top:100%;left:0;right:0;background:var(--nen);border-bottom:1px solid var(--vien);
+    flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 16px;display:none}
+  .top-nav[data-mo]{display:flex}
+  .top-nav a{padding:10px 0;border-bottom:1px solid var(--vien)}
+  .top-nav .nut-lh{margin-top:10px;text-align:center;border-bottom:0}
+  .menu-nut{display:block}
+  header.top{position:relative}
+}
+
+/* ================= TANG NGOAI — trang dich ================= */
+.ngoai .hero{position:relative;overflow:hidden;color:#EDF2FA;padding:clamp(52px,7vw,104px) 0;
+  background:radial-gradient(820px 440px at 84% -20%,rgba(184,134,42,.22),transparent 60%),
+             linear-gradient(158deg,#1E4C9E 0%,#184088 48%,#0C2148 100%)}
+.ngoai .hero .wrap{position:relative;z-index:2}
+.ngoai .hero h1{color:#fff;max-width:19ch}
+.ngoai .hero .lede{color:rgba(237,242,250,.9);max-width:62ch;font-size:clamp(16.6px,1.9vw,19px);margin-top:17px}
+.nhan-pill{display:inline-block;font-size:12.2px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--nhan);border:1px solid rgba(184,134,42,.48);padding:6px 14px;border-radius:999px;margin-bottom:19px}
+.hero-nut{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.n1,.n2{padding:13px 26px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;display:inline-block}
+.n1{background:var(--nhan);color:#231B00}
+.n1:hover{background:#E4B451}
+.n2{border:1.5px solid rgba(237,242,250,.4);color:#EDF2FA}
+.n2:hover{border-color:var(--nhan);color:var(--nhan)}
+.hero-so{display:flex;flex-wrap:wrap;gap:30px;margin-top:38px;padding-top:24px;border-top:1px solid rgba(237,242,250,.16)}
+.hero-so div b{display:block;font-family:'Times New Roman',Times,'Nimbus Roman',serif;font-size:26px;color:var(--nhan);line-height:1.2}
+.hero-so div span{font-size:13.4px;color:rgba(237,242,250,.72)}
+/* duong ray trang tri */
+.ray{position:absolute;left:0;right:0;bottom:0;height:76px;opacity:.5;z-index:1}
+
+/* ================= TANG TRONG — trang cong cu ================= */
+.trong .banner{background:var(--muc);color:#EDF2FA;padding:clamp(26px,3.4vw,44px) 0}
+:root[data-theme="dark"] .trong .banner{background:var(--muc2);border-bottom:1px solid var(--vien)}
+.trong .banner h1{color:#fff;font-size:clamp(25px,3.4vw,37px)}
+.trong .banner p{color:rgba(237,242,250,.86);max-width:66ch;margin:11px 0 0;font-size:16.2px}
+.duong{font-size:13.4px;color:rgba(237,242,250,.66);margin-bottom:11px}
+.duong a{color:rgba(237,242,250,.86)}
+.trong .than{padding:clamp(30px,3.8vw,52px) 0}
+
+section{padding:clamp(40px,5vw,70px) 0;border-bottom:1px solid var(--vien)}
+section.nen2{background:var(--nen2)}
+.dau{margin-bottom:28px;max-width:74ch}
+.dau .mac{font-size:12.2px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--nhan2);margin-bottom:8px}
+.luoi{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
+.the{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:23px;box-shadow:var(--bong)}
+.the h3{margin-bottom:7px}
+.the p{margin:0;font-size:15.2px;color:var(--chu2)}
+.the.lienket{text-decoration:none;color:inherit;display:block;transition:border-color .15s}
+.the.lienket:hover{border-color:var(--muc3)}
+.the .di{margin-top:13px;font-size:14.4px;font-weight:700;color:var(--nhan2)}
+.ico{width:38px;height:38px;border-radius:10px;background:var(--muc);display:grid;place-items:center;margin-bottom:13px}
+.ico svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:root[data-theme="dark"] .ico svg{stroke:#0D2044}
+
+/* ---------- BANG ---------- */
+.bang-boc{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;border:1px solid var(--vien);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;min-width:620px;background:var(--the)}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--vien);font-size:14.9px;vertical-align:top}
+th{background:var(--nen2);font-weight:800;color:var(--muc);font-size:13.4px;position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--nen2)}
+.mã{font-family:Consolas,"Courier New",monospace;font-size:13.6px;color:var(--muc);font-weight:700;white-space:nowrap}
+
+/* ---------- CONG CU LOC ---------- */
+.loc{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:18px;margin-bottom:18px;box-shadow:var(--bong)}
+.loc-hang{display:flex;flex-wrap:wrap;gap:11px;align-items:flex-end}
+.loc-o{flex:1 1 190px;min-width:0}
+.loc-o label{display:block;font-size:12.6px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--chu2);margin-bottom:5px}
+.loc-o input,.loc-o select{width:100%;padding:9px 12px;border:1px solid var(--vien);border-radius:9px;
+  font-size:15px;font-family:inherit;background:var(--nen);color:var(--chu)}
+.loc-dem{margin-top:11px;font-size:14.2px;color:var(--chu2)}
+.loc-dem b{color:var(--muc)}
+.the-loc{display:inline-block;font-size:12.4px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.tl-luat{background:var(--ngoc-nen);color:var(--ngoc)}
+.tl-nd{background:var(--hoacuc-nen);color:var(--nhan2)}
+.tl-tt{background:var(--nen3);color:var(--muc)}
+.tl-khac{background:var(--vien-nhat);color:var(--chu2)}
+.dinh{font-size:12.2px;color:var(--chu2);white-space:nowrap}
+
+/* ---------- MOC / QUY TRINH ---------- */
+.gd{counter-reset:g;display:grid;gap:14px}
+.gd .b{background:var(--the);border:1px solid var(--vien);border-left:3px solid var(--nhan);border-radius:var(--r);
+  padding:21px 23px;box-shadow:var(--bong)}
+.gd .b h3::before{counter-increment:g;content:"Giai đoạn " counter(g) " · ";color:var(--nhan2);font-size:14px;
+  font-family:"Segoe UI",sans-serif;font-weight:800;letter-spacing:.04em}
+.gd .b .ct{margin-top:11px;display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(216px,1fr))}
+.gd .b .ct div{font-size:14.4px}
+.gd .b .ct b{display:block;font-size:11.8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--chu2);margin-bottom:2px}
+
+/* ---------- HOI DAP ---------- */
+details{background:var(--the);border:1px solid var(--vien);border-radius:11px;padding:15px 18px;margin-bottom:10px}
+details[open]{border-color:var(--muc3)}
+summary{cursor:pointer;font-weight:700;font-size:15.8px;color:var(--muc);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;font-size:20px;line-height:1;color:var(--nhan2)}
+details[open] summary::after{content:"–"}
+details p{font-size:15px;color:var(--chu2)}
+
+/* ---------- BIEU MAU ---------- */
+.mau{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:clamp(20px,3vw,32px);box-shadow:var(--bong)}
+.mau-luoi{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+.truong label{display:block;font-size:13.4px;font-weight:700;margin-bottom:5px}
+.truong input,.truong select,.truong textarea{width:100%;padding:10px 12px;border:1px solid var(--vien);
+  border-radius:9px;font-size:15.2px;font-family:inherit;background:var(--nen);color:var(--chu)}
+.truong textarea{min-height:112px;resize:vertical}
+.rong{grid-column:1/-1}
+.nut-gui{margin-top:17px;padding:13px 30px;border:0;border-radius:10px;cursor:pointer;background:var(--muc);
+  color:#fff;font-size:16px;font-weight:700;font-family:inherit}
+:root[data-theme="dark"] .nut-gui{color:#0D2044}
+.nut-gui:hover{background:var(--muc3)}
+
+/* ---------- CHAN TRANG ---------- */
+footer{background:var(--nen2);padding:34px 0 24px;font-size:14.2px;color:var(--chu2);border-top:1px solid var(--vien)}
+.ft-luoi{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+footer b{color:var(--chu);display:block;margin-bottom:6px;font-size:14.4px}
+footer a{color:var(--chu2);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:4px}
+.ft-cuoi{margin-top:24px;padding-top:16px;border-top:1px solid var(--vien);font-size:13.2px}
+
+@media print{
+  .top-nav,.menu-nut,.loc,.mau,.hero-nut{display:none!important}
+  body{background:#fff;color:#000;font-size:11.5pt}
+  section,.gd .b{page-break-inside:avoid;border:0}
+  .bang-boc{overflow:visible;border:0}
+}
+
+/* ---------- lop bo sung cho trang giao dien cap 2 ---------- */
+.huong-dan{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));margin:16px 0 24px}
+.huong-dan .b{background:var(--nen2);border:1px solid var(--vien);border-radius:11px;padding:16px 18px}
+.huong-dan .b b{display:block;color:var(--muc);font-size:15.2px;margin-bottom:5px}
+.huong-dan .b span{font-size:14.4px;color:var(--chu2)}
+
+.thongke{display:flex;flex-wrap:wrap;gap:11px;margin:14px 0 22px}
+.thongke div{background:var(--the);border:1px solid var(--vien);border-radius:10px;padding:12px 17px;min-width:118px}
+.thongke b{display:block;font-family:'Times New Roman',Times,serif;font-size:25px;color:var(--muc);line-height:1.15}
+.thongke span{font-size:13.2px;color:var(--chu2)}
+
+.buoc{counter-reset:s;display:grid;gap:12px;margin:16px 0}
+.buoc .b{display:flex;gap:15px;align-items:flex-start;background:var(--the);border:1px solid var(--vien);
+  border-radius:11px;padding:17px 19px}
+.buoc .b::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:29px;height:29px;border-radius:50%;
+  background:var(--muc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14.6px}
+:root[data-theme="dark"] .buoc .b::before{color:#0D2044}
+.buoc .b b{display:block;color:var(--muc);font-size:16px;margin-bottom:3px}
+.buoc .b span{font-size:14.9px;color:var(--chu2)}
+
+.cot2{display:grid;gap:22px;grid-template-columns:1.35fr 1fr;align-items:start}
+@media(max-width:860px){.cot2{grid-template-columns:1fr}}
+.hop-ben{background:var(--nen2);border:1px solid var(--vien);border-radius:var(--r);padding:20px 22px;
+  position:sticky;top:78px}
+@media(max-width:860px){.hop-ben{position:static}}
+.hop-ben h3{font-size:16.5px;margin-bottom:9px}
+.hop-ben ul{margin:0;padding-left:18px;font-size:14.6px;color:var(--chu2)}
+.hop-ben li{margin-bottom:7px}
+
+.kenh{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));margin:18px 0}
+.kenh .b{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:21px;box-shadow:var(--bong)}
+.kenh .b .nh{display:inline-block;font-size:11.6px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.nh-nhanh{background:var(--ngoc-nen);color:var(--ngoc)}
+.nh-sau{background:var(--hoacuc-nen);color:var(--nhan2)}
+.nh-cham{background:var(--nen3);color:var(--muc)}
+.kenh .b h3{margin-bottom:6px}
+.kenh .b p{margin:0;font-size:14.9px;color:var(--chu2)}
+.kenh .b .dm{margin-top:11px;font-size:14px;color:var(--chu2);border-top:1px solid var(--vien);padding-top:9px}
+.kenh .b .dm b{color:var(--muc)}
+.so-lon{font-family:'Times New Roman',Times,serif;font-size:27px;font-weight:700;color:var(--muc);
+  text-decoration:none;letter-spacing:.01em;display:inline-block}
+.so-lon:hover{color:var(--nhan2)}
+
+/* ---------- bo chuyen ngon ngu ---------- */
+.top-in{position:relative}
+.ngonngu{display:flex;align-items:center;gap:2px;border:1px solid var(--vien);border-radius:999px;
+  padding:2px;background:var(--nen2);flex:0 0 auto}
+.ngonngu a{font-size:12.6px;font-weight:800;letter-spacing:.03em;padding:5px 11px;border-radius:999px;
+  color:var(--chu2);text-decoration:none;white-space:nowrap;line-height:1}
+.ngonngu a:hover{color:var(--muc);text-decoration:none}
+.ngonngu a[aria-current]{background:var(--muc);color:#fff}
+:root[data-theme="dark"] .ngonngu a[aria-current]{color:#0D2044}
+/* logo day sang trai, bo ngon ngu bam ngoai cung ben PHAI */
+.top-in .hieu{margin-right:auto}
+@media(max-width:1000px){
+  .ngonngu{order:1;margin-right:8px}
+  .menu-nut{order:2}
+}
+@media(max-width:420px){.ngonngu a{padding:5px 8px;font-size:11.8px}
+  .hieu i{display:none}}
+
+/* ---------- bang so sanh hai cach lam ---------- */
+.ss td:nth-child(2){color:var(--chu2)}
+.ss td:nth-child(3){color:var(--chu);font-weight:600}
+.ss thead th:nth-child(3){color:var(--ngoc)}
+
+/* ---------- phan hanh ---------- */
+.ph{display:grid;gap:12px;margin:16px 0}
+.ph .b{display:grid;grid-template-columns:74px 1fr;gap:16px;background:var(--the);border:1px solid var(--vien);
+  border-radius:var(--r);padding:18px 20px;box-shadow:var(--bong)}
+@media(max-width:620px){.ph .b{grid-template-columns:1fr;gap:8px}}
+.ph .ma{font-family:Consolas,"Courier New",monospace;font-size:19px;font-weight:700;color:var(--nhan2);
+  line-height:1.2;padding-top:2px}
+.ph h3{font-size:17px;margin-bottom:6px}
+.ph p{margin:0;font-size:14.9px;color:var(--chu2)}
+.ph .luuy{margin-top:9px;padding-top:8px;border-top:1px solid var(--vien);font-size:14.2px;color:var(--do)}
+
+/* ---------- can doi ---------- */
+.cd{background:var(--nen2);border:1px solid var(--vien);border-left:3px solid var(--ngoc);
+  border-radius:var(--r);padding:18px 20px;margin-bottom:13px}
+.cd b{display:block;color:var(--muc);font-size:16px;margin-bottom:8px}
+.cd .ct{font-family:Consolas,"Courier New",monospace;font-size:14.4px;background:var(--the);
+  border:1px solid var(--vien);border-radius:8px;padding:11px 13px;color:var(--chu);overflow-x:auto}
+.cd .gc{margin-top:9px;font-size:14.3px;color:var(--chu2)}
+
+/* ---------- rui ro ---------- */
+.rr-nhom{margin-bottom:26px}
+.rr-nhom>h3{font-size:19px;margin-bottom:11px;padding-bottom:7px;border-bottom:2px solid var(--vien)}
+.rr{display:grid;gap:11px}
+.rr .b{background:var(--the);border:1px solid var(--vien);border-radius:11px;padding:16px 18px}
+.rr .b .dau{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.rr .b h4{margin:0;font-family:'Times New Roman',Times,serif;font-size:16.6px;color:var(--muc);line-height:1.3}
+.rr .b .muc{flex:0 0 auto;font-size:11.4px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px}
+.m-cao{background:var(--do-nen);color:var(--do)}
+.m-trung{background:var(--hoacuc-nen);color:var(--nhan2)}
+.m-thap{background:var(--nen3);color:var(--chu2)}
+.rr .b .mo{margin:9px 0 0;font-size:14.7px;color:var(--chu2)}
+.rr .b .tt{margin:9px 0 0;padding-top:8px;border-top:1px solid var(--vien);font-size:14.5px;color:var(--chu)}
+.rr .b .tt b{color:var(--ngoc)}
+
+/* ---------- trang ngoai ngu ---------- */
+.nn-bao{background:var(--nen2);border:1px solid var(--vien);border-left:3px solid var(--nhan);
+  border-radius:var(--r);padding:18px 20px;margin:22px 0}
+</style>
+</head>
+<body class="trong">
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="hieu" href="../index.html"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#184088"/><rect x="10" y="7" width="14" height="15" rx="3.4" fill="none" stroke="#B8862A" stroke-width="1.7"/><path d="M10 16h14" stroke="#B8862A" stroke-width="1.7"/><circle cx="13.6" cy="19" r="1.2" fill="#B8862A"/><circle cx="20.4" cy="19" r="1.2" fill="#B8862A"/><path d="M12 22l-2 4M22 22l2 4" stroke="#B8862A" stroke-width="1.7" stroke-linecap="round"/><path d="M8 28h18" stroke="#B8862A" stroke-width="1.5" stroke-linecap="round"/></svg><span><b>Đường sắt đô thị</b><i>Văn bản · Quy trình · Kinh nghiệm</i></span></a>
+    <button class="menu-nut" id="menu" aria-expanded="false" aria-controls="dhuong">Mục lục</button>
+    <nav class="top-nav" id="dhuong">
+        <a href="../van-ban/index.html">Cập nhật văn bản</a>
+        <a href="../quy-trinh/index.html">Quy trình dự án</a>
+        <a href="../kiem-toan/index.html">Kiểm toán quyết toán</a>
+        <a href="../thu-vien-rui-ro/index.html" aria-current="page">Thư viện rủi ro</a>
+        <a href="../kinh-nghiem/index.html">Kinh nghiệm QLDA</a>
+        <a href="../vuong-mac/index.html">Vướng mắc</a>
+        <a href="../tu-van/index.html">Tư vấn</a>
+        <a href="../lien-he/index.html" class="nut-lh">Liên hệ</a>
+    </nav>
+    <div class="ngonngu" role="group" aria-label="Chọn ngôn ngữ"><a href="../index.html" hreflang="vi" aria-current="true">VI</a><a href="../en/index.html" hreflang="en">EN</a><a href="../zh/index.html" hreflang="zh">中文</a></div>
+  </div>
+</header>
+
+
+<div class="banner"><div class="wrap">
+  <div class="duong"><a href="../index.html">Trang chủ</a> · Thư viện rủi ro</div>
+  <h1>Thư viện rủi ro kiểm toán dự án</h1>
+  <p>33 rủi ro thường gặp chia theo tám nhóm, mỗi rủi ro nêu dấu hiệu nhận biết và thủ tục kiểm toán
+  ứng phó. Dùng làm danh mục soát khi lập kế hoạch kiểm toán.</p>
+</div></div>
+
+<div class="than"><div class="wrap">
+
+  <div class="the" style="border-left:3px solid var(--do);margin-bottom:24px">
+    <h3>Đọc trước: đây là tài liệu tham khảo chung</h3>
+    <p style="margin-top:9px">Thư viện này <b>tổng hợp từ kinh nghiệm nghề nghiệp chung và tài liệu công khai</b>.
+    <b>Không có rủi ro nào ở đây được lấy từ thực tiễn của một đơn vị cụ thể</b>, không phản ánh phát hiện
+    kiểm toán tại bất kỳ dự án nào, và không nêu tên đơn vị, dự án hay cá nhân nào.</p>
+    <p>Mục đích là làm <b>danh mục gợi nhớ</b> khi lập kế hoạch kiểm toán — để không bỏ sót nhóm rủi ro
+    nào — chứ không phải danh sách lỗi của ai.</p>
+    <p style="color:var(--do)"><b>Mức rủi ro ghi ở đây là mức chung.</b> Mức thực tế của một dự án cụ thể
+    phải do kiểm toán viên đánh giá dựa trên hiểu biết về đơn vị và môi trường hoạt động của chính dự án đó.</p>
+  </div>
+
+  <div class="thongke">
+    <div><b>33</b><span>Rủi ro</span></div>
+    <div><b>8</b><span>Nhóm</span></div>
+    <div><b>18</b><span>Mức cao</span></div>
+    <div><b>5</b><span>Riêng đường sắt đô thị</span></div>
+  </div>
+
+  <div class="huong-dan" style="margin-bottom:26px">
+    <div class="b"><b>Mức Cao</b><span>Nếu xảy ra thì thường dẫn tới việc khoản chi phí bị loại hoặc bị treo,
+    không quyết toán được. Cần thủ tục kiểm tra riêng.</span></div>
+    <div class="b"><b>Mức Trung bình</b><span>Ảnh hưởng tới giá trị quyết toán nhưng thường xử lý được nếu
+    phát hiện sớm và bổ sung được hồ sơ.</span></div>
+    <div class="b"><b>Mức Thấp</b><span>Chủ yếu ảnh hưởng tới việc trình bày và thuyết minh, ít khi ảnh hưởng
+    tới con số.</span></div>
+  </div>
+
+  <h2 style="margin:28px 0 16px">Tám nhóm rủi ro</h2>
+  <div class="rr-nhom"><h3>Hồ sơ pháp lý</h3><div class="rr"><div class="b"><div class="dau"><h4>Trình tự đầu tư bị đảo hoặc bỏ bước</h4><span class="muc m-cao">Cao</span></div><p class="mo">Ký hợp đồng trước khi có quyết định phê duyệt dự án; khởi công trước khi có giấy phép xây dựng.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu ngày ký của từng văn bản theo trục thời gian, không chỉ kiểm tra có đủ văn bản hay không.</p></div><div class="b"><div class="dau"><h4>Thẩm quyền phê duyệt không đúng cấp</h4><span class="muc m-cao">Cao</span></div><p class="mo">Người ký quyết định không thuộc cấp có thẩm quyền theo phân loại dự án hoặc theo hạn mức giá trị.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu chức danh người ký với quy định phân cấp có hiệu lực tại thời điểm ký.</p></div><div class="b"><div class="dau"><h4>Áp dụng cơ chế đặc thù không đúng phạm vi</h4><span class="muc m-cao">Cao</span></div><p class="mo">Vận dụng cơ chế rút gọn trình tự cho dự án hoặc địa bàn không thuộc phạm vi được thí điểm.</p><p class="tt"><b>Thủ tục ứng phó — </b>Yêu cầu chủ đầu tư xuất trình văn bản chứng minh dự án thuộc phạm vi áp dụng.</p></div><div class="b"><div class="dau"><h4>Hồ sơ lập sau, ghi lùi ngày</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Biên bản, quyết định lập muộn nhưng ghi ngày của thời điểm lẽ ra phải có.</p><p class="tt"><b>Thủ tục ứng phó — </b>So sánh chất liệu và hình thức văn bản trong cùng bộ hồ sơ; đối chiếu với nhật ký thi công và chứng từ thanh toán cùng kỳ.</p></div></div></div><div class="rr-nhom"><h3>Nguồn vốn và thanh toán</h3><div class="rr"><div class="b"><div class="dau"><h4>Chênh lệch giữa sổ chủ đầu tư và cơ quan thanh toán</h4><span class="muc m-cao">Cao</span></div><p class="mo">Số vốn đã thanh toán trên sổ kế toán khác số của Kho bạc hoặc ngân hàng phục vụ.</p><p class="tt"><b>Thủ tục ứng phó — </b>Yêu cầu biên bản đối chiếu từng năm; truy nguyên nhân từng khoản lệch, không chấp nhận lệch tổng.</p></div><div class="b"><div class="dau"><h4>Thanh toán vượt giá trị hợp đồng</h4><span class="muc m-cao">Cao</span></div><p class="mo">Tổng các đợt thanh toán lớn hơn giá hợp đồng cộng phụ lục hợp lệ.</p><p class="tt"><b>Thủ tục ứng phó — </b>Cộng dồn toàn bộ đợt thanh toán và đối chiếu với giá hợp đồng sau điều chỉnh.</p></div><div class="b"><div class="dau"><h4>Tạm ứng chưa thu hồi hết</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Khoản tạm ứng theo hợp đồng chưa được khấu trừ đủ khi công trình đã hoàn thành.</p><p class="tt"><b>Thủ tục ứng phó — </b>Lập bảng theo dõi tạm ứng và thu hồi theo từng hợp đồng, đối chiếu với bảo lãnh tạm ứng.</p></div><div class="b"><div class="dau"><h4>Chi phí phát sinh không có nguồn vốn bố trí</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Khối lượng đã thực hiện nhưng chưa được bố trí vốn trong kế hoạch đầu tư công.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu chi phí đề nghị quyết toán với kế hoạch vốn được giao từng năm.</p></div></div></div><div class="rr-nhom"><h3>Khối lượng và đơn giá</h3><div class="rr"><div class="b"><div class="dau"><h4>Khối lượng quyết toán vượt khối lượng nghiệm thu</h4><span class="muc m-cao">Cao</span></div><p class="mo">Bảng quyết toán ghi khối lượng lớn hơn biên bản nghiệm thu tương ứng.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu ba chiều: bảng quyết toán — biên bản nghiệm thu — bản vẽ hoàn công.</p></div><div class="b"><div class="dau"><h4>Trùng khối lượng giữa các gói thầu</h4><span class="muc m-cao">Cao</span></div><p class="mo">Cùng một hạng mục được tính ở hai gói thầu khác nhau, thường xảy ra ở phần giao nhau giữa hai gói.</p><p class="tt"><b>Thủ tục ứng phó — </b>Dò trùng theo mã hiệu đơn giá và theo lý trình; đặc biệt chú ý ranh giới giữa các gói.</p></div><div class="b"><div class="dau"><h4>Áp sai định mức theo thời kỳ</h4><span class="muc m-cao">Cao</span></div><p class="mo">Dùng định mức hiện hành cho khối lượng đã nghiệm thu nhiều năm trước.</p><p class="tt"><b>Thủ tục ứng phó — </b>Xác định thời điểm áp dụng của từng công tác, tra định mức có hiệu lực tại đúng thời điểm đó.</p></div><div class="b"><div class="dau"><h4>Công tác đặc thù chưa được duyệt định mức</h4><span class="muc m-cao">Cao</span></div><p class="mo">Khoan hầm, lắp đặt hệ thống tín hiệu, thử nghiệm liên động — không có trong bộ định mức chung.</p><p class="tt"><b>Thủ tục ứng phó — </b>Yêu cầu quyết định phê duyệt định mức mới; không có thì khoản đó chưa đủ căn cứ quyết toán.</p></div><div class="b"><div class="dau"><h4>Điều chỉnh giá không đúng hình thức giá hợp đồng</h4><span class="muc m-cao">Cao</span></div><p class="mo">Bù giá trượt giá cho hợp đồng trọn gói hoặc hợp đồng theo đơn giá cố định.</p><p class="tt"><b>Thủ tục ứng phó — </b>Xác định hình thức giá ghi trong hợp đồng trước, rồi mới xét khoản điều chỉnh có được phép không.</p></div><div class="b"><div class="dau"><h4>Chỉ số giá dùng để điều chỉnh không đúng nguồn</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Dùng chỉ số giá của địa phương khác, của loại công trình khác, hoặc của kỳ khác.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu nguồn chỉ số giá với quy định trong hợp đồng và với văn bản công bố của cơ quan có thẩm quyền.</p></div></div></div><div class="rr-nhom"><h3>Hợp đồng</h3><div class="rr"><div class="b"><div class="dau"><h4>Hình thức giá trong hợp đồng khác cách thanh toán thực tế</h4><span class="muc m-cao">Cao</span></div><p class="mo">Ký trọn gói nhưng thanh toán theo khối lượng thực tế, hoặc ngược lại.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đọc điều khoản giá và điều khoản thanh toán của hợp đồng trước khi kiểm bất kỳ con số nào.</p></div><div class="b"><div class="dau"><h4>Phụ lục hợp đồng ký sau khi đã thi công xong</h4><span class="muc m-cao">Cao</span></div><p class="mo">Phụ lục điều chỉnh khối lượng hoặc giá ký sau thời điểm nghiệm thu phần việc đó.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu ngày ký phụ lục với ngày nghiệm thu khối lượng tương ứng.</p></div><div class="b"><div class="dau"><h4>Hợp đồng EPC không có bảng khối lượng chi tiết</h4><span class="muc m-cao">Cao</span></div><p class="mo">Hợp đồng theo mẫu quốc tế mô tả phạm vi theo kết quả đầu ra, không có bảng khối lượng để đối chiếu.</p><p class="tt"><b>Thủ tục ứng phó — </b>Yêu cầu bảng giá phân tích và bảng khối lượng cơ sở; nếu không có thì nêu rõ hạn chế phạm vi.</p></div><div class="b"><div class="dau"><h4>Giá sau điều chỉnh vượt giá gói thầu được duyệt</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Tổng giá hợp đồng cộng các phụ lục vượt giá gói thầu trong kế hoạch lựa chọn nhà thầu.</p><p class="tt"><b>Thủ tục ứng phó — </b>Cộng dồn và đối chiếu với quyết định phê duyệt kế hoạch lựa chọn nhà thầu.</p></div></div></div><div class="rr-nhom"><h3>Chi phí quản lý dự án, tư vấn và chi phí khác</h3><div class="rr"><div class="b"><div class="dau"><h4>Chi phí quản lý dự án vượt định mức</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Chi phí thực tế lớn hơn mức tính theo tỷ lệ định mức trên chi phí xây dựng và thiết bị.</p><p class="tt"><b>Thủ tục ứng phó — </b>Tính lại theo định mức có nội suy giữa hai mốc quy mô; so với số chủ đầu tư đề nghị.</p></div><div class="b"><div class="dau"><h4>Khoản đã nằm trong định mức nhưng vẫn tính riêng</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Chi phí văn phòng phẩm, điện nước của Ban Quản lý dự án tính thêm ngoài định mức.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu danh mục chi phí đã bao gồm trong định mức với các khoản chi thực tế.</p></div><div class="b"><div class="dau"><h4>Chi phí tư vấn vượt hợp đồng</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Giá trị quyết toán hợp đồng tư vấn lớn hơn giá hợp đồng và phụ lục.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu từng hợp đồng tư vấn, kiểm tra sản phẩm bàn giao có đủ theo hợp đồng không.</p></div></div></div><div class="rr-nhom"><h3>Tài sản và bàn giao</h3><div class="rr"><div class="b"><div class="dau"><h4>Giá trị tài sản không cân với chi phí đầu tư</h4><span class="muc m-cao">Cao</span></div><p class="mo">Phương trình cân đối không khớp: chi phí trừ khoản không tính vào tài sản trừ tồn đọng không bằng giá trị tài sản.</p><p class="tt"><b>Thủ tục ứng phó — </b>Chạy phương trình cân đối trên cùng một bộ số; truy từng khoản lệch trước khi phát hành.</p></div><div class="b"><div class="dau"><h4>Phân bổ chi phí chung không theo nguyên tắc</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Chi phí chung chia cho các hạng mục theo cảm tính thay vì theo tỷ lệ vốn.</p><p class="tt"><b>Thủ tục ứng phó — </b>Kiểm tra bảng phân bổ, đối chiếu tiêu thức phân bổ với chính sách đã được phê duyệt.</p></div><div class="b"><div class="dau"><h4>Tài sản bàn giao thiếu hoặc trùng giữa các đơn vị nhận</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Cùng một hạng mục xuất hiện ở hai biên bản bàn giao, hoặc không xuất hiện ở biên bản nào.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu tổng danh mục tài sản với tổng các biên bản bàn giao.</p></div><div class="b"><div class="dau"><h4>Chi phí không tính vào giá trị tài sản chưa được cho phép</h4><span class="muc m-cao">Cao</span></div><p class="mo">Khoản thiệt hại, khoản của hạng mục bị huỷ bỏ chưa có quyết định của cấp có thẩm quyền.</p><p class="tt"><b>Thủ tục ứng phó — </b>Yêu cầu quyết định cho phép; không có thì khoản đó phải treo, không được kết chuyển.</p></div></div></div><div class="rr-nhom"><h3>Công nợ và tồn đọng</h3><div class="rr"><div class="b"><div class="dau"><h4>Công nợ xác định không đúng đối tượng</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Số dư ghi theo tên gói thầu thay vì theo pháp nhân nhà thầu, hoặc gộp nhiều nhà thầu.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu số dư theo từng pháp nhân; gửi thư xác nhận dưới sự kiểm soát của kiểm toán viên.</p></div><div class="b"><div class="dau"><h4>Thư xác nhận do chủ đầu tư tự gửi và tự nhận</h4><span class="muc m-cao">Cao</span></div><p class="mo">Kiểm toán viên không kiểm soát khâu gửi và nhận nên bằng chứng mất độ tin cậy.</p><p class="tt"><b>Thủ tục ứng phó — </b>Kiểm toán viên trực tiếp kiểm soát địa chỉ gửi và nhận thư phản hồi.</p></div><div class="b"><div class="dau"><h4>Vật tư thiết bị tồn đọng chưa có phương án xử lý</h4><span class="muc m-thap">Thấp</span></div><p class="mo">Vật tư còn trong kho sau khi công trình hoàn thành nhưng chưa xác định xử lý thế nào.</p><p class="tt"><b>Thủ tục ứng phó — </b>Kiểm kê thực tế đối chiếu sổ sách; kiến nghị phương án xử lý trong báo cáo.</p></div></div></div><div class="rr-nhom"><h3>Rủi ro riêng của dự án đường sắt đô thị</h3><div class="rr"><div class="b"><div class="dau"><h4>Chi phí giai đoạn chạy thử phân loại sai</h4><span class="muc m-cao">Cao</span></div><p class="mo">Tiền điện, lương nhân sự vận hành, bảo hiểm trong thời gian chạy thử tính vào chi phí đầu tư mà chưa có căn cứ.</p><p class="tt"><b>Thủ tục ứng phó — </b>Yêu cầu văn bản phê duyệt phạm vi và nguồn chi trả cho giai đoạn chạy thử được lập trước khi chạy thử.</p></div><div class="b"><div class="dau"><h4>Chi phí đánh giá an toàn hệ thống chưa nằm trong tổng mức đầu tư</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Hạng mục do tổ chức độc lập nước ngoài thực hiện, thường bị bỏ sót khi lập dự án.</p><p class="tt"><b>Thủ tục ứng phó — </b>Đối chiếu hợp đồng đánh giá an toàn với tổng mức đầu tư được duyệt.</p></div><div class="b"><div class="dau"><h4>Chênh lệch tỷ giá của phần vốn vay và thiết bị nhập khẩu</h4><span class="muc m-cao">Cao</span></div><p class="mo">Tỷ giá áp dụng cho từng loại giao dịch không nhất quán hoặc không đúng thời điểm.</p><p class="tt"><b>Thủ tục ứng phó — </b>Kiểm tra riêng khoản chênh lệch tỷ giá; đối chiếu tỷ giá áp dụng với quy định trong hợp đồng.</p></div><div class="b"><div class="dau"><h4>Chi phí đào tạo và chuyển giao công nghệ không rõ có tạo tài sản không</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Khoản lớn nhưng không hình thành tài sản cố định, dễ bị treo khi quyết toán.</p><p class="tt"><b>Thủ tục ứng phó — </b>Yêu cầu quyết định của cấp có thẩm quyền về việc có tính vào giá trị tài sản hay không.</p></div><div class="b"><div class="dau"><h4>Ranh giới chi phí giữa phần tuyến và khu vực TOD không rõ</h4><span class="muc m-trung">Trung bình</span></div><p class="mo">Dòng tiền và tài sản của hai phần trộn vào nhau, đến khi bàn giao không tách được.</p><p class="tt"><b>Thủ tục ứng phó — </b>Kiểm tra chính sách tách bạch chi phí có được lập từ giai đoạn lập dự án hay không.</p></div></div></div>
+
+  <h2 style="margin:26px 0 14px">Cách dùng</h2>
+  <div class="the" style="border-left:3px solid var(--muc3)">
+    <h3>Cách dùng thư viện này</h3>
+    <p style="margin-top:8px">Khi lập kế hoạch kiểm toán một dự án, đọc lướt tám nhóm và đánh dấu những
+    rủi ro <b>có khả năng xảy ra ở dự án này</b> dựa trên đặc điểm thực tế: quy mô, nguồn vốn, số gói thầu,
+    loại hợp đồng, thời gian thực hiện. Những rủi ro được đánh dấu sẽ quyết định phạm vi và cỡ mẫu
+    của từng phần hành.</p>
+    <p>Danh mục này <b>không đầy đủ và không cố định</b>. Mỗi dự án có thể có rủi ro riêng không nằm ở đây,
+    và việc nhận diện rủi ro đó thuộc xét đoán nghề nghiệp của kiểm toán viên.</p>
+  </div>
+
+</div></div>
+
+
+<footer>
+  <div class="wrap">
+    <div class="ft-luoi">
+      <div><b>Đường sắt đô thị</b>Trang thông tin chuyên môn về đầu tư, quản lý và quyết toán
+        dự án đường sắt đô thị tại Việt Nam.</div>
+      <div><b>Tra cứu</b><ul>
+        <li><a href="../van-ban/index.html">Cập nhật văn bản</a></li>
+        <li><a href="../quy-trinh/index.html">Quy trình thực hiện dự án</a></li>
+        <li><a href="../kinh-nghiem/index.html">Kinh nghiệm quản lý dự án</a></li></ul></div>
+      <div><b>Trao đổi</b><ul>
+        <li><a href="../vuong-mac/index.html">Vướng mắc thường gặp</a></li>
+        <li><a href="../tu-van/index.html">Gửi yêu cầu tư vấn</a></li>
+        <li><a href="../lien-he/index.html">Liên hệ</a></li></ul></div>
+      <div><b>Lưu ý</b>Nội dung trên trang là thông tin tham khảo, không thay thế ý kiến tư vấn
+        cho một dự án cụ thể. Văn bản pháp luật thay đổi thường xuyên — luôn đối chiếu bản gốc.</div>
+    </div>
+    <div class="ft-cuoi">Bản quyền của Hãng Kiểm toán và Định giá ASCO · Nội dung biên soạn từ kho văn bản pháp luật nội bộ, cập nhật 24/08/2026.</div>
+  </div>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Thư viện rủi ro kiểm toán dự án","description":"33 rủi ro thường gặp trong kiểm toán báo cáo quyết toán dự án hoàn thành, chia tám nhóm, kèm dấu hiệu nhận biết và thủ tục ứng phó. Tài liệu tham khảo chung.","inLanguage":"vi-VN"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://duongsatdothi.vn/"},{"@type":"ListItem","position":2,"name":"Thư viện rủi ro","item":"https://duongsatdothi.vn/thu-vien-rui-ro/"}]}</script>
+<script>
+(function(){var b=document.getElementById('menu'),n=document.getElementById('dhuong');
+if(b&&n){b.addEventListener('click',function(){var m=n.hasAttribute('data-mo');
+if(m){n.removeAttribute('data-mo');}else{n.setAttribute('data-mo','');}
+b.setAttribute('aria-expanded',String(!m));});}})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+# Website Đường sắt đô thị — bản demo
+
+## Chạy lại sau khi sửa nội dung
+
+```
+python ds_v5.py
+```
+
+Kịch bản sinh ra bảy trang HTML + sitemap.xml + robots.txt.
+
+| Tệp | Việc |
+|---|---|
+| `ds_build.py` | Khung chung: bảng màu, CSS, thanh đầu, chân trang |
+| `ds_data.py` | **Nội dung chuyên môn** — sửa ở đây là chính |
+| `ds_pages.py` | Trang đích |
+| `ds_pages2.py` | Trang văn bản, tư vấn, liên hệ + hàm ghi file |
+| `ds_v2.py` | Trang quy trình, kinh nghiệm, vướng mắc |
+| `ds_v3.py` | Bốn trang giao diện cấp 2 chi tiết |
+| `ds_data2.py` | Nội dung kiểm toán quyết toán + thư viện rủi ro |
+| `ds_v4.py` | Bộ chuyển ngôn ngữ + 2 trang mới |
+| `ds_v5.py` | Trang tiếng Anh, tiếng Trung + **chạy file này** |
+| `vb_phanloai.json` | 51 đầu văn bản, sinh từ kho VBPL |
+
+## Hai tầng giao diện
+
+Cách gọi thống nhất theo Tổng Giám đốc: **trang giao diện cấp 1** và **trang giao diện cấp 2**.
+
+
+- **Tầng ngoài** `body.ngoai` — trang đích, nền chuyển sắc navy, ít chữ
+- **Tầng trong** `body.trong` — trang công cụ, dải tiêu đề gọn, mật độ thông tin cao
+
+## Bảng màu — lấy từ website ASCO
+
+| Vai trò | Sáng | Tối |
+|---|---|---|
+| Thương hiệu | `#184088` | `#8FB2EE` |
+| Nhấn | `#B8862A` | `#E0B458` |
+| Hỗ trợ | `#0F6B54` | `#4FC0A2` |
+| Cảnh báo | `#A82420` | `#F0857E` |
+
+## ⚠️ Phông chữ — đừng đổi lại Georgia
+
+Tiêu đề dùng `'Times New Roman', Times, 'Nimbus Roman', serif`.
+
+**Không dùng Georgia.** Georgia thiếu glyph cho các chữ Việt vừa có dấu mũ vừa có dấu thanh
+(ắ ầ ế ồ ấ), trình duyệt phải ghép dấu rời nên chữ vỡ: "sắt" hiện thành "să´t".
+Đo bằng canvas: bề rộng chữ "ắ" trong Georgia gấp **1,99 lần** chữ "a";
+trong Times New Roman tỷ lệ là **1,00**.
+
+## ⚠️ Liên kết phải ghi rõ `index.html`
+
+Mọi liên kết nội bộ viết dạng `van-ban/index.html`, **không viết `van-ban/`**.
+
+Lý do: khi Tổng Giám đốc bấm đúp vào file để xem (giao thức `file://`), trình duyệt
+**không tự tìm `index.html` trong thư mục** — nó chỉ liệt kê thư mục ra, thành một
+màn hình đen kiểu "Chỉ mục của C:\...". Máy chủ web thì tự làm việc đó, nên lỗi này
+chỉ lộ ra khi mở bằng file.
+
+Cách viết `index.html` chạy đúng ở **cả hai** môi trường. Thẻ canonical vẫn khai
+`/van-ban/` nên không ảnh hưởng tìm kiếm.
+
+Kiểm nhanh trước khi giao: không được còn liên kết nội bộ nào kết thúc bằng dấu `/`.
+
+## Ba ngôn ngữ
+
+| Ngôn ngữ | Đường dẫn | Phạm vi |
+|---|---|---|
+| Tiếng Việt | `/` | **Toàn bộ 9 trang** |
+| English | `/en/` | Một trang tổng quan |
+| 中文 | `/zh/` | Một trang tổng quan |
+
+Bộ chuyển nằm **ngoài cùng bên phải** thanh đầu, sau khối điều hướng.
+Trên điện thoại nó đứng giữa logo và nút Mục lục.
+
+Lý do chỉ làm một trang cho mỗi ngoại ngữ: phần lõi của trang là **danh mục văn bản
+pháp luật Việt Nam**, mà văn bản đó chỉ có bản chính thức bằng tiếng Việt — dịch tên
+văn bản ra tiếng Anh rồi để người ta trích dẫn là tạo rủi ro. Trang ngoại ngữ vì thế
+tập trung vào thứ người nước ngoài cần: **chín giai đoạn dự án**, **ba lỗi họ hay mắc**,
+và **khái niệm kiểm toán song hành**.
