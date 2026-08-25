@@ -344,3 +344,22 @@ trang tieng Anh CHI la ten van ban va chan trang.
 
 **Con lai o ban tieng Anh:** Van ban · Thu vien rui ro · Kinh nghiem · Vuong mac.
 Chan trang cung chua dich.
+
+## Ban 17 — BO TIENG ANH XONG (dot 4, ds_v17.py, ds_en_rr.py, ds_en_kn.py)
+
+`/en/van-ban/` · `/en/thu-vien-rui-ro/` · `/en/kinh-nghiem/` · `/en/vuong-mac/` + CHAN TRANG.
+Trang **42 -> 46**. **Chay `python ds_v17.py`** — ban moi nhat.
+
+**Menu tren trang tieng Anh nay 0 dau VI** — moi muc deu co ban tieng Anh.
+
+⚠️ **BAY DA VAP: kho tep nam o `/van-ban/tep/`.** Trang `/en/van-ban/` o thu muc khac nen
+duong dan tuong doi `tep/...` tro sai — 161 lien ket hong. Da sua bang `_o_tep()` doi thanh
+`@/van-ban/tep/...`. **Bat ky ban dich nao cua trang Van ban sau nay deu phai lam vay.**
+
+Chan trang: `ds_en_kn.CHAN['en']`, thay bang `ds_v17._chan()`. Ngay cap nhat van lay tu
+`ds_v10.NGAY_CAP_NHAT` (doc nguoc tu chan trang tieng Viet) nen chi phai sua mot cho.
+
+Trang `/en/van-ban/` da thu that: 51 van ban, o tim bo dau hai phia ("duong sat" ra 33),
+bon bo loc chay, bam ten van ban tai duoc tep (681 KB, ma 200).
+
+**Bo tieng Anh coi nhu xong.** Buoc sau: tieng Trung — dung lai khuon nay, chi thay noi dung.
