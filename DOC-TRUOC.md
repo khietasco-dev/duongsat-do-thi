@@ -392,3 +392,19 @@ May tinh phi tieng Trung dung don vi **十亿越南盾**, da doi chieu: 120 ty r
 
 **Con lai o bo tieng Trung:** 9 trang dich vu + Van ban · Thu vien rui ro · Kinh nghiem · Vuong mac.
 Menu trang tieng Trung con **13 dau VI** — dung bang so muc chua dich.
+
+## Ban 19 — BO TIENG TRUNG XONG (dot 2, ds_v19.py)
+
+9 trang `/zh/dich-vu/<slug>/` + `/zh/van-ban/` `/zh/thu-vien-rui-ro/` `/zh/kinh-nghiem/`
+`/zh/vuong-mac/`. Trang **50 -> 63**. **Chay `python ds_v19.py`** — ban moi nhat.
+Ban dich: `ds_zh_dv.py` (9 dich vu) · `ds_zh_rr.py` (Van ban + Rui ro) · `ds_zh_kn.py`
+(Kinh nghiem + Vuong mac).
+
+✅ **Menu tren trang tieng Trung: 0 dau VI.** Da kiem tren 4 trang mau o cac cap khac nhau.
+
+⚠️ **BAY MOI: dung va CHUOI JAVASCRIPT cua ban tieng khac.**
+Ban dau viet `B.than_js['zh/van-ban'] = B.than_js['en/van-ban'].replace(...)` — phep thay
+KHONG an, va cau tieng Anh "51 of 51 instruments" lot len trang tieng Trung.
+Da doi thanh viet han mot khoi JS rieng. **Moi thu tieng mot khoi JS rieng, dung va chuoi.**
+
+Bo dem ban tieng Trung nay hien "共 51 份，显示 33 份" — da thu that.
