@@ -147,3 +147,19 @@ Quy tac da cai vao may tinh:
 - Da kiem toan doc lap / KTNN / thanh tra theo Dieu 11 -> phi **tham tra** = **50%** (diem e)
 - Toi thieu: kiem toan **1 trieu dong** + VAT; tham tra **500 nghin dong**
 - Phi kiem toan la **muc toi da**, cong VAT; phi tham tra khong cong VAT
+
+## Ban 10 — hotline, nut chon ngon ngu, ngay cap nhat (ds_v10.py)
+
+- Duoi logo ĐƯỜNG SẮT ĐÔ THỊ ghi **HOTLINE: 0825092007** (chi ghi, khong bam duoc —
+  vi ca khoi logo da la mot the `<a>` roi, long `<a>` trong `<a>` la HTML sai).
+- Nut ngon ngu doi nhan tu ten ngon ngu hien tai thanh **"Chọn ngôn ngữ"**
+  (moi ngon ngu mot nhan rieng). Thu tu trong menu: Viet - Anh - Trung - Nhat - Phap - Duc.
+- Dong duoi cung chan trang: **"Văn bản được cập nhật đến <NGAY_CAP_NHAT>"**.
+
+⚠️ **Sua ngay cap nhat CHI o MOT CHO**: hang `NGAY_CAP_NHAT` dau file `ds_v10.py`,
+roi chay `python ds_v10.py`. Dung sua tay trong cac file index.html.
+
+⚠️ **Chay `ds_v10.py`, khong con chay `ds_v9.py`.** Moi ban ke thua ban truoc.
+
+Thanh dau con **~32px du** o 1175px (diem chat nhat, ngay tren nguong gop menu 1160px).
+Them mot muc menu nua la tran — phai rut nhan hoac nang nguong gop.
