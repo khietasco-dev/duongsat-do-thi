@@ -263,3 +263,31 @@ ngoai ngu moi lien ket menu duoc gan:
 Ca 6 trang: menu **mot dong**, thanh dau **106px**, khong tran ngang.
 Tren dien thoai 375px: 3 dong, thanh dau 154px, bang so xuong khong tran mep.
 Ra lai 1.002 lien ket noi bo: **0 hong**.
+
+## Ban 14 — TRANG BEN TRONG DOI THEO NGON NGU, DOT 1 (ds_v14.py, ds_dv_dich.py)
+
+CEO 25/08: bam sang tieng Anh thi trang ben trong cung phai tieng Anh.
+**Da do: 18 trang tieng Viet = 28.953 tu. Nhan 5 thu tieng = ~145.000 tu.**
+Khong dich tron trong mot lan duoc — chia dot.
+
+**Dot 1 (xong):** trang tong dich vu `/en/dich-vu/` `/zh/` `/ja/` `/fr/` `/de/` — 5 trang
+dich TRON VEN. Chon trang nay truoc vi: (a) la trang thuong mai quan trong nhat,
+(b) la van cua chinh minh, khong co trich dan dieu luat nen dich an toan.
+Trang tu 24 len **29**.
+
+**Nut ngon ngu nay BIET DANG DUNG TRANG NAO** (`ds_v14._bo_ngon_ngu`):
+- Dung o `/dich-vu/` bam DE -> `/de/dich-vu/` (dung trang do, thu tieng do)
+- Dung o `/van-ban/` bam DE -> `/de/` (chua co ban dich thi ve trang tong quan)
+- Bang `DA_DICH` khai bao chu de nao da co ban dich o thu tieng nao.
+  **Dich xong trang nao thi them vao `DA_DICH`**, nut ngon ngu tu biet duong.
+
+Ban dich nam trong **`ds_dv_dich.py`**: `TRANG` (khung trang) + `MO_TA` (9 the).
+
+### Nguyen tac dich cua trang nay
+
+Chi dich **van cua chinh minh**. KHONG dich ten van ban phap luat, KHONG dich trich dan
+dieu khoan — chi dan so hieu kem chu giai. Ly do: ban tieng Viet moi la ban chinh thuc,
+dich sai mot chu la doi nghia dieu luat.
+
+**Con lai chua lam:** 8 trang tieng Viet con lai o ban tieng Anh, va ca 18 trang o
+4 thu tieng kia — khoang **130.000 tu**.
