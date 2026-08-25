@@ -291,3 +291,32 @@ dich sai mot chu la doi nghia dieu luat.
 
 **Con lai chua lam:** 8 trang tieng Viet con lai o ban tieng Anh, va ca 18 trang o
 4 thu tieng kia — khoang **130.000 tu**.
+
+## Ban 15 — 9 TRANG DICH VU CAP 2 BANG TIENG ANH (dot 2, ds_v15.py, ds_dv_en.py)
+
+CEO 25/08: o che do tieng Anh, bam vao tung dich vu van ra tieng Viet.
+Da dung `/en/dich-vu/<slug>/` cho ca 9 dich vu. Trang **29 -> 38**.
+
+**Chay `python ds_v15.py`** — ban moi nhat.
+
+Sau ban nay, o che do TIENG ANH nhanh Dich vu da LIEN MACH:
+menu -> bang so xuong -> trang tong -> 9 trang chi tiet, khong con roi ve tieng Viet.
+
+Ban dich trong **`ds_dv_en.py`**: `KHUNG` (khung trang) + `EN` (9 dich vu).
+
+### Cach them mot trang dich moi
+
+1. Viet noi dung vao file `ds_dv_<thu tieng>.py`
+2. Khai vao `V14.DA_DICH['<chu de>'] = {'<thu tieng>'}` — nut ngon ngu tu biet duong
+3. Them vao `TRANG` voi slug `<thu tieng>/<chu de>`
+
+Trang nam sau BA cap (`en/dich-vu/<slug>`) — bo lui duong dan cua ban 12 tu xu ly,
+khong phai sua gi.
+
+### Nguyen tac dich, khong lam khac
+
+Phan "Legal basis" ghi ro la **dien giai cua ASCO, khong phai ban dich chinh thuc**,
+va tro nguoi doc ve ban goc tieng Viet o muc Tra cuu van ban. Cau nay nam trong
+`KHUNG['cancu_nhac']` — **giu nguyen o moi thu tieng se dich sau**.
+
+**Con lai:** 8 trang tieng Viet con lai o ban tieng Anh, va ca 18 trang o 4 thu tieng kia.
