@@ -125,3 +125,25 @@ nhưng khi đó trang chạy trên mạng sẽ không mở được tệp.
 
 Tên tệp đã **bỏ dấu tiếng Việt và thay khoảng trắng bằng gạch nối** để địa chỉ web
 không bị mã hoá lung tung. Xem hàm `gon()` trong `ds_tep.py`.
+
+## Ban 9 — May tinh phi kiem toan quyet toan (ds_v9.py)
+
+Trang `/kiem-toan/` co them khoi may tinh phi theo **Nghi dinh 193/2026/ND-CP Dieu 20**
+(ban hanh 01/6/2026, hieu luc 01/7/2026).
+
+Bang ty le nam trong `ds_v9.MOC / KT / TT` **va** lap lai trong khoi JavaScript
+`B.than_js['kiem-toan']`. **Sua so thi phai sua CA HAI CHO.**
+
+Da doi chieu tung con so: ty le cua ND 193/2026 Dieu 20 **giu nguyen** so voi
+ND 254/2025 Dieu 45. Chi doi so dieu (45 -> 20) va dan chieu (Dieu 36 -> Dieu 11).
+
+Ban goc Word + PDF luu tai kho VBPL:
+`111 VBPL\VBPL theo Luat\Luat Dau tu cong 58-2024-QH15\02 - Nghi dinh\ND 193 2026 ...`
+
+Quy tac da cai vao may tinh:
+- Noi suy tuyen tinh diem a: `Ki = Kb - (Kb-Ka)(Gi-Gb)/(Ga-Gb)`
+- Chi phi thiet bi >= 50% -> **70%** (diem d)
+- Chi phi boi thuong, ho tro, tai dinh cu -> **50%** (diem d)
+- Da kiem toan doc lap / KTNN / thanh tra theo Dieu 11 -> phi **tham tra** = **50%** (diem e)
+- Toi thieu: kiem toan **1 trieu dong** + VAT; tham tra **500 nghin dong**
+- Phi kiem toan la **muc toi da**, cong VAT; phi tham tra khong cong VAT
