@@ -428,6 +428,47 @@ td.tenvb a.mo::after{content:"↗";font-size:11.4px;margin-left:5px;color:var(--
 
 /* ---------- Dong ngay cap nhat o chan trang ---------- */
 .ft-cuoi .ngay{display:block;margin-top:5px;font-weight:700;color:var(--chu)}
+
+/* ================= THANH DAU HAI HANG (ban 11) ================= */
+/* Hang 1: logo + hotline ben trai, nut ngon ngu ben phai */
+.top-in{padding:10px 22px 9px;gap:12px}
+.top-in .hieu{margin-right:auto}
+/* Luat chung `details{...}` (dung cho khoi hoi-dap) dinh ca vao nut ngon ngu:
+   no boc them mot khung vien + nen + padding 15/18, lam hang 1 cao vong len
+   100px va ve mot cai hop thua quanh nut. Go sach o day. */
+.nn{margin:0!important;padding:0!important;border:0!important;background:none!important;
+  border-radius:0!important}
+
+/* Bo han nut Muc luc o MOI kho man hinh */
+.menu-nut{display:none!important}
+
+/* Hang 2: day du menu, tu xuong dong khi het cho */
+.hang-menu{border-top:1px solid var(--vien)}
+.top-nav{position:static!important;display:flex!important;flex-direction:row!important;
+  flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:7px 17px;
+  padding:8px 0 9px!important;background:none!important;border:0!important;
+  top:auto;left:auto;right:auto}
+.top-nav a{font-size:14.6px;padding:3px 0!important;border-bottom:0!important;line-height:1.35}
+.top-nav .nut-lh{padding:6px 15px!important;margin-top:0!important;text-align:center}
+
+/* Thanh dau dinh theo man hinh khi menu con gon mot dong.
+   Duoi 700px menu thanh hai dong, thanh dau cao ~140px — de dinh thi an mat
+   mot phan sau man hinh dien thoai, nen tha cho no cuon di. */
+@media(max-width:1160px){
+  header.top{position:sticky}
+  .top-nav{gap:7px 15px}
+}
+@media(max-width:700px){
+  header.top{position:relative}
+  .top-nav{gap:6px 13px}
+  .top-nav a{font-size:13px}
+  .top-nav .nut-lh{padding:5px 13px!important}
+}
+@media(max-width:400px){
+  .top-nav{gap:5px 11px}
+  .top-nav a{font-size:12.4px}
+}
+@media print{.top-nav,.hang-menu{display:none!important}}
 </style>
 </head>
 <body class="trong">
@@ -435,8 +476,11 @@ td.tenvb a.mo::after{content:"↗";font-size:11.4px;margin-left:5px;color:var(--
 <header class="top">
   <div class="wrap top-in">
     <a class="hieu" href="../index.html"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#184088"/><rect x="10" y="7" width="14" height="15" rx="3.4" fill="none" stroke="#B8862A" stroke-width="1.7"/><path d="M10 16h14" stroke="#B8862A" stroke-width="1.7"/><circle cx="13.6" cy="19" r="1.2" fill="#B8862A"/><circle cx="20.4" cy="19" r="1.2" fill="#B8862A"/><path d="M12 22l-2 4M22 22l2 4" stroke="#B8862A" stroke-width="1.7" stroke-linecap="round"/><path d="M8 28h18" stroke="#B8862A" stroke-width="1.5" stroke-linecap="round"/></svg><span><b>Đường sắt đô thị</b><i>Hotline: 0825092007</i></span></a>
-    <button class="menu-nut" id="menu" aria-expanded="false" aria-controls="dhuong">Mục lục</button>
-    <nav class="top-nav" id="dhuong">
+    <details class="nn"><summary aria-label="Ngôn ngữ"><svg class="qc" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg><span class="nhan">Chọn ngôn ngữ</span><span class="cau">▾</span></summary><div class="nn-menu"><a href="../index.html" hreflang="vi" aria-current="true"><span>Tiếng Việt</span><span class="ma">VI</span></a><a href="../en/index.html" hreflang="en"><span>English</span><span class="ma">EN</span></a><a href="../zh/index.html" hreflang="zh"><span>中文</span><span class="ma">ZH</span></a><a href="../ja/index.html" hreflang="ja"><span>日本語</span><span class="ma">JA</span></a><a href="../fr/index.html" hreflang="fr"><span>Français</span><span class="ma">FR</span></a><a href="../de/index.html" hreflang="de"><span>Deutsch</span><span class="ma">DE</span></a></div></details>
+  </div>
+  <div class="hang-menu">
+    <div class="wrap">
+      <nav class="top-nav" id="dhuong">
         <a href="../van-ban/index.html">Văn bản</a>
         <a href="../quy-trinh/index.html">Quy trình</a>
         <a href="../kiem-toan/index.html" aria-current="page">Kiểm toán QT</a>
@@ -446,7 +490,7 @@ td.tenvb a.mo::after{content:"↗";font-size:11.4px;margin-left:5px;color:var(--
         <a href="../tu-van/index.html">Tư vấn</a>
         <a href="../lien-he/index.html" class="nut-lh">Liên hệ</a>
     </nav>
-    <details class="nn"><summary aria-label="Ngôn ngữ"><svg class="qc" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg><span class="nhan">Chọn ngôn ngữ</span><span class="cau">▾</span></summary><div class="nn-menu"><a href="../index.html" hreflang="vi" aria-current="true"><span>Tiếng Việt</span><span class="ma">VI</span></a><a href="../en/index.html" hreflang="en"><span>English</span><span class="ma">EN</span></a><a href="../zh/index.html" hreflang="zh"><span>中文</span><span class="ma">ZH</span></a><a href="../ja/index.html" hreflang="ja"><span>日本語</span><span class="ma">JA</span></a><a href="../fr/index.html" hreflang="fr"><span>Français</span><span class="ma">FR</span></a><a href="../de/index.html" hreflang="de"><span>Deutsch</span><span class="ma">DE</span></a></div></details>
+    </div>
   </div>
 </header>
 

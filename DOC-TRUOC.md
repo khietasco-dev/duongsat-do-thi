@@ -163,3 +163,34 @@ roi chay `python ds_v10.py`. Dung sua tay trong cac file index.html.
 
 Thanh dau con **~32px du** o 1175px (diem chat nhat, ngay tren nguong gop menu 1160px).
 Them mot muc menu nua la tran — phai rut nhan hoac nang nguong gop.
+
+## Ban 11 — THANH DAU HAI HANG, bo han nut "Muc luc" (ds_v11.py)
+
+CEO chot 25/08/2026: menu phai hien thang tren banner, khong gom vao nut "Muc luc".
+
+- **Hang 1**: logo ĐƯỜNG SẮT ĐÔ THỊ + hotline (trai) · nut Chon ngon ngu (phai)
+- **Hang 2**: du 8 muc menu, luon hien, tu xuong dong khi het cho
+- Nut "Muc luc" bi go o **MOI kho man hinh** — the `<button>` khong con trong HTML
+- Giu nhan viet tat "Kiem toan QT" theo y CEO
+
+### So do da do that trong trinh duyet
+
+| Kho man hinh | Menu | Cao thanh dau | Dinh man hinh |
+|---|---|---|---|
+| 1280px | 1 dong, du 8 muc | 108px | co |
+| 768px  | 1 dong, du 8 muc | 107px | co |
+| 375px  | 2 dong, du 8 muc | 125px | **khong** (cuon di) |
+| 320px  | 3 dong, du 8 muc | 153px | **khong** |
+
+Duoi 700px thanh dau chuyen `position:relative` — menu hai ba dong ma con dinh
+theo man hinh thi an mat mot phan sau man hinh dien thoai.
+
+### 🐛 Loi CU da lo ra khi lam viec nay
+
+Luat chung `details{border;background;padding:15px 18px;margin-bottom:10px}` (dung cho
+khoi hoi-dap o trang Vuong mac) **dinh ca vao nut ngon ngu** `<details class="nn">`:
+no ve them mot khung vien thua quanh nut va lam hang 1 cao **100px** thay vi 58px.
+Da go bang `.nn{padding:0!important;border:0!important;background:none!important;...}`.
+
+→ Nho lay: **them mot the HTML pho thong (`details`, `table`, `ul`) vao thanh dau thi
+phai kiem xem luat chung cua the do co dinh vao khong.**
