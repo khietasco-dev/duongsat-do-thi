@@ -363,3 +363,32 @@ Trang `/en/van-ban/` da thu that: 51 van ban, o tim bo dau hai phia ("duong sat"
 bon bo loc chay, bam ten van ban tai duoc tep (681 KB, ma 200).
 
 **Bo tieng Anh coi nhu xong.** Buoc sau: tieng Trung — dung lai khuon nay, chi thay noi dung.
+
+## Ban 18 — BON TRANG TIENG TRUNG (dot 1 bo tieng Trung, ds_v18.py)
+
+`/zh/quy-trinh/` · `/zh/kiem-toan/` · `/zh/tu-van/` · `/zh/lien-he/` + chan trang tieng Trung.
+Trang **46 -> 50**. **Chay `python ds_v18.py`** — ban moi nhat.
+Ban dich: `ds_zh_qt.py` (Quy trinh + Kiem toan QT) va `ds_zh_tv.py` (Tu van + Lien he + chan trang).
+
+### ⚠️ RANG BUOC THUAT NGU — da nap tu bo cua ASCO
+
+Nguon: `02 - ASCO/Thuat ngu va cau mau song ngu/asco_thuat_ngu.json` (244 muc).
+
+| Viet | Trung | Bay |
+|---|---|---|
+| Quyet toan DU AN | **竣工决算** | KHONG phai 汇算清缴 (do la quyet toan THUE) |
+| Mot ty dong | **十亿越南盾** | ⚠ **亿 chi la 100 TRIEU** — sai 10 lan |
+| Hop dong kiem toan | **审计业务约定书** | Khong phai 审计合同 |
+| Chung kien kiem ke | **监盘** | Khong phai 盘点 (tu di dem) |
+| Khau tru VAT | **增值税进项税额抵扣** | KHAC 税前可扣除费用 (duoc tru thue TNDN) |
+| Y kien chap nhan toan phan | **无保留意见** | Thieu chu 无 la thanh y kien NGOAI TRU |
+
+🔴 **DA VAP MOT LAN NGAY TRONG BAN NAY:** viet "几千亿盾" cho "nhieu nghin ty dong" —
+sai 10 lan. Da sua thanh **数万亿越南盾** (1.000 ty = 10^12 = 一万亿).
+**Moi lan viet so tien tieng Trung phai doi chieu lai bang tren.**
+
+May tinh phi tieng Trung dung don vi **十亿越南盾**, da doi chieu: 120 ty ra
+445.500.000 越南盾 — dung y het ban tieng Viet va tieng Anh.
+
+**Con lai o bo tieng Trung:** 9 trang dich vu + Van ban · Thu vien rui ro · Kinh nghiem · Vuong mac.
+Menu trang tieng Trung con **13 dau VI** — dung bang so muc chua dich.
