@@ -228,3 +228,38 @@ Noi dung 9 dich vu nam trong **`ds_dv.py`** — sua noi dung thi sua file do, kh
 | 375px  | 9 muc bon dong | 152px | bam theo hang menu, khong lam cao them thanh dau |
 
 **Da ra 1.002 lien ket noi bo tren ca 24 trang: 0 lien ket hong.**
+
+## Ban 13 — DONG BO NGON NGU CHO THANH MENU (ds_v13.py)
+
+CEO phat hien 25/08: bam sang trang tieng Anh thi menu tren cung van tieng Viet.
+Nay ca thanh menu + bang so xuong "Dich vu cung cap" doi theo ngon ngu trang.
+
+**Chay `python ds_v13.py`** — ban moi nhat.
+
+Bang nhan nam trong `ds_v13.py`: `NHAN` (8 muc menu) · `NHAN_DV` (nut so xuong) ·
+`NHAN_TAT` · `NHAN_NHOM` (3 nhom) · `NHAN_MUC_DV` (9 dich vu) · `NHAC`.
+**Nhan tieng Viet la KHOA tra cuu** — doi nhan tieng Viet o ban truoc thi phai doi ca o day,
+neu khong script se dung han va bao "KHONG THAY nhan menu".
+
+### Noi that voi nguoi doc nuoc ngoai
+
+Cac trang dich den VAN LA TIENG VIET (chi 6 trang tong quan co ban dich). Nen tren trang
+ngoai ngu moi lien ket menu duoc gan:
+- `hreflang="vi"` — cho cong cu tim kiem biet
+- `title="page in Vietnamese"` (dich theo tung thu tieng) — hien khi ro chuot
+- mot dau **VI** nho o goc tren ben phai nhan — nguoi doc biet TRUOC khi bam
+
+### So do da do (be rong hang menu 1.136px)
+
+| Trang | Be rong menu | Con du |
+|---|---|---|
+| vi | 840px | 160px |
+| de | 791px | 209px |
+| en | 722px | 278px |
+| fr | 709px | 291px |
+| zh | 590px | 410px |
+| ja | 563px | 437px |
+
+Ca 6 trang: menu **mot dong**, thanh dau **106px**, khong tran ngang.
+Tren dien thoai 375px: 3 dong, thanh dau 154px, bang so xuong khong tran mep.
+Ra lai 1.002 lien ket noi bo: **0 hong**.
