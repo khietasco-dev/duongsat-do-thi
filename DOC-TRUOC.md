@@ -320,3 +320,27 @@ va tro nguoi doc ve ban goc tieng Viet o muc Tra cuu van ban. Cau nay nam trong
 `KHUNG['cancu_nhac']` — **giu nguyen o moi thu tieng se dich sau**.
 
 **Con lai:** 8 trang tieng Viet con lai o ban tieng Anh, va ca 18 trang o 4 thu tieng kia.
+
+## Ban 16 — BON TRANG TIENG ANH (dot 3, ds_v16.py, ds_en_qt.py, ds_en_tv.py)
+
+`/en/quy-trinh/` · `/en/kiem-toan/` · `/en/tu-van/` · `/en/lien-he/`. Trang **38 -> 42**.
+**Chay `python ds_v16.py`** — ban moi nhat.
+
+O che do tieng Anh nguoi doc nay di duoc tron mach:
+Dich vu -> Quy trinh -> Kiem toan QT -> Tu van -> Lien he.
+
+- `ds_en_qt.py` — Quy trinh (9 giai doan, 4 ngan phap ly, 3 cho ho) + Kiem toan QT
+  (5 ly do song hanh, bang so sanh 7 dong, 13 phan hanh, 2 phep can doi, 3 dieu khong lam,
+  may tinh phi)
+- `ds_en_tv.py` — Tu van (3 loai yeu cau, bieu mau, 9 the dich vu) + Lien he
+
+**May tinh phi ban tieng Anh** o `B.than_js['en/kiem-toan']` — bang ty le van lay tu
+`ds_v9.KT` va `ds_v9.TT` nen sua so mot cho la ca hai ban doi theo. Da doi chieu:
+120 ty ra 445.500.000 dong, dung y het ban tieng Viet.
+
+⚠️ **TEN VAN BAN PHAP LUAT GIU NGUYEN TIENG VIET** — Luat Dat dai 31/2024/QH15,
+NĐ 206/2026… la ten chinh thuc, dich ra la sai. Da ra lai: chu tieng Viet con lai tren
+trang tieng Anh CHI la ten van ban va chan trang.
+
+**Con lai o ban tieng Anh:** Van ban · Thu vien rui ro · Kinh nghiem · Vuong mac.
+Chan trang cung chua dich.
