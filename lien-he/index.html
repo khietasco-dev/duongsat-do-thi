@@ -469,6 +469,86 @@ td.tenvb a.mo::after{content:"↗";font-size:11.4px;margin-left:5px;color:var(--
   .top-nav a{font-size:12.4px}
 }
 @media print{.top-nav,.hang-menu{display:none!important}}
+
+/* ---------- menu IN HOA ---------- */
+.top-nav a,.top-nav .dv>summary{text-transform:uppercase;font-size:13.2px;font-weight:700;
+  letter-spacing:.032em}
+.top-nav .nut-lh{letter-spacing:.045em}
+/* 9 muc IN HOA tren dien thoai: siet co chu va khoang cach de con 3 dong thay vi 4 */
+@media(max-width:700px){
+  .top-nav a,.top-nav .dv>summary{font-size:11.9px;letter-spacing:.012em}
+  .top-nav{gap:5px 11px}
+  .top-nav .nut-lh{padding:4px 11px!important}
+}
+@media(max-width:400px){
+  .top-nav a,.top-nav .dv>summary{font-size:11.2px;letter-spacing:0}
+  .top-nav{gap:4px 9px}
+}
+
+/* ---------- muc menu so xuong "Dich vu cung cap" ---------- */
+.dv{position:relative;margin:0!important;padding:0!important;border:0!important;
+  background:none!important;border-radius:0!important}
+.dv>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  color:var(--chu);white-space:nowrap;user-select:none;padding:3px 0}
+.dv>summary::-webkit-details-marker{display:none}
+.dv>summary:hover{color:var(--muc)}
+.dv>summary .cau{font-size:10.6px;opacity:.7;transition:transform .15s}
+.dv[open]>summary{color:var(--muc)}
+.dv[open]>summary .cau{transform:rotate(180deg)}
+.dv-menu{position:absolute;top:calc(100% + 9px);left:0;z-index:90;width:330px;
+  background:var(--the);border:1px solid var(--vien);border-radius:12px;padding:7px;
+  box-shadow:0 14px 38px rgba(14,23,41,.19)}
+:root[data-theme="dark"] .dv-menu{box-shadow:0 14px 38px rgba(0,0,0,.55)}
+.dv-menu a{display:block;padding:8px 11px;border-radius:8px;font-size:13.8px;font-weight:600;
+  color:var(--chu);text-decoration:none;white-space:normal;text-transform:none;letter-spacing:0;
+  line-height:1.4}
+.dv-menu a:hover{background:var(--nen2);color:var(--muc)}
+.dv-menu a[aria-current]{background:var(--muc);color:#fff}
+:root[data-theme="dark"] .dv-menu a[aria-current]{color:#0D2044}
+.dv-menu .tat{font-weight:800;border-bottom:1px solid var(--vien);border-radius:8px 8px 0 0;
+  margin-bottom:4px;padding-bottom:10px}
+.dv-menu .nhomdv{font-size:11.2px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--nhan2);padding:9px 11px 3px}
+/* Tren dien thoai: bang xo ra bam theo CA HANG MENU, trai sang phai het be ngang.
+   Khong dung width:100% cho .dv — lam vay no chiem tron mot dong, menu doi tu 3 len 4 dong. */
+@media(max-width:700px){
+  /* ban 11 dat .top-nav{position:static!important} nen phai ghi de bang !important,
+     khong thi bang xo xuong bam nham vao the cha cao hon va tran ra mep man hinh */
+  .top-nav{position:relative!important}
+  .dv{position:static}
+  .dv-menu{top:calc(100% + 6px);left:0;right:0;width:auto;z-index:95;
+    box-shadow:0 12px 30px rgba(14,23,41,.22)}
+}
+
+/* ---------- the dich vu ---------- */
+.dv-luoi{display:grid;gap:15px;grid-template-columns:repeat(3,1fr);margin:14px 0 6px}
+@media(max-width:1000px){.dv-luoi{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:660px){.dv-luoi{grid-template-columns:1fr}}
+.dv-the{display:block;background:var(--the);border:1px solid var(--vien);border-radius:var(--r);
+  padding:19px 20px;text-decoration:none;box-shadow:var(--bong);transition:border-color .15s,transform .15s}
+.dv-the:hover{border-color:var(--muc3);transform:translateY(-2px)}
+.dv-the .so{font-family:Consolas,"Courier New",monospace;font-size:12.4px;font-weight:800;
+  color:var(--nhan2);letter-spacing:.06em}
+.dv-the h3{margin:5px 0 7px;font-size:16.6px;color:var(--muc);line-height:1.32}
+.dv-the p{font-size:14.2px;color:var(--chu2);margin:0;line-height:1.55}
+.dv-the .di{display:inline-block;margin-top:10px;font-size:13.2px;font-weight:700;color:var(--muc)}
+
+/* ---------- trang chi tiet dich vu ---------- */
+.dv-mo{font-size:17px;line-height:1.68;color:var(--chu);margin-bottom:6px}
+.dv-cc{background:var(--nen2);border:1px solid var(--vien);border-radius:11px;padding:16px 18px;
+  margin-bottom:11px}
+.dv-cc b{display:block;color:var(--muc);font-size:14.4px;margin-bottom:5px}
+.dv-cc span{font-size:14.6px;color:var(--chu2);line-height:1.62}
+.dv-buoc{counter-reset:b;list-style:none;padding:0;margin:12px 0 0}
+.dv-buoc li{counter-increment:b;position:relative;padding:0 0 15px 46px;margin:0}
+.dv-buoc li::before{content:counter(b);position:absolute;left:0;top:0;width:31px;height:31px;
+  border-radius:50%;background:var(--muc);color:#fff;font-weight:800;font-size:14.2px;
+  display:flex;align-items:center;justify-content:center}
+:root[data-theme="dark"] .dv-buoc li::before{color:#0D2044}
+.dv-buoc b{display:block;font-size:15.6px;color:var(--chu);margin-bottom:3px}
+.dv-buoc span{font-size:14.6px;color:var(--chu2);line-height:1.6}
+.dv-luu{border-left:3px solid var(--do);background:var(--do-nen);border-radius:9px;
+  padding:15px 18px;margin-top:22px;font-size:14.4px;line-height:1.62}
 </style>
 </head>
 <body class="trong">
@@ -487,6 +567,7 @@ td.tenvb a.mo::after{content:"↗";font-size:11.4px;margin-left:5px;color:var(--
         <a href="../thu-vien-rui-ro/index.html">Thư viện rủi ro</a>
         <a href="../kinh-nghiem/index.html">Kinh nghiệm</a>
         <a href="../vuong-mac/index.html">Vướng mắc</a>
+        <details class="dv"><summary>Dịch vụ cung cấp<span class="cau">▾</span></summary><div class="dv-menu"><a class="tat" href="../dich-vu/index.html">Tất cả dịch vụ</a><div class="nhomdv">Tài chính và thu hồi vốn</div><a href="../dich-vu/thu-hoi-von-tod/index.html">Thu hồi vốn từ quỹ đất TOD</a><a href="../dich-vu/phuong-an-tai-chinh/index.html">Phương án tài chính tuyến và dự án TOD</a><a href="../dich-vu/co-cau-nguon-von/index.html">Cơ cấu nguồn vốn dự án</a><a href="../dich-vu/suat-von-dau-tu/index.html">Suất vốn đầu tư và quy đổi định mức</a><div class="nhomdv">Quản trị Ban quản lý dự án</div><a href="../dich-vu/kiem-soat-noi-bo/index.html">Kiểm soát nội bộ Ban quản lý dự án</a><a href="../dich-vu/ho-so-quyet-toan/index.html">Quản lý hồ sơ quyết toán từ ngày đầu</a><a href="../dich-vu/tai-co-cau-doanh-nghiep/index.html">Tái cơ cấu doanh nghiệp dự án và vận hành</a><div class="nhomdv">Thuế và năng lực</div><a href="../dich-vu/thue-du-an/index.html">Thuế cho dự án đường sắt đô thị</a><a href="../dich-vu/boi-duong-can-bo/index.html">Bồi dưỡng cán bộ Ban quản lý dự án</a></div></details>
         <a href="../tu-van/index.html">Tư vấn</a>
         <a href="../lien-he/index.html" class="nut-lh" aria-current="page">Liên hệ</a>
     </nav>
@@ -636,10 +717,10 @@ b.setAttribute('aria-expanded',String(!m));});}})();
 
 <script>
 (function(){document.addEventListener('click',function(e){
- document.querySelectorAll('details.nn[open]').forEach(function(d){
+ document.querySelectorAll('details.nn[open],details.dv[open]').forEach(function(d){
   if(!d.contains(e.target)) d.removeAttribute('open');});});
  document.addEventListener('keydown',function(e){ if(e.key==='Escape')
-  document.querySelectorAll('details.nn[open]').forEach(function(d){d.removeAttribute('open');});});
+  document.querySelectorAll('details.nn[open],details.dv[open]').forEach(function(d){d.removeAttribute('open');});});
 })();
 </script>
 </body>

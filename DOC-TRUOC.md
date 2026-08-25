@@ -194,3 +194,37 @@ Da go bang `.nn{padding:0!important;border:0!important;background:none!important
 
 → Nho lay: **them mot the HTML pho thong (`details`, `table`, `ul`) vao thanh dau thi
 phai kiem xem luat chung cua the do co dinh vao khong.**
+
+## Ban 12 — MENU IN HOA + muc "DICH VU CUNG CAP" (ds_v12.py, ds_dv.py)
+
+CEO chot 25/08/2026. Trang tu 14 len **24 trang**.
+
+- Menu tren banner **IN HOA** — lam bang `text-transform:uppercase`, chu trong HTML
+  van viet thuong (de bo doc man hinh va cong cu tim kiem doc dung).
+- Them muc **"Dich vu cung cap"** dang so xuong (`<details class="dv">`), xo ra 10 lien ket:
+  1 trang tong + 9 dich vu, chia 3 nhom.
+- **9 trang gioi thieu dich vu** tai `/dich-vu/<slug>/` + **1 trang tong** `/dich-vu/`.
+- Trang `/tu-van/` duoc chen them khoi 9 the dich vu.
+
+Noi dung 9 dich vu nam trong **`ds_dv.py`** — sua noi dung thi sua file do, khong sua HTML.
+
+### ⚠️ Ba cai bay da vap khi lam ban nay
+
+1. **Trang nam sau HAI cap.** Khuon goc chi tinh duong dan lui MOT cap (`../`).
+   Xu ly trong `ds_v12.khung()`: lui them mot cap cho lien ket cua khuon, con lien ket
+   trong ruot trang viet bang dau **`@/`** (= goc trang) roi thay sau. **Dung viet `../`
+   trong ruot trang dich vu** — no se bi lui nham.
+2. **`.top-nav{position:static!important}` cua ban 11** lam bang xo xuong tren dien thoai
+   bam nham vao the cha cao hon → tran ra mep man hinh. Phai ghi de bang
+   `position:relative!important`.
+3. **Dung dat `.dv{width:100%}` tren dien thoai** — muc do se chiem tron mot dong,
+   menu doi tu 3 len 4 dong.
+
+### So do da do
+
+| Kho man hinh | Menu | Cao thanh dau | Bang xo xuong |
+|---|---|---|---|
+| 1280px | 9 muc mot dong | 106px | noi, rong 330px, khong tran |
+| 375px  | 9 muc bon dong | 152px | bam theo hang menu, khong lam cao them thanh dau |
+
+**Da ra 1.002 lien ket noi bo tren ca 24 trang: 0 lien ket hong.**
