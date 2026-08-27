@@ -408,3 +408,77 @@ KHONG an, va cau tieng Anh "51 of 51 instruments" lot len trang tieng Trung.
 Da doi thanh viet han mot khoi JS rieng. **Moi thu tieng mot khoi JS rieng, dung va chuoi.**
 
 Bo dem ban tieng Trung nay hien "共 51 份，显示 33 份" — da thu that.
+
+## Ban 20 — BON TRANG TIENG NHAT (dot 1 bo tieng Nhat, ds_v20.py)
+
+`/ja/quy-trinh/` · `/ja/kiem-toan/` · `/ja/tu-van/` · `/ja/lien-he/` + chan trang tieng Nhat.
+Trang **63 -> 67**. **Chay `python ds_v20.py`** — ban moi nhat.
+Ban dich: `ds_ja_qt.py` (Quy trinh + Kiem toan QT) va `ds_ja_tv.py` (Tu van + Lien he + chan trang).
+
+### ⚠ BAY DA VAP NGAY TRONG BAN NAY — ke thua nham ban cha
+
+Viet `import ds_v18 as V18` roi `TRANG = list(V18.TRANG)`. Chay ra **54 trang thay vi 67** —
+roi mat 13 trang tieng Trung cua ban 19, va **sitemap.xml thieu 13 dia chi**.
+Cac file index.html cu van con tren dia nen khong lo mat, nhung Google chi doc sitemap.
+
+→ **Moi ban moi phai ke thua ban LIEN TRUOC, khong phai ban minh nho toi.**
+Kiem nhanh: dong "Da ghi N trang" phai bang so trang ban truoc cong so trang moi them.
+
+### ⚠ DON VI TIEN TIENG NHAT — cung bay nhu tieng Trung
+
+`億` = **100 TRIEU**, khong phai ty. `兆` = 10^12.
+
+| Viet | Nhat |
+|---|---|
+| 1 ty dong | 十億ドン |
+| 5 ty dong | 50億ドン |
+| 1.000 ty dong | 1兆ドン |
+| 10.000 ty dong | 10兆ドン |
+
+Da kiem tren trinh duyet that: moc duoi hien "監査対象額 50億ドン以下",
+moc tren hien "10兆ドン以上" — dung. Da ra: trang tieng Nhat khong lot `亿`,
+`越南盾` hay `billion` cua ban tieng khac.
+
+### 🔧 SUA MOT LOI CU — bieu mau Tu van bao loi bang tieng Viet
+
+`B.than_js['tu-van']` chua hai cau thong bao tieng Viet. Ban 17 gan nguyen khoi do cho
+`en/tu-van`, ban 18 gan cho `zh/tu-van`. Nghia la **nguoi doc tieng Anh va tieng Trung
+bam Gui van thay tieng Viet** — ton tai tu 25/08.
+
+Ban 20 tach `_JS_MAU` + bang `_MAU_NHAN` sinh khoi JS rieng cho tung thu tieng va gan lai
+cho ca `en`, `zh`, `ja`. Da thu that tren trinh duyet: ba ban ra ba thu tieng, 0 ky tu tieng Viet.
+
+### ⚠ MUC FAQ "tra loi bang ngon ngu nao" — da viet THAN TRONG
+
+Ban tieng Trung hua tra loi bang 中文 vi ASCO co bo cong cu ngon ngu Trung Quoc (244 thuat ngu).
+**Voi tieng Nhat CHUA co bo tuong duong**, nen ban nay chi hua tra loi chinh thuc bang
+**tieng Viet hoac tieng Anh**, con tieng Nhat thi nhan cau hoi. **CEO can quyet: giu nhu vay,
+hay nang len thanh co tra loi tieng Nhat?** Neu nang thi phai co nguoi bao dam chat luong.
+
+### Da do that tren trinh duyet
+
+| Muc | Ket qua |
+|---|---|
+| May tinh phi 120 ty | **445.500.000 ドン** — dung y ban Viet, Anh, Trung |
+| Moc duoi 5 ty | 0,96% · 52.800.000 ドン |
+| Moc tren 20.000 ty | 0,069% · 15.180.000.000 ドン |
+| He so 70% (thiet bi ≥50%) | 311.850.000 ドン |
+| Bo trong | "ゼロより大きい数値を入力してください。" |
+| Thanh dau 1280px | 107px, menu mot dong, du 458px |
+| Thanh dau 375px | 128px, `position:relative`, khong tran |
+| Bang ty le tren dien thoai | co thanh cuon rieng, khong lam tran trang |
+| Lien ket noi bo toan site | **2.870 lien ket, 0 hong** |
+| Sitemap | 67 dia chi, 6 dia chi `/ja/` |
+
+**Chu tieng Viet con lai tren 4 trang tieng Nhat CHI la ten van ban phap luat** va ky hieu
+diem `đ` cua dieu luat — dung nguyen tac da chot.
+
+**Menu trang tieng Nhat con 13 dau VI** = 4 muc menu chua dich (Van ban · Thu vien rui ro ·
+Kinh nghiem · Vuong mac) + 9 trang dich vu. Dung bang ban tieng Trung sau dot 1.
+
+⚠ **Cot dau chan trang van ghi "Urban railway"** o ca ban `zh` va `ja` — chuoi nay hardcode
+trong `ds_v17._chan()`. Khong sai (do la ten thuong hieu) nhung neu muon dich thi them mot
+khoa vao `CHAN[lang]` va sua `_chan()` — sua mot cho, ca hai ban doi theo.
+
+**Con lai o bo tieng Nhat:** 9 trang dich vu + Van ban · Thu vien rui ro · Kinh nghiem · Vuong mac
+= **13 trang**. Khuon da san, lam theo ds_v19.py.
