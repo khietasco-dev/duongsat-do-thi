@@ -482,3 +482,63 @@ khoa vao `CHAN[lang]` va sua `_chan()` — sua mot cho, ca hai ban doi theo.
 
 **Con lai o bo tieng Nhat:** 9 trang dich vu + Van ban · Thu vien rui ro · Kinh nghiem · Vuong mac
 = **13 trang**. Khuon da san, lam theo ds_v19.py.
+
+## Ban 21 — BO TIENG NHAT XONG (dot 2, ds_v21.py)
+
+9 trang `/ja/dich-vu/<slug>/` + `/ja/van-ban/` `/ja/thu-vien-rui-ro/` `/ja/kinh-nghiem/`
+`/ja/vuong-mac/`. Trang **67 -> 80**. **Chay `python ds_v21.py`** — ban moi nhat.
+Ban dich: `ds_ja_dv.py` (9 dich vu) · `ds_ja_rr.py` (Van ban + Rui ro) ·
+`ds_ja_kn.py` (Kinh nghiem + Vuong mac).
+
+✅ **Menu tren ca 19 trang tieng Nhat: 0 dau VI.** Chan trang tieng Nhat: 19/19 trang.
+
+### 🔧 SUA MOT LOI CU NUA — nhan "N phần" tieng Viet tren ban ngoai ngu
+
+O cot **Mo tep** cua trang Van ban, van ban chia nhieu ky hien nhan `N phần`.
+Chuoi do sinh trong `ds_v8.o_tep()` va **ban 17 (en) va ban 19 (zh) deu bi**, moi ban
+5 van ban. Nay `ds_v21._tep_lang(d, lang)` dich theo tung thu tieng va **ghi de lai**
+`V17._o_tep` va `V19._o_tep` — sua mot cho, ca ba ban doi theo.
+
+| Ban | Nhan |
+|---|---|
+| vi | `5 phần` |
+| en | `5 parts` |
+| zh | `共 5 部分` |
+| ja | `全 5 部` |
+
+### Da do that tren trinh duyet
+
+| Muc | Ket qua |
+|---|---|
+| Bo dem trang Van ban ja | `全 51 件中 51 件を表示` |
+| Tim bo dau hai phia | `duong sat` va `đường sắt` deu ra **33/51** — dung y ban Viet va Trung |
+| Tim theo so hieu `188` | 3 van ban |
+| Loc `Thông tư` | 12 van ban |
+| Lien ket tep tren /ja/van-ban/ | **161 lien ket**, thu 4 mau deu ma **200** (681 KB · 1.170 KB · 246 KB) |
+| Nhan phan nhieu ky | 全 2 部 · 全 2 部 · 全 3 部 · 全 2 部 · **全 6 部** (TT 59/2024) |
+| Trang dich vu TOD | 3 can cu · 5 buoc · thanh dau 106px · 0 dau VI |
+| Trang Kinh nghiem | 12 bai hoc · 3 sai lam · 5 moc |
+| Thu vien rui ro | **33 rui ro · 8 nhom**, danh so den 33, 33 muc do |
+| Vuong mac | 10 vuong mac, 4 o nhan tieng Nhat |
+| Trang tong dich vu ja | 9 the, **0 the tro ve tieng Viet** |
+| Lien ket noi bo toan site | **3.486 lien ket, 0 hong** |
+| Sitemap | **80 dia chi** — ja 19 · zh 19 · en 19 |
+
+**Nhanh Dich vu o che do tieng Nhat nay LIEN MACH:** menu → bang so xuong → trang tong
+→ 9 trang chi tiet, khong con roi ve tieng Viet.
+
+⚠ **Cau bat buoc o moi ban dich** (`ds_ja_dv.KHUNG['cancu_nhac']`): phan 根拠法令 ghi ro
+day la **cach doc cua ASCO, khong phai ban dich chinh thuc**, va tro ve ban goc tieng Viet.
+Da kiem tren trang chay that: co.
+
+⚠ **Hai dieu kien truoc khi ky** (`KHUNG['luu']`): dang ky voi Bo Tai chinh theo
+Dieu 40 khoan 2, va kiem tinh doc lap theo Dieu 30. Da kiem: co tren trang.
+
+### Con lai cua ca du an
+
+**Ba thu tieng con lai — Phap, Duc — moi thu 18 trang.** Khuon da san, lam theo
+ds_v20 + ds_v21. Nhung can nhac truoc: nha thau Phap va Duc lam ODA o Viet Nam deu doc
+duoc tieng Anh, nen gia tri tang them thap hon nhieu so voi ba bo da lam.
+
+🔴 **Van con: canonical tro vao ten mien khong ton tai** (`ds_build.GOC`), nay anh huong
+**ca 80 trang**. Chua sua vi cho CEO quyet.
