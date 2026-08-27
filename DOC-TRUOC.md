@@ -542,3 +542,88 @@ duoc tieng Anh, nen gia tri tang them thap hon nhieu so voi ba bo da lam.
 
 🔴 **Van con: canonical tro vao ten mien khong ton tai** (`ds_build.GOC`), nay anh huong
 **ca 80 trang**. Chua sua vi cho CEO quyet.
+
+## Ban 22 — BO TIENG DUC XONG TRON TRONG MOT LAN (ds_v22.py)
+
+17 trang: `/de/quy-trinh/` `/de/kiem-toan/` `/de/tu-van/` `/de/lien-he/` + chan trang,
+9 trang `/de/dich-vu/<slug>/`, `/de/van-ban/` `/de/thu-vien-rui-ro/` `/de/kinh-nghiem/`
+`/de/vuong-mac/`. Trang **80 -> 97**. **Chay `python ds_v22.py`** — ban moi nhat.
+Ban dich: `ds_de_qt.py` · `ds_de_tv.py` · `ds_de_dv.py` · `ds_de_rr.py` · `ds_de_kn.py`.
+
+Khac ba bo truoc: tieng Anh 4 dot (ban 14-17), tieng Trung 2 dot (18-19),
+tieng Nhat 2 dot (20-21). **Bo tieng Duc gop TRON trong mot ban** vi khuon da chin han.
+
+✅ **Menu tren ca 19 trang tieng Duc: 0 dau VI.** Chan trang tieng Duc: 19/19.
+
+### 🔴🔴 BAY DON VI TIEN NGUY HIEM NHAT TU TRUOC TOI NAY
+
+**"Billion" trong tieng Duc = 10^12**, KHONG phai 10^9 nhu tieng Anh.
+Viet "1 Billion VND" cho "1 ty dong" la **sai 1.000 lan**.
+
+| Viet | Duc | KHONG duoc viet |
+|---|---|---|
+| 1 ty dong | 1 Milliarde VND | ~~1 Billion VND~~ |
+| 5 ty dong | 5 Milliarden VND | |
+| 1.000 ty dong | 1 Billion VND | |
+| 10.000 ty dong | 10 Billionen VND | |
+
+Ban tieng Anh dung nhan "Billion VND" nghia la TY — **dich thang sang Duc la sai 1.000 lan**.
+Da ra bang may tren 19 trang: **"Billion VND" xuat hien 0 lan**; chi co
+"5 Milliarden VND" (moc duoi) va "10 Billionen VND" (moc tren). Khong vap.
+
+Bay nay cung ho voi `亿` cua tieng Trung (= 100 trieu) va `億` cua tieng Nhat.
+
+### ⚠ Dau thap phan tieng Duc la DAU PHAY
+
+Ham `n()` trong khoi JS tieng Duc phai `.replace('.', ',')`, va bang ty le trong HTML
+cung phai doi. Da kiem tren trang chay that: bang hien `0,96 · 0,645 · 0,45 · 0,345 ·
+0,195 · 0,129 · 0,069`, ket qua hien `0,3375 %` va `445.500.000 VND`.
+
+### ⚠ TIENG DUC VUOT NGUONG SEO — 13/17 trang
+
+`ds_v7.ghi()` canh bao khi **title > 60** hoac **desc > 160** ky tu. Tu ghep tieng Duc dai
+nen 13 trang vuot ngay lan chay dau (co trang desc **191**). Da rut gon 13 cho trong
+5 file dich. Sau khi sua: **"Vuot nguong SEO: khong co"**.
+
+→ **Ba thu tieng con lai (Phap) va moi ban dich sau nay deu phai chay lai va doc dong nay.**
+Mep menu tieng Duc cung sat nhat: **919px / 1136px** — con du 217px, ban dai nhat trong
+sau thu tieng. Them mot muc menu nua thi phai do lai ban `de` truoc.
+
+### 🐛 Loi da vap khi lam ban nay
+
+`QT_GD[5]` (giai doan Bau ausfuhrung) **thieu mot o** — viet 5 phan tu thay vi 6, quen o
+"Was entsteht". Script dung ngay voi `ValueError: not enough values to unpack`.
+**Dung han la co y** — de khong am tham ra trang thieu noi dung. Kiem nhanh khi them ban dich:
+`[len(g) for g in QT_GD]` phai ra toan **6**.
+
+### Da do that tren trinh duyet
+
+| Muc | Ket qua |
+|---|---|
+| May tinh phi 120 ty | **445.500.000 VND** · `0,3375 %` — dung y bon ban kia |
+| Moc duoi 5 ty | `Prüfungsgegenstand ≤ 5 Milliarden VND — Satz 0,96 %` |
+| Moc tren 20.000 ty | `≥ 10 Billionen VND — Satz 0,069 %` · 15.180.000.000 VND |
+| Bo trong | `Bitte geben Sie einen Wert größer als null ein.` |
+| Bo dem trang Van ban | `51 von 51 Vorschriften` |
+| Tim bo dau hai phia | `duong sat` va `đường sắt` deu ra **33/51** |
+| Lien ket tep tren /de/van-ban/ | **161 lien ket** |
+| Nhan phan nhieu ky | `2 Teile · 2 Teile · 3 Teile · 2 Teile · 6 Teile` |
+| Thanh dau 1280px | **107px**, menu mot dong, 0 dau VI |
+| Thu vien rui ro | **33 rui ro · 8 nhom**, 33 muc do |
+| Kinh nghiem | 12 bai hoc · 3 sai lam · 5 moc |
+| Vuong mac | 10 vuong mac, 4 o nhan tieng Duc |
+| Trang tong dich vu de | 9 the, **0 the tro ve tieng Viet** |
+| Bieu mau | bao loi bang tieng Duc, 4 o chon `— Bitte wählen —` |
+| Lien ket noi bo toan site | **4.244 lien ket, 0 hong** |
+| Sitemap | **97 dia chi** — de 19 · ja 19 · zh 19 · en 19 |
+
+**Chu tieng Viet con lai tren trang tieng Duc CHI la ten van ban phap luat**, ky hieu diem
+`đ` cua dieu luat, va vi du `„đường sắt“ / „duong sat“` trong huong dan tim kiem (co y).
+
+### Con lai cua ca du an
+
+**Chi con TIENG PHAP** — 17 trang, khuon da san, lam theo ds_v22 la mot ban gop tron.
+Nhung can nhac: nha thau Phap lam ODA o Viet Nam deu doc duoc tieng Anh.
+
+🔴 **Van con: canonical tro vao ten mien khong ton tai** (`ds_build.GOC`), nay anh huong
+**ca 97 trang**. Sua mot dong roi chay lai `ds_v22.py`. Cho CEO quyet.
