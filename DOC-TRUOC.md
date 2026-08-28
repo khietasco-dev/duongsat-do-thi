@@ -627,3 +627,88 @@ Nhung can nhac: nha thau Phap lam ODA o Viet Nam deu doc duoc tieng Anh.
 
 🔴 **Van con: canonical tro vao ten mien khong ton tai** (`ds_build.GOC`), nay anh huong
 **ca 97 trang**. Sua mot dong roi chay lai `ds_v22.py`. Cho CEO quyet.
+
+## Ban 23 — BO TIENG PHAP XONG. TRON BO SAU NGON NGU (ds_v23.py)
+
+17 trang `/fr/…`. Trang **97 -> 114**. **Chay `python ds_v23.py`** — ban moi nhat.
+Ban dich: `ds_fr_qt.py` · `ds_fr_tv.py` · `ds_fr_dv.py` · `ds_fr_rr.py` · `ds_fr_kn.py`.
+
+🎯 **XONG TRON BO: Viet · Anh · Trung · Nhat · Duc · Phap — moi thu tieng 19 trang.**
+
+### Cach lam: SINH ban dung tu ban truoc thay vi go tay
+
+Ban 23 duoc **sinh tu `ds_v22.py` bang mot script thay chuoi** (`scratchpad/sinh_v23.py`),
+roi sua ba khoi JS va hai chuoi con sot. Nhanh hon go tay va **khong bo sot cau truc**.
+Sau khi sinh, da ra bang may: `ds_de` · `CHAN_DE` · `'de/` · `@/de/` · `Strang` · `Teile` ·
+`Vorhaben` deu **0 lan**.
+
+⚠ Hai chuoi script KHONG bat duoc, phai sua tay:
+1. Dong ghi chu don vi tien (comment) — vo hai nhung sai nghia.
+2. **`"name": "ASCO Prüfungs- und Bewertungsgesellschaft"` trong JSON-LD** — cai nay
+   CO HAI: may tim kiem doc, ma lai la ten tieng Duc tren trang tieng Phap. Da sua.
+→ **Sinh xong phai ra lai chu cua ban nguon**, dung tin script chay het.
+
+### 🔴 BAY DON VI TIEN — tieng Phap cung THANG DAI nhu tieng Duc
+
+**"billion" tieng Phap = 10^12.** Ty = **milliard**.
+
+| Viet | Phap |
+|---|---|
+| 1 ty | 1 milliard de VND |
+| 5 ty | 5 milliards de VND |
+| 1.000 ty | 1 000 milliards de VND |
+| 10.000 ty | 10 000 milliards de VND |
+
+Da ra bang may tren 19 trang: **"billion" xuat hien 0 lan**; chi co
+"5 milliards de VND" (moc duoi) va "10 000 milliards de VND" (moc tren).
+
+**Bon thu tieng deu co bay don vi tien, moi thu mot kieu:**
+`亿` Trung = 100 trieu · `億` Nhat = 100 trieu · `Billion` Duc = 10^12 ·
+`billion` Phap = 10^12. **Chi tieng Anh dung "billion" = ty.**
+
+### ⚠ Cach viet so tieng Phap
+
+Dau thap phan la DAU PHAY; phan cach nghin va truoc dau `%` la **khoang trang hep U+202F**.
+`toLocaleString('fr-FR')` tu lam phan nghin. Da kiem tren trang chay that:
+`0,3375 %` · `445 500 000 VND` · bang ty le `0,96 · 0,645 · 0,45 · 0,345 · 0,195 · 0,129 · 0,069`.
+
+### Da do that tren trinh duyet
+
+| Muc | Ket qua |
+|---|---|
+| May tinh phi 120 ty | **445 500 000 VND** — dung y ca nam ban kia |
+| Moc duoi 5 ty | `Montant ≤ 5 milliards de VND — taux 0,96 %` |
+| Moc tren 20.000 ty | `≥ 10 000 milliards de VND — taux 0,069 %` |
+| Bo trong | `Veuillez saisir une valeur supérieure à zéro.` |
+| Bo dem trang Van ban | `51 textes sur 51` |
+| Tim bo dau hai phia | `duong sat` va `đường sắt` deu ra **33/51** |
+| Lien ket tep tren /fr/van-ban/ | **161 lien ket** |
+| Nhan phan nhieu ky | `2 parties · 2 parties · 3 parties · 2 parties · 6 parties` |
+| Thanh dau 1280px | **107px**, menu mot dong, mep phai 836px/1136px, 0 dau VI |
+| Thu vien rui ro | **33 rui ro · 8 nhom**, 33 muc do |
+| Trang tong dich vu fr | 9 the, **0 the tro ve tieng Viet** |
+| Bieu mau | bao loi bang tieng Phap |
+
+### Ra soat toan site sau khi xong sau ngon ngu
+
+| Ban | So trang | Dau VI tren menu | Chan trang dung ngon ngu |
+|---|---|---|---|
+| en | 19 | **0** | 19/19 |
+| zh | 19 | **0** | 19/19 |
+| ja | 19 | **0** | 19/19 |
+| de | 19 | **0** | 19/19 |
+| fr | 19 | **0** | 19/19 |
+
+**5.002 lien ket noi bo tren 114 trang: 0 hong.** Sitemap **114 dia chi**, moi thu tieng du 19.
+
+⚠ **Khi ra chu tieng Viet sot tren trang TIENG PHAP, phai bo cac dau ma tieng Phap cung
+dung** (`à á â è é ê î ô ù û ç`) khoi bo ky tu, neu khong se ra **1.460 duong tinh gia**.
+Bo ky tu dung: `ảãạăằắẳẵặầấẩẫậẻẽẹềếểễệỉĩịỏõọồốổỗộơờớởỡợủũụưừứửữựỳýỷỹỵđ`.
+Loc dung thi con **13 doan, tat ca la ten van ban va dia danh** (Phú Quốc, Bến Thành…).
+
+### Con lai cua ca du an
+
+**Khong con thu tieng nao.** Bo sau ngon ngu da tron ven.
+
+🔴 **Van con: canonical tro vao ten mien khong ton tai** (`ds_build.GOC`), nay anh huong
+**ca 114 trang**. Sua mot dong roi chay lai `ds_v23.py`. Cho CEO quyet.

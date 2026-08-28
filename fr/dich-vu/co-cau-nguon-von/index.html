@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Structure de financement d’un projet ferroviaire</title>
+<meta name="description" content="Comparer et combiner budget, ODA, capitaux privés et PPP : qui porte quel risque et ce que chaque source coûte réellement.">
+<link rel="canonical" href="https://duongsatdothi.vn/fr/dich-vu/co-cau-nguon-von/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#184088">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2034%2034%22%3E%3Crect%20width%3D%2234%22%20height%3D%2234%22%20rx%3D%227%22%20fill%3D%22%23184088%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%227%22%20width%3D%2214%22%20height%3D%2215%22%20rx%3D%223.4%22%20fill%3D%22none%22%20stroke%3D%22%23B8862A%22%20stroke-width%3D%221.9%22%2F%3E%3Cpath%20d%3D%22M10%2016h14%22%20stroke%3D%22%23B8862A%22%20stroke-width%3D%221.9%22%2F%3E%3Ccircle%20cx%3D%2213.6%22%20cy%3D%2219%22%20r%3D%221.3%22%20fill%3D%22%23B8862A%22%2F%3E%3Ccircle%20cx%3D%2220.4%22%20cy%3D%2219%22%20r%3D%221.3%22%20fill%3D%22%23B8862A%22%2F%3E%3Cpath%20d%3D%22M12%2022l-2%204M22%2022l2%204%22%20stroke%3D%22%23B8862A%22%20stroke-width%3D%221.9%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M8%2028h18%22%20stroke%3D%22%23B8862A%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Đường sắt đô thị">
+<meta property="og:title" content="Structure de financement d’un projet ferroviaire">
+<meta property="og:description" content="Comparer et combiner budget, ODA, capitaux privés et PPP : qui porte quel risque et ce que chaque source coûte réellement.">
+<meta property="og:url" content="https://duongsatdothi.vn/fr/dich-vu/co-cau-nguon-von/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Structure de financement d’un projet ferroviaire">
+<meta name="twitter:description" content="Comparer et combiner budget, ODA, capitaux privés et PPP : qui porte quel risque et ce que chaque source coûte réellement.">
+<style>
+:root{
+  --nen:#FFFFFF; --the:#FFFFFF; --nen2:#F4F7FC; --nen3:#EEF2F8;
+  --muc:#184088;            /* navy ASCO - mau thuong hieu */
+  --muc2:#12305F;           /* navy sau */
+  --muc3:#4A6EB0;           /* navy sang - vien, hover */
+  --nhan:#B8862A;           /* vang dong ASCO */
+  --nhan2:#8E6817;
+  --ngoc:#0F6B54;           /* XANH NGOC - mau ho tro moi */
+  --ngoc-nen:#E4F2ED;
+  --do:#A82420; --do-nen:#FBEAE8;
+  --hoacuc:#B8862A; --hoacuc-nen:#FBF3E2;
+  --chu:#0E1729; --chu2:#5D687C;
+  --vien:#E0E6F0; --vien-nhat:#EEF2F8;
+  --bong:0 1px 2px rgba(14,23,41,.05),0 8px 26px rgba(14,23,41,.07);
+  --r:13px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --nen:#0D2044; --the:#13294F; --nen2:#0A1B3B; --nen3:#102A56;
+  --muc:#8FB2EE; --muc2:#13294F; --muc3:#5478BE;
+  --nhan:#E0B458; --nhan2:#F2CE83;
+  --ngoc:#4FC0A2; --ngoc-nen:#0E3A30;
+  --do:#F0857E; --do-nen:#3A1A18;
+  --hoacuc:#E0B458; --hoacuc-nen:#2E2415;
+  --chu:#EEF3FB; --chu2:#8DA0C0;
+  --vien:#22406E; --vien-nhat:#1A3260;
+  --bong:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.45);
+}}
+:root[data-theme="dark"]{
+  --nen:#0D2044; --the:#13294F; --nen2:#0A1B3B; --nen3:#102A56;
+  --muc:#8FB2EE; --muc2:#13294F; --muc3:#5478BE;
+  --nhan:#E0B458; --nhan2:#F2CE83;
+  --ngoc:#4FC0A2; --ngoc-nen:#0E3A30;
+  --do:#F0857E; --do-nen:#3A1A18;
+  --hoacuc:#E0B458; --hoacuc-nen:#2E2415;
+  --chu:#EEF3FB; --chu2:#8DA0C0;
+  --vien:#22406E; --vien-nhat:#1A3260;
+  --bong:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--nen);color:var(--chu);
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  font-size:16.6px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.hep{max-width:900px}
+h1,h2,h3{font-family:'Times New Roman',Times,'Nimbus Roman',serif;letter-spacing:-.021em;line-height:1.22;margin:0}
+h1{font-size:clamp(28px,4.1vw,45px)}
+h2{font-size:clamp(22px,2.9vw,31px);color:var(--muc)}
+h3{font-size:18.5px;color:var(--muc)}
+p{margin:13px 0}
+a{color:var(--muc)}
+.small{font-size:14.3px;color:var(--chu2)}
+
+/* ---------- THANH DAU (dung chung 2 tang) ---------- */
+header.top{position:sticky;top:0;z-index:60;background:var(--nen);border-bottom:1px solid var(--vien)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 22px}
+.hieu{display:flex;align-items:center;gap:10px;text-decoration:none}
+.hieu svg{width:34px;height:34px;flex:0 0 auto}
+.hieu b{font-family:'Times New Roman',Times,'Nimbus Roman',serif;font-size:17.6px;color:var(--muc);display:block;line-height:1.2}
+.hieu i{font-style:normal;font-size:10.8px;font-weight:700;color:var(--chu2);letter-spacing:.1em;text-transform:uppercase}
+.top-nav{display:flex;align-items:center;gap:16px}
+.top-nav a{font-size:14.6px;font-weight:600;color:var(--chu);text-decoration:none;white-space:nowrap}
+.top-nav a:hover,.top-nav a[aria-current]{color:var(--muc);text-decoration:underline;text-underline-offset:5px}
+.nut-lh{background:var(--muc);color:#fff!important;padding:8px 16px;border-radius:999px;font-weight:700}
+:root[data-theme="dark"] .nut-lh{color:#0D2044!important}
+.menu-nut{display:none;background:none;border:1px solid var(--vien);border-radius:9px;padding:7px 11px;
+  font-size:15px;font-family:inherit;color:var(--chu);cursor:pointer}
+@media(max-width:1160px){
+  .top-nav{position:absolute;top:100%;left:0;right:0;background:var(--nen);border-bottom:1px solid var(--vien);
+    flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 16px;display:none}
+  .top-nav[data-mo]{display:flex}
+  .top-nav a{padding:10px 0;border-bottom:1px solid var(--vien)}
+  .top-nav .nut-lh{margin-top:10px;text-align:center;border-bottom:0}
+  .menu-nut{display:block}
+  header.top{position:relative}
+}
+
+/* ================= TANG NGOAI — trang dich ================= */
+.ngoai .hero{position:relative;overflow:hidden;color:#EDF2FA;padding:clamp(52px,7vw,104px) 0;
+  background:radial-gradient(820px 440px at 84% -20%,rgba(184,134,42,.22),transparent 60%),
+             linear-gradient(158deg,#1E4C9E 0%,#184088 48%,#0C2148 100%)}
+.ngoai .hero .wrap{position:relative;z-index:2}
+.ngoai .hero h1{color:#fff;max-width:19ch}
+.ngoai .hero .lede{color:rgba(237,242,250,.9);max-width:62ch;font-size:clamp(16.6px,1.9vw,19px);margin-top:17px}
+.nhan-pill{display:inline-block;font-size:12.2px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--nhan);border:1px solid rgba(184,134,42,.48);padding:6px 14px;border-radius:999px;margin-bottom:19px}
+.hero-nut{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.n1,.n2{padding:13px 26px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;display:inline-block}
+.n1{background:var(--nhan);color:#231B00}
+.n1:hover{background:#E4B451}
+.n2{border:1.5px solid rgba(237,242,250,.4);color:#EDF2FA}
+.n2:hover{border-color:var(--nhan);color:var(--nhan)}
+.hero-so{display:flex;flex-wrap:wrap;gap:30px;margin-top:38px;padding-top:24px;border-top:1px solid rgba(237,242,250,.16)}
+.hero-so div b{display:block;font-family:'Times New Roman',Times,'Nimbus Roman',serif;font-size:26px;color:var(--nhan);line-height:1.2}
+.hero-so div span{font-size:13.4px;color:rgba(237,242,250,.72)}
+/* duong ray trang tri */
+.ray{position:absolute;left:0;right:0;bottom:0;height:76px;opacity:.5;z-index:1}
+
+/* ================= TANG TRONG — trang cong cu ================= */
+.trong .banner{background:var(--muc);color:#EDF2FA;padding:clamp(26px,3.4vw,44px) 0}
+:root[data-theme="dark"] .trong .banner{background:var(--muc2);border-bottom:1px solid var(--vien)}
+.trong .banner h1{color:#fff;font-size:clamp(25px,3.4vw,37px)}
+.trong .banner p{color:rgba(237,242,250,.86);max-width:66ch;margin:11px 0 0;font-size:16.2px}
+.duong{font-size:13.4px;color:rgba(237,242,250,.66);margin-bottom:11px}
+.duong a{color:rgba(237,242,250,.86)}
+.trong .than{padding:clamp(30px,3.8vw,52px) 0}
+
+section{padding:clamp(40px,5vw,70px) 0;border-bottom:1px solid var(--vien)}
+section.nen2{background:var(--nen2)}
+.dau{margin-bottom:28px;max-width:74ch}
+.dau .mac{font-size:12.2px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--nhan2);margin-bottom:8px}
+.luoi{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
+.the{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:23px;box-shadow:var(--bong)}
+.the h3{margin-bottom:7px}
+.the p{margin:0;font-size:15.2px;color:var(--chu2)}
+.the.lienket{text-decoration:none;color:inherit;display:block;transition:border-color .15s}
+.the.lienket:hover{border-color:var(--muc3)}
+.the .di{margin-top:13px;font-size:14.4px;font-weight:700;color:var(--nhan2)}
+.ico{width:38px;height:38px;border-radius:10px;background:var(--muc);display:grid;place-items:center;margin-bottom:13px}
+.ico svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:root[data-theme="dark"] .ico svg{stroke:#0D2044}
+
+/* ---------- BANG ---------- */
+.bang-boc{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;border:1px solid var(--vien);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;min-width:620px;background:var(--the)}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--vien);font-size:14.9px;vertical-align:top}
+th{background:var(--nen2);font-weight:800;color:var(--muc);font-size:13.4px;position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--nen2)}
+.mã{font-family:Consolas,"Courier New",monospace;font-size:13.6px;color:var(--muc);font-weight:700;white-space:nowrap}
+
+/* ---------- CONG CU LOC ---------- */
+.loc{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:18px;margin-bottom:18px;box-shadow:var(--bong)}
+.loc-hang{display:flex;flex-wrap:wrap;gap:11px;align-items:flex-end}
+.loc-o{flex:1 1 190px;min-width:0}
+.loc-o label{display:block;font-size:12.6px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--chu2);margin-bottom:5px}
+.loc-o input,.loc-o select{width:100%;padding:9px 12px;border:1px solid var(--vien);border-radius:9px;
+  font-size:15px;font-family:inherit;background:var(--nen);color:var(--chu)}
+.loc-dem{margin-top:11px;font-size:14.2px;color:var(--chu2)}
+.loc-dem b{color:var(--muc)}
+.the-loc{display:inline-block;font-size:12.4px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.tl-luat{background:var(--ngoc-nen);color:var(--ngoc)}
+.tl-nd{background:var(--hoacuc-nen);color:var(--nhan2)}
+.tl-tt{background:var(--nen3);color:var(--muc)}
+.tl-khac{background:var(--vien-nhat);color:var(--chu2)}
+.dinh{font-size:12.2px;color:var(--chu2);white-space:nowrap}
+
+/* ---------- MOC / QUY TRINH ---------- */
+.gd{counter-reset:g;display:grid;gap:14px}
+.gd .b{background:var(--the);border:1px solid var(--vien);border-left:3px solid var(--nhan);border-radius:var(--r);
+  padding:21px 23px;box-shadow:var(--bong)}
+.gd .b h3::before{counter-increment:g;content:"Giai đoạn " counter(g) " · ";color:var(--nhan2);font-size:14px;
+  font-family:"Segoe UI",sans-serif;font-weight:800;letter-spacing:.04em}
+.gd .b .ct{margin-top:11px;display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(216px,1fr))}
+.gd .b .ct div{font-size:14.4px}
+.gd .b .ct b{display:block;font-size:11.8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--chu2);margin-bottom:2px}
+
+/* ---------- HOI DAP ---------- */
+details{background:var(--the);border:1px solid var(--vien);border-radius:11px;padding:15px 18px;margin-bottom:10px}
+details[open]{border-color:var(--muc3)}
+summary{cursor:pointer;font-weight:700;font-size:15.8px;color:var(--muc);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;font-size:20px;line-height:1;color:var(--nhan2)}
+details[open] summary::after{content:"–"}
+details p{font-size:15px;color:var(--chu2)}
+
+/* ---------- BIEU MAU ---------- */
+.mau{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:clamp(20px,3vw,32px);box-shadow:var(--bong)}
+.mau-luoi{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+.truong label{display:block;font-size:13.4px;font-weight:700;margin-bottom:5px}
+.truong input,.truong select,.truong textarea{width:100%;padding:10px 12px;border:1px solid var(--vien);
+  border-radius:9px;font-size:15.2px;font-family:inherit;background:var(--nen);color:var(--chu)}
+.truong textarea{min-height:112px;resize:vertical}
+.rong{grid-column:1/-1}
+.nut-gui{margin-top:17px;padding:13px 30px;border:0;border-radius:10px;cursor:pointer;background:var(--muc);
+  color:#fff;font-size:16px;font-weight:700;font-family:inherit}
+:root[data-theme="dark"] .nut-gui{color:#0D2044}
+.nut-gui:hover{background:var(--muc3)}
+
+/* ---------- CHAN TRANG ---------- */
+footer{background:var(--nen2);padding:34px 0 24px;font-size:14.2px;color:var(--chu2);border-top:1px solid var(--vien)}
+.ft-luoi{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+footer b{color:var(--chu);display:block;margin-bottom:6px;font-size:14.4px}
+footer a{color:var(--chu2);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:4px}
+.ft-cuoi{margin-top:24px;padding-top:16px;border-top:1px solid var(--vien);font-size:13.2px}
+
+@media print{
+  .top-nav,.menu-nut,.loc,.mau,.hero-nut{display:none!important}
+  body{background:#fff;color:#000;font-size:11.5pt}
+  section,.gd .b{page-break-inside:avoid;border:0}
+  .bang-boc{overflow:visible;border:0}
+}
+
+/* ---------- lop bo sung cho trang giao dien cap 2 ---------- */
+.huong-dan{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));margin:16px 0 24px}
+.huong-dan .b{background:var(--nen2);border:1px solid var(--vien);border-radius:11px;padding:16px 18px}
+.huong-dan .b b{display:block;color:var(--muc);font-size:15.2px;margin-bottom:5px}
+.huong-dan .b span{font-size:14.4px;color:var(--chu2)}
+
+.thongke{display:flex;flex-wrap:wrap;gap:11px;margin:14px 0 22px}
+.thongke div{background:var(--the);border:1px solid var(--vien);border-radius:10px;padding:12px 17px;min-width:118px}
+.thongke b{display:block;font-family:'Times New Roman',Times,serif;font-size:25px;color:var(--muc);line-height:1.15}
+.thongke span{font-size:13.2px;color:var(--chu2)}
+
+.buoc{counter-reset:s;display:grid;gap:12px;margin:16px 0}
+.buoc .b{display:flex;gap:15px;align-items:flex-start;background:var(--the);border:1px solid var(--vien);
+  border-radius:11px;padding:17px 19px}
+.buoc .b::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:29px;height:29px;border-radius:50%;
+  background:var(--muc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14.6px}
+:root[data-theme="dark"] .buoc .b::before{color:#0D2044}
+.buoc .b b{display:block;color:var(--muc);font-size:16px;margin-bottom:3px}
+.buoc .b span{font-size:14.9px;color:var(--chu2)}
+
+.cot2{display:grid;gap:22px;grid-template-columns:1.35fr 1fr;align-items:start}
+@media(max-width:860px){.cot2{grid-template-columns:1fr}}
+.hop-ben{background:var(--nen2);border:1px solid var(--vien);border-radius:var(--r);padding:20px 22px;
+  position:sticky;top:78px}
+@media(max-width:860px){.hop-ben{position:static}}
+.hop-ben h3{font-size:16.5px;margin-bottom:9px}
+.hop-ben ul{margin:0;padding-left:18px;font-size:14.6px;color:var(--chu2)}
+.hop-ben li{margin-bottom:7px}
+
+.kenh{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));margin:18px 0}
+.kenh .b{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);padding:21px;box-shadow:var(--bong)}
+.kenh .b .nh{display:inline-block;font-size:11.6px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.nh-nhanh{background:var(--ngoc-nen);color:var(--ngoc)}
+.nh-sau{background:var(--hoacuc-nen);color:var(--nhan2)}
+.nh-cham{background:var(--nen3);color:var(--muc)}
+.kenh .b h3{margin-bottom:6px}
+.kenh .b p{margin:0;font-size:14.9px;color:var(--chu2)}
+.kenh .b .dm{margin-top:11px;font-size:14px;color:var(--chu2);border-top:1px solid var(--vien);padding-top:9px}
+.kenh .b .dm b{color:var(--muc)}
+.so-lon{font-family:'Times New Roman',Times,serif;font-size:27px;font-weight:700;color:var(--muc);
+  text-decoration:none;letter-spacing:.01em;display:inline-block}
+.so-lon:hover{color:var(--nhan2)}
+
+/* ---------- bo chuyen ngon ngu ---------- */
+.top-in{position:relative}
+.ngonngu{display:flex;align-items:center;gap:2px;border:1px solid var(--vien);border-radius:999px;
+  padding:2px;background:var(--nen2);flex:0 0 auto}
+.ngonngu a{font-size:12.6px;font-weight:800;letter-spacing:.03em;padding:5px 11px;border-radius:999px;
+  color:var(--chu2);text-decoration:none;white-space:nowrap;line-height:1}
+.ngonngu a:hover{color:var(--muc);text-decoration:none}
+.ngonngu a[aria-current]{background:var(--muc);color:#fff}
+:root[data-theme="dark"] .ngonngu a[aria-current]{color:#0D2044}
+/* logo day sang trai, bo ngon ngu bam ngoai cung ben PHAI */
+.top-in .hieu{margin-right:auto}
+@media(max-width:1000px){
+  .ngonngu{order:1;margin-right:8px}
+  .menu-nut{order:2}
+}
+@media(max-width:420px){.ngonngu a{padding:5px 8px;font-size:11.8px}
+  .hieu i{display:none}}
+
+/* ---------- bang so sanh hai cach lam ---------- */
+.ss td:nth-child(2){color:var(--chu2)}
+.ss td:nth-child(3){color:var(--chu);font-weight:600}
+.ss thead th:nth-child(3){color:var(--ngoc)}
+
+/* ---------- phan hanh ---------- */
+.ph{display:grid;gap:12px;margin:16px 0}
+.ph .b{display:grid;grid-template-columns:74px 1fr;gap:16px;background:var(--the);border:1px solid var(--vien);
+  border-radius:var(--r);padding:18px 20px;box-shadow:var(--bong)}
+@media(max-width:620px){.ph .b{grid-template-columns:1fr;gap:8px}}
+.ph .ma{font-family:Consolas,"Courier New",monospace;font-size:19px;font-weight:700;color:var(--nhan2);
+  line-height:1.2;padding-top:2px}
+.ph h3{font-size:17px;margin-bottom:6px}
+.ph p{margin:0;font-size:14.9px;color:var(--chu2)}
+.ph .luuy{margin-top:9px;padding-top:8px;border-top:1px solid var(--vien);font-size:14.2px;color:var(--do)}
+
+/* ---------- can doi ---------- */
+.cd{background:var(--nen2);border:1px solid var(--vien);border-left:3px solid var(--ngoc);
+  border-radius:var(--r);padding:18px 20px;margin-bottom:13px}
+.cd b{display:block;color:var(--muc);font-size:16px;margin-bottom:8px}
+.cd .ct{font-family:Consolas,"Courier New",monospace;font-size:14.4px;background:var(--the);
+  border:1px solid var(--vien);border-radius:8px;padding:11px 13px;color:var(--chu);overflow-x:auto}
+.cd .gc{margin-top:9px;font-size:14.3px;color:var(--chu2)}
+
+/* ---------- rui ro ---------- */
+.rr-nhom{margin-bottom:26px}
+.rr-nhom>h3{font-size:19px;margin-bottom:11px;padding-bottom:7px;border-bottom:2px solid var(--vien)}
+.rr{display:grid;gap:11px}
+.rr .b{background:var(--the);border:1px solid var(--vien);border-radius:11px;padding:16px 18px}
+.rr .b .dau{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.rr .b h4{margin:0;font-family:'Times New Roman',Times,serif;font-size:16.6px;color:var(--muc);line-height:1.3}
+.rr .b .muc{flex:0 0 auto;font-size:11.4px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px}
+.m-cao{background:var(--do-nen);color:var(--do)}
+.m-trung{background:var(--hoacuc-nen);color:var(--nhan2)}
+.m-thap{background:var(--nen3);color:var(--chu2)}
+.rr .b .mo{margin:9px 0 0;font-size:14.7px;color:var(--chu2)}
+.rr .b .tt{margin:9px 0 0;padding-top:8px;border-top:1px solid var(--vien);font-size:14.5px;color:var(--chu)}
+.rr .b .tt b{color:var(--ngoc)}
+
+/* ---------- trang ngoai ngu ---------- */
+.nn-bao{background:var(--nen2);border:1px solid var(--vien);border-left:3px solid var(--nhan);
+  border-radius:var(--r);padding:18px 20px;margin:22px 0}
+
+/* ---------- LOGO: in hoa, khong vo dong ---------- */
+.hieu{flex:0 0 auto;white-space:nowrap}
+.hieu b{font-size:16.4px;letter-spacing:.055em;text-transform:uppercase;white-space:nowrap}
+.hieu i{white-space:nowrap;font-size:10.4px}
+@media(max-width:1180px){.hieu b{font-size:15.2px;letter-spacing:.04em}}
+/* thanh dau chat vi co 8 muc + nut ngon ngu: siet khoang cach, an dong phu */
+.top-nav{gap:13px}
+.top-nav a{font-size:14.2px}
+@media(max-width:1400px){.hieu i{display:none}}
+@media(max-width:520px){
+  .hieu b{font-size:13.4px;letter-spacing:0}
+  .hieu svg{width:27px;height:27px}
+  .hieu{gap:8px}
+  .top-in{gap:9px;padding-left:16px;padding-right:16px}
+}
+@media(max-width:390px){.hieu b{font-size:12.6px}}
+
+/* ---------- NGON NGU: nut so xuong ---------- */
+.nn{position:relative;flex:0 0 auto}
+.nn>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:7px;
+  border:1px solid var(--vien);border-radius:999px;padding:7px 13px;background:var(--nen2);
+  font-size:13.4px;font-weight:700;color:var(--chu);white-space:nowrap;user-select:none}
+.nn>summary::-webkit-details-marker{display:none}
+.nn>summary:hover{border-color:var(--muc3);color:var(--muc)}
+.nn>summary .cau{font-size:11.6px;opacity:.7;transition:transform .15s}
+.nn[open]>summary .cau{transform:rotate(180deg)}
+.nn>summary .qc{width:15px;height:15px;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:1.9}
+.nn-menu{position:absolute;top:calc(100% + 7px);right:0;z-index:80;min-width:196px;
+  background:var(--the);border:1px solid var(--vien);border-radius:12px;padding:6px;
+  box-shadow:0 12px 34px rgba(14,23,41,.18)}
+:root[data-theme="dark"] .nn-menu{box-shadow:0 12px 34px rgba(0,0,0,.5)}
+.nn-menu a{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:9px 12px;border-radius:8px;font-size:14.4px;font-weight:600;color:var(--chu);
+  text-decoration:none;white-space:nowrap}
+.nn-menu a:hover{background:var(--nen2);color:var(--muc)}
+.nn-menu a[aria-current]{background:var(--muc);color:#fff}
+:root[data-theme="dark"] .nn-menu a[aria-current]{color:#0D2044}
+.nn-menu a .ma{font-size:11.6px;font-weight:800;letter-spacing:.06em;opacity:.65}
+.nn-menu a[aria-current] .ma{opacity:.9}
+@media(max-width:1160px){.nn{order:1;margin-right:8px}}
+@media(max-width:420px){.nn>summary{padding:6px 10px;font-size:12.6px}
+  .nn>summary .nhan{display:none}}
+
+/* ---------- BANG VAN BAN: cot so hieu ---------- */
+.sohieu{font-family:Consolas,"Courier New",monospace;font-size:13.4px;font-weight:700;
+  color:var(--muc);white-space:nowrap}
+td.tenvb{line-height:1.45}
+td.tenvb .phu{display:block;font-size:12.8px;color:var(--chu2);margin-top:2px}
+
+/* ---------- lien ket mo tep ---------- */
+td.tenvb a.mo{color:var(--chu);text-decoration:none;border-bottom:1px solid transparent}
+td.tenvb a.mo:hover{color:var(--muc);border-bottom-color:var(--muc3)}
+td.tenvb a.mo::after{content:"↗";font-size:11.4px;margin-left:5px;color:var(--nhan2);
+  vertical-align:super;opacity:.75}
+.tep{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.tep a{display:inline-block;font-size:11.8px;font-weight:800;letter-spacing:.04em;
+  padding:3px 8px;border-radius:6px;text-decoration:none;white-space:nowrap;line-height:1.5}
+.tep a.w{background:var(--nen3);color:var(--muc)}
+.tep a.w:hover{background:var(--muc);color:#fff}
+:root[data-theme="dark"] .tep a.w:hover{color:#0D2044}
+.tep a.p{background:var(--do-nen);color:var(--do)}
+.tep a.p:hover{background:var(--do);color:#fff}
+.tep .ghi{font-size:11.4px;color:var(--chu2);white-space:nowrap}
+
+/* ---------- may tinh phi ---------- */
+.mtp{background:var(--the);border:1px solid var(--vien);border-radius:var(--r);
+  padding:clamp(20px,3vw,30px);box-shadow:var(--bong);margin:18px 0}
+.mtp-luoi{display:grid;gap:20px;grid-template-columns:1fr 1fr;align-items:start}
+@media(max-width:820px){.mtp-luoi{grid-template-columns:1fr}}
+.mtp .o{margin-bottom:15px}
+.mtp label{display:block;font-size:13.4px;font-weight:700;margin-bottom:5px;color:var(--chu)}
+.mtp label .phu{display:block;font-weight:400;font-size:12.6px;color:var(--chu2);margin-top:2px}
+.mtp input[type=number],.mtp select{width:100%;padding:11px 13px;border:1px solid var(--vien);
+  border-radius:9px;font-size:16.5px;font-family:'Times New Roman',Times,serif;font-weight:700;
+  background:var(--nen);color:var(--chu)}
+.mtp select{font-family:inherit;font-size:15px;font-weight:400}
+.mtp .tick{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:14.3px;color:var(--chu2)}
+.mtp .tick input{margin-top:3px;width:17px;height:17px;flex:0 0 auto}
+.mtp .tick b{color:var(--chu);font-weight:700}
+.kq{background:var(--nen2);border:1px solid var(--vien);border-radius:11px;padding:19px 21px}
+.kq .dong{display:flex;justify-content:space-between;gap:14px;padding:7px 0;font-size:14.9px;
+  border-bottom:1px dashed var(--vien)}
+.kq .dong:last-child{border-bottom:0}
+.kq .dong span:first-child{color:var(--chu2)}
+.kq .dong span:last-child{font-weight:700;color:var(--chu);white-space:nowrap}
+.kq .to{margin-top:13px;padding-top:13px;border-top:2px solid var(--muc)}
+.kq .to .nhan{font-size:12.6px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--nhan2);display:block;margin-bottom:3px}
+.kq .to .so{font-family:'Times New Roman',Times,serif;font-size:clamp(25px,3.6vw,33px);
+  font-weight:700;color:var(--muc);line-height:1.15}
+.kq .to .phu{font-size:13.4px;color:var(--chu2);margin-top:3px}
+.kq .cthuc{margin-top:12px;padding:10px 12px;background:var(--the);border:1px solid var(--vien);
+  border-radius:8px;font-family:Consolas,"Courier New",monospace;font-size:12.8px;color:var(--chu2);
+  overflow-x:auto;white-space:nowrap}
+.kq .loi{color:var(--do);font-weight:700;font-size:14.6px}
+.bang-dm td.n,.bang-dm th.n{text-align:right;font-family:Consolas,"Courier New",monospace}
+
+/* ---------- Hotline duoi logo ---------- */
+.hieu i{display:block!important;font-size:10.6px;color:var(--do);letter-spacing:.09em;
+  font-weight:800;margin-top:1px}
+@media(max-width:1400px){.hieu i{display:block}}
+@media(max-width:430px){.hieu i{font-size:9.8px;letter-spacing:.05em}}
+
+/* ---------- Dong ngay cap nhat o chan trang ---------- */
+.ft-cuoi .ngay{display:block;margin-top:5px;font-weight:700;color:var(--chu)}
+
+/* ================= THANH DAU HAI HANG (ban 11) ================= */
+/* Hang 1: logo + hotline ben trai, nut ngon ngu ben phai */
+.top-in{padding:10px 22px 9px;gap:12px}
+.top-in .hieu{margin-right:auto}
+/* Luat chung `details{...}` (dung cho khoi hoi-dap) dinh ca vao nut ngon ngu:
+   no boc them mot khung vien + nen + padding 15/18, lam hang 1 cao vong len
+   100px va ve mot cai hop thua quanh nut. Go sach o day. */
+.nn{margin:0!important;padding:0!important;border:0!important;background:none!important;
+  border-radius:0!important}
+
+/* Bo han nut Muc luc o MOI kho man hinh */
+.menu-nut{display:none!important}
+
+/* Hang 2: day du menu, tu xuong dong khi het cho */
+.hang-menu{border-top:1px solid var(--vien)}
+.top-nav{position:static!important;display:flex!important;flex-direction:row!important;
+  flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:7px 17px;
+  padding:8px 0 9px!important;background:none!important;border:0!important;
+  top:auto;left:auto;right:auto}
+.top-nav a{font-size:14.6px;padding:3px 0!important;border-bottom:0!important;line-height:1.35}
+.top-nav .nut-lh{padding:6px 15px!important;margin-top:0!important;text-align:center}
+
+/* Thanh dau dinh theo man hinh khi menu con gon mot dong.
+   Duoi 700px menu thanh hai dong, thanh dau cao ~140px — de dinh thi an mat
+   mot phan sau man hinh dien thoai, nen tha cho no cuon di. */
+@media(max-width:1160px){
+  header.top{position:sticky}
+  .top-nav{gap:7px 15px}
+}
+@media(max-width:700px){
+  header.top{position:relative}
+  .top-nav{gap:6px 13px}
+  .top-nav a{font-size:13px}
+  .top-nav .nut-lh{padding:5px 13px!important}
+}
+@media(max-width:400px){
+  .top-nav{gap:5px 11px}
+  .top-nav a{font-size:12.4px}
+}
+@media print{.top-nav,.hang-menu{display:none!important}}
+
+/* ---------- menu IN HOA ---------- */
+.top-nav a,.top-nav .dv>summary{text-transform:uppercase;font-size:13.2px;font-weight:700;
+  letter-spacing:.032em}
+.top-nav .nut-lh{letter-spacing:.045em}
+/* 9 muc IN HOA tren dien thoai: siet co chu va khoang cach de con 3 dong thay vi 4 */
+@media(max-width:700px){
+  .top-nav a,.top-nav .dv>summary{font-size:11.9px;letter-spacing:.012em}
+  .top-nav{gap:5px 11px}
+  .top-nav .nut-lh{padding:4px 11px!important}
+}
+@media(max-width:400px){
+  .top-nav a,.top-nav .dv>summary{font-size:11.2px;letter-spacing:0}
+  .top-nav{gap:4px 9px}
+}
+
+/* ---------- muc menu so xuong "Dich vu cung cap" ---------- */
+.dv{position:relative;margin:0!important;padding:0!important;border:0!important;
+  background:none!important;border-radius:0!important}
+.dv>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  color:var(--chu);white-space:nowrap;user-select:none;padding:3px 0}
+.dv>summary::-webkit-details-marker{display:none}
+.dv>summary:hover{color:var(--muc)}
+.dv>summary .cau{font-size:10.6px;opacity:.7;transition:transform .15s}
+.dv[open]>summary{color:var(--muc)}
+.dv[open]>summary .cau{transform:rotate(180deg)}
+.dv-menu{position:absolute;top:calc(100% + 9px);left:0;z-index:90;width:330px;
+  background:var(--the);border:1px solid var(--vien);border-radius:12px;padding:7px;
+  box-shadow:0 14px 38px rgba(14,23,41,.19)}
+:root[data-theme="dark"] .dv-menu{box-shadow:0 14px 38px rgba(0,0,0,.55)}
+.dv-menu a{display:block;padding:8px 11px;border-radius:8px;font-size:13.8px;font-weight:600;
+  color:var(--chu);text-decoration:none;white-space:normal;text-transform:none;letter-spacing:0;
+  line-height:1.4}
+.dv-menu a:hover{background:var(--nen2);color:var(--muc)}
+.dv-menu a[aria-current]{background:var(--muc);color:#fff}
+:root[data-theme="dark"] .dv-menu a[aria-current]{color:#0D2044}
+.dv-menu .tat{font-weight:800;border-bottom:1px solid var(--vien);border-radius:8px 8px 0 0;
+  margin-bottom:4px;padding-bottom:10px}
+.dv-menu .nhomdv{font-size:11.2px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--nhan2);padding:9px 11px 3px}
+/* Tren dien thoai: bang xo ra bam theo CA HANG MENU, trai sang phai het be ngang.
+   Khong dung width:100% cho .dv — lam vay no chiem tron mot dong, menu doi tu 3 len 4 dong. */
+@media(max-width:700px){
+  /* ban 11 dat .top-nav{position:static!important} nen phai ghi de bang !important,
+     khong thi bang xo xuong bam nham vao the cha cao hon va tran ra mep man hinh */
+  .top-nav{position:relative!important}
+  .dv{position:static}
+  .dv-menu{top:calc(100% + 6px);left:0;right:0;width:auto;z-index:95;
+    box-shadow:0 12px 30px rgba(14,23,41,.22)}
+}
+
+/* ---------- the dich vu ---------- */
+.dv-luoi{display:grid;gap:15px;grid-template-columns:repeat(3,1fr);margin:14px 0 6px}
+@media(max-width:1000px){.dv-luoi{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:660px){.dv-luoi{grid-template-columns:1fr}}
+.dv-the{display:block;background:var(--the);border:1px solid var(--vien);border-radius:var(--r);
+  padding:19px 20px;text-decoration:none;box-shadow:var(--bong);transition:border-color .15s,transform .15s}
+.dv-the:hover{border-color:var(--muc3);transform:translateY(-2px)}
+.dv-the .so{font-family:Consolas,"Courier New",monospace;font-size:12.4px;font-weight:800;
+  color:var(--nhan2);letter-spacing:.06em}
+.dv-the h3{margin:5px 0 7px;font-size:16.6px;color:var(--muc);line-height:1.32}
+.dv-the p{font-size:14.2px;color:var(--chu2);margin:0;line-height:1.55}
+.dv-the .di{display:inline-block;margin-top:10px;font-size:13.2px;font-weight:700;color:var(--muc)}
+
+/* ---------- trang chi tiet dich vu ---------- */
+.dv-mo{font-size:17px;line-height:1.68;color:var(--chu);margin-bottom:6px}
+.dv-cc{background:var(--nen2);border:1px solid var(--vien);border-radius:11px;padding:16px 18px;
+  margin-bottom:11px}
+.dv-cc b{display:block;color:var(--muc);font-size:14.4px;margin-bottom:5px}
+.dv-cc span{font-size:14.6px;color:var(--chu2);line-height:1.62}
+.dv-buoc{counter-reset:b;list-style:none;padding:0;margin:12px 0 0}
+.dv-buoc li{counter-increment:b;position:relative;padding:0 0 15px 46px;margin:0}
+.dv-buoc li::before{content:counter(b);position:absolute;left:0;top:0;width:31px;height:31px;
+  border-radius:50%;background:var(--muc);color:#fff;font-weight:800;font-size:14.2px;
+  display:flex;align-items:center;justify-content:center}
+:root[data-theme="dark"] .dv-buoc li::before{color:#0D2044}
+.dv-buoc b{display:block;font-size:15.6px;color:var(--chu);margin-bottom:3px}
+.dv-buoc span{font-size:14.6px;color:var(--chu2);line-height:1.6}
+.dv-luu{border-left:3px solid var(--do);background:var(--do-nen);border-radius:9px;
+  padding:15px 18px;margin-top:22px;font-size:14.4px;line-height:1.62}
+
+/* ---------- dau "VI" tren trang ngoai ngu: bao truoc trang dich den la tieng Viet ---------- */
+.top-nav a.vi-dich::after{content:"VI";font-size:8.6px;font-weight:800;letter-spacing:.06em;
+  vertical-align:super;margin-left:3px;opacity:.62;color:var(--nhan2)}
+.top-nav .nut-lh.vi-dich::after{color:#fff;opacity:.75}
+:root[data-theme="dark"] .top-nav .nut-lh.vi-dich::after{color:#0D2044}
+.dv-menu a.vi-dich::after{content:"VI";font-size:9px;font-weight:800;vertical-align:super;
+  margin-left:4px;opacity:.55}
+
+/* muc ngon ngu chua co ban dich cho trang dang xem — bao truoc bang dau cham */
+.nn-menu a.chua-dich>span:first-child::after{content:"·";margin-left:6px;opacity:.5}
+.nn-menu a.chua-dich{opacity:.82}
+</style>
+</head>
+<body class="trong">
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="hieu" href="../../../index.html"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#184088"/><rect x="10" y="7" width="14" height="15" rx="3.4" fill="none" stroke="#B8862A" stroke-width="1.7"/><path d="M10 16h14" stroke="#B8862A" stroke-width="1.7"/><circle cx="13.6" cy="19" r="1.2" fill="#B8862A"/><circle cx="20.4" cy="19" r="1.2" fill="#B8862A"/><path d="M12 22l-2 4M22 22l2 4" stroke="#B8862A" stroke-width="1.7" stroke-linecap="round"/><path d="M8 28h18" stroke="#B8862A" stroke-width="1.5" stroke-linecap="round"/></svg><span><b>Đường sắt đô thị</b><i>Hotline: 0825092007</i></span></a>
+    <details class="nn"><summary aria-label="Langue"><svg class="qc" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg><span class="nhan">Choisir la langue</span><span class="cau">▾</span></summary><div class="nn-menu"><a href="../../../dich-vu/co-cau-nguon-von/index.html" hreflang="vi"><span>Tiếng Việt</span><span class="ma">VI</span></a><a href="../../../en/dich-vu/co-cau-nguon-von/index.html" hreflang="en"><span>English</span><span class="ma">EN</span></a><a href="../../../zh/dich-vu/co-cau-nguon-von/index.html" hreflang="zh"><span>中文</span><span class="ma">ZH</span></a><a href="../../../ja/dich-vu/co-cau-nguon-von/index.html" hreflang="ja"><span>日本語</span><span class="ma">JA</span></a><a href="../../../fr/dich-vu/co-cau-nguon-von/index.html" hreflang="fr" aria-current="true"><span>Français</span><span class="ma">FR</span></a><a href="../../../de/dich-vu/co-cau-nguon-von/index.html" hreflang="de"><span>Deutsch</span><span class="ma">DE</span></a></div></details>
+  </div>
+  <div class="hang-menu">
+    <div class="wrap">
+      <nav class="top-nav" id="dhuong">
+        <a href="../../../de/van-ban/index.html">Textes</a>
+        <a href="../../../de/quy-trinh/index.html">Processus</a>
+        <a href="../../../de/kiem-toan/index.html">Audit</a>
+        <a href="../../../de/thu-vien-rui-ro/index.html">Risques</a>
+        <a href="../../../de/kinh-nghiem/index.html">Expérience</a>
+        <a href="../../../de/vuong-mac/index.html">Problèmes</a>
+        <details class="dv"><summary>Services<span class="cau">▾</span></summary><div class="dv-menu"><a hreflang="vi" title="page en vietnamien" class="tat" href="../../../fr/dich-vu/index.html">Tous les services</a><div class="nhomdv">Finance et récupération</div><a href="../../../de/dich-vu/thu-hoi-von-tod/index.html">Récupération par le foncier TOD</a><a href="../../../de/dich-vu/phuong-an-tai-chinh/index.html">Plan financier de la ligne</a><a href="../../../de/dich-vu/co-cau-nguon-von/index.html">Structure de financement</a><a href="../../../de/dich-vu/suat-von-dau-tu/index.html">Ratios et normes de coût</a><div class="nhomdv">Gouvernance de l’unité de gestion</div><a href="../../../de/dich-vu/kiem-soat-noi-bo/index.html">Contrôle interne de l’unité</a><a href="../../../de/dich-vu/ho-so-quyet-toan/index.html">Dossiers de décompte final</a><a href="../../../de/dich-vu/tai-co-cau-doanh-nghiep/index.html">Restructuration des sociétés</a><div class="nhomdv">Fiscalité et compétences</div><a href="../../../de/dich-vu/thue-du-an/index.html">Fiscalité du projet</a><a href="../../../de/dich-vu/boi-duong-can-bo/index.html">Formation des agents</a></div></details>
+        <a href="../../../de/tu-van/index.html">Conseil</a>
+        <a href="../../../de/lien-he/index.html" class="nut-lh">Contact</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+
+<div class="banner"><div class="wrap">
+  <div class="duong"><a href="../../../fr/index.html">Accueil</a> ·
+    <a href="../../../fr/dich-vu/index.html">Prestations</a> · Structure de financement</div>
+  <span class="the-loc" style="background:var(--nen3);color:var(--muc)">Finance et récupération</span>
+  <h1>Conseil sur la structure de financement d’un projet ferroviaire urbain</h1>
+  <p>Chaque source de financement porte ses propres contraintes — de procédure, de rythme de décaissement, d’origine des fournitures, de partage du risque de change. Un mauvais montage ne prive pas le projet d’argent ; il l’immobilise simplement.</p>
+</div></div>
+
+<div class="than"><div class="wrap">
+  <h2 style="margin-bottom:10px">Difficultés fréquentes</h2>
+  <ul><li>L’ODA paraît bon marché au taux affiché, mais les conditions sur les entreprises et l’origine des équipements en relèvent le coût réel.</li><li>Le risque de change d’un prêt en devises courant sur vingt ou trente ans n’est pas chiffré.</li><li>La contrepartie nationale n’est pas mise en place à temps, ce qui bloque le décaissement du prêt lui-même.</li><li>On ne sait pas quelles parties conviennent à un investisseur privé et lesquelles l’État doit conserver.</li></ul>
+
+  <h2 style="margin:30px 0 10px">Fondements juridiques</h2>
+  <p class="small" style="margin-bottom:12px">Le texte ci-dessous est <b>notre lecture</b> de chaque disposition, non une traduction officielle. Seul le texte vietnamien fait foi — chaque document s’ouvre depuis la rubrique <a href="../../../fr/van-ban/index.html">Recherche de textes</a>.</p>
+  <div class="dv-cc"><b>Luật Đường sắt — article 24</b><span>Pour les projets ferroviaires relevant du droit de l’investissement ou du droit des PPP, l’État garantit sur le budget public la totalité des coûts d’indemnisation, d’aide et de réinstallation, et ce travail est isolé en un projet distinct.</span></div><div class="dv-cc"><b>Luật Đường sắt — article 23</b><span>Un projet composant d’indemnisation, d’aide et de réinstallation est géré comme un projet autonome et n’a pas à satisfaire l’exigence d’exploitation indépendante que le droit de la construction impose par ailleurs.</span></div><div class="dv-cc"><b>Luật Đường sắt — article 5, alinéas 2 et 4</b><span>Rétrocession de prêts et crédits préférentiels ; ainsi que le classement de l’exploitation d’infrastructures ferroviaires, du transport ferroviaire, de l’industrie ferroviaire et de la formation des personnels parmi les secteurs bénéficiant d’incitations à l’investissement.</span></div>
+
+  <h2 style="margin:30px 0 6px">Ce que nous faisons</h2>
+  <ol class="dv-buoc"><li><b>Recenser les sources disponibles et leurs exigences</b><span>Pour chacune : taux, durée, différé, conditions de passation, procédure de décaissement.</span></li><li><b>Les ramener à une base de comparaison unique</b><span>Calculer le coût réel du capital une fois intégrées les conditions de passation et le coût de procédure — non le taux affiché.</span></li><li><b>Cartographier les risques</b><span>Change, décaissement, calendrier de libération des emprises — qui porte quoi, et par quel mécanisme contractuel.</span></li><li><b>Proposer un montage assorti d’une solution de repli</b><span>Y compris le déclencheur : si la source A prend plus d’un certain retard, quelle voie prend le relais.</span></li></ol>
+
+  <div class="luoi g2" style="margin-top:26px">
+    <div class="the" style="border-left:3px solid var(--ngoc)">
+      <h3>Ce que vous recevez</h3><ul><li>Une comparaison des sources de financement sur une base unique</li><li>Une cartographie de la répartition des risques entre les parties</li><li>Une proposition de structure assortie de scénarios de repli</li></ul></div>
+    <div class="the" style="border-left:3px solid var(--nhan)">
+      <h3>Quand nous solliciter</h3><p style="margin-top:8px">Lors de la constitution du dossier d’orientation d’investissement ; lorsqu’il est envisagé de basculer une partie de la ligne en PPP ; ou lorsque la source actuelle rencontre des difficultés de décaissement.</p></div>
+  </div>
+
+  <div class="dv-luu"><b>Deux conditions, que nous énonçons d’emblée.</b> Premièrement, il s’agit d’une prestation relevant de l’article 40, alinéa 2, de la Luật Kiểm toán độc lập — une société d’audit doit l’enregistrer auprès du ministère des Finances avant de la fournir. Deuxièmement, si nous auditons votre organisme, ou si cela est prévisible, cette mission doit passer un contrôle d’indépendance au titre de l’article 30 de la même loi avant signature. Nous procédons d’abord à ce contrôle et, s’il n’est pas concluant, nous le disons franchement et déclinons.</div>
+
+  <div class="the" style="border-left:3px solid var(--muc3);margin-top:20px">
+    <h3>L’étape suivante</h3><p style="margin-top:8px">Décrivez votre situation sur la page <a href="../../../fr/tu-van/index.html">Demander conseil</a> ou appelez le <b>0825092007</b>. Nous lisons, qualifions et répondons sous 24 heures ouvrées — y compris lorsque la réponse est que le travail sort de ce qui nous est permis.</p>
+    <p class="small" style="margin-top:9px"><a href="../../../fr/dich-vu/index.html">← Voir les neuf prestations</a></p>
+  </div>
+</div></div>
+
+
+<footer>
+  <div class="wrap">
+    <div class="ft-luoi">
+      <div><b>Urban railway</b>Un site de référence sur l’investissement, la gouvernance et le décompte final des projets ferroviaires urbains au Vietnam.</div>
+      <div><b>Consulter</b><ul><li><a href="../../../van-ban/index.html">Recherche de textes</a></li><li><a href="../../../quy-trinh/index.html">Déroulement du projet</a></li><li><a href="../../../kinh-nghiem/index.html">Enseignements de gestion</a></li></ul></div>
+      <div><b>Nous joindre</b><ul><li><a href="../../../vuong-mac/index.html">Difficultés fréquentes</a></li><li><a href="../../../tu-van/index.html">Demander conseil</a></li><li><a href="../../../lien-he/index.html">Contact</a></li></ul></div>
+      <div><b>À noter</b>Le contenu de ce site est indicatif et ne remplace pas un conseil sur un projet précis. Les textes changent souvent — vérifiez toujours sur l’original.</div>
+    </div>
+    <div class="ft-cuoi">Droits réservés — ASCO, Société d’audit et d’évaluation, Vietnam · Compilé à partir de notre fonds documentaire interne.<span class="ngay">Textes à jour au 31/08/2026.</span></div>
+  </div>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Conseil sur la structure de financement d’un projet ferroviaire urbain","description":"Comparer et combiner budget, ODA, capitaux privés et PPP : qui porte quel risque et ce que chaque source coûte réellement.","serviceType":"Finance et récupération","areaServed":"VN","inLanguage":"fr","provider":{"@type":"Organization","name":"ASCO — Société d’audit et d’évaluation, Vietnam","telephone":"0825092007"}}</script>
+<script>
+(function(){var b=document.getElementById('menu'),n=document.getElementById('dhuong');
+if(b&&n){b.addEventListener('click',function(){var m=n.hasAttribute('data-mo');
+if(m){n.removeAttribute('data-mo');}else{n.setAttribute('data-mo','');}
+b.setAttribute('aria-expanded',String(!m));});}})();
+</script>
+
+<script>
+(function(){document.addEventListener('click',function(e){
+ document.querySelectorAll('details.nn[open],details.dv[open]').forEach(function(d){
+  if(!d.contains(e.target)) d.removeAttribute('open');});});
+ document.addEventListener('keydown',function(e){ if(e.key==='Escape')
+  document.querySelectorAll('details.nn[open],details.dv[open]').forEach(function(d){d.removeAttribute('open');});});
+})();
+</script>
+</body>
+</html>
